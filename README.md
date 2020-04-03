@@ -9,7 +9,7 @@ We provision Linux desktop with PyCharm IDE, required Python environment for all
 To setup and perform the user study, please follow the below steps to start a VM pre-provisioned with required environments and use PyCharm IDE.
 
 
-1. Install latest version (6.1) of [VirtualBox](https://www.virtualbox.org/wiki/Downloads), available for all platforms.
+1. Install latest version (6.1) of [VirtualBox](https://www.virtualbox.org/wiki/Downloads), available for all platforms. (For MacOS users, in case you encounter error during installation, please check out [this article](https://medium.com/@DMeechan/fixing-the-installation-failed-virtualbox-error-on-mac-high-sierra-7c421362b5b5).)
 2. Install latest version of [Vagrant](https://www.vagrantup.com/downloads.html), an automatic VM provisioning tool.
 3. (Optional but strongly recommended) Install Vagrant plugin with command `vagrant plugin install vagrant-vbguest` for automatically updating the VirtualBox Guest plugin inside the VM to provide the best experience on your host depending on the VirtualBox version.
 4. `git clone https://github.com/frankxu2004/tranx-study.git`
