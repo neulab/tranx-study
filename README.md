@@ -28,7 +28,14 @@ To setup and perform the user study, please follow the below steps to start a VM
 18. The script will automatically pack your work and upload to our server for the user study evaluations. If everything goes smoothly, you should see a message `Submission success! All done!`. In case you see errors, please make sure the `<userid>` and `<task>` given as arguments are correct.
 
 
-## Data being collected
+## Data Collected
 1. Your interaction with the plugin in PyCharm IDE, including queries and edits.
 2. Your web search/browsing activities inside the VM's Chrome.
 3. Your completed task.
+
+
+## Cleanup
+1. `vagrant destroy` to destroy the VM.
+2. Delete the repo folder.
+3. Delete the local VM image caches downloaded previously by deleting the folder `$HOME/.vagrant.d`.
+4. Uninstall Vagrant and VirtualBox software.

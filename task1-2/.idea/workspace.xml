@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f7a11fe-c1be-47af-80df-ddb9ca487f49" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,12 +118,12 @@
       <screen x="0" y="31" width="2560" height="1360" />
     </state>
     <state width="1503" height="430" key="GridCell.Tab.1.right/0.31.2560.1360@0.31.2560.1360" timestamp="1585227036261" />
-    <state x="24" y="31" width="906" height="614" key="SettingsEditor" timestamp="1586245037813">
-      <screen x="0" y="31" width="1056" height="614" />
+    <state x="769" y="287" width="906" height="732" key="SettingsEditor" timestamp="1586251719614">
+      <screen x="0" y="31" width="2560" height="1242" />
     </state>
     <state x="24" y="31" width="906" height="614" key="SettingsEditor/0.31.1056.614@0.31.1056.614" timestamp="1586245037813" />
     <state x="254" y="31" width="906" height="717" key="SettingsEditor/0.31.1160.717@0.31.1160.717" timestamp="1585250961808" />
-    <state x="769" y="287" width="1022" height="732" key="SettingsEditor/0.31.2560.1242@0.31.2560.1242" timestamp="1585220743859" />
+    <state x="769" y="287" width="906" height="732" key="SettingsEditor/0.31.2560.1242@0.31.2560.1242" timestamp="1586251719614" />
     <state x="743" y="404" key="com.intellij.ide.util.TipDialog" timestamp="1585223144110">
       <screen x="0" y="31" width="1920" height="1000" />
     </state>
