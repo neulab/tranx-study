@@ -20,8 +20,16 @@ echo "Zipping..."
 
 TIMESTAMP=`date +"%s"`
 
-ZIPNAME="${USERID}_${TASKNAME}_${TIMESTAMP}.zip"
+ZIPNAME="${USERID}_${TASKNAME%/}_${TIMESTAMP}.zip"
 
+pkill mitmdump
+sleep 1
+
+pushd $TASKNAME
+rm -f browser_requests.log
+popd
+
+cp browser_requests.log $TASKNAME
 zip -r $ZIPNAME $TASKNAME
 
 echo "Submitting $ZIPNAME"
