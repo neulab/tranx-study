@@ -18,16 +18,22 @@ To setup and perform the user study, please follow the below steps to start a VM
 6. `vagrant up`
 7. Wait until Vagrant automatically download the VM and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. The current directory (i.e. this repo) will be automatically mounted in the VM as `/vagrant` so you could find all the tasks, codes, etc. synced.
 
-### 2. Completing Task inside VM
-1. At this stage, as you start to complete your task, you should maximize or full-screen the VM. All activities including coding, web search, etc., should be done within the VM.
-2. Open a terminal by clicking the terminal icon in the bottom dock inside VM, and start the user study monitoring process by command `cd /vagrant && ./start-monitoring.sh`.
-2. Start PyCharm IDE from top-left menu `Applications - Development - PyCharm Community Edition`.
+### 2. Warmup & Familiarize with VM Environment
+Starting from this stage, as you start to complete your task, you should maximize or full-screen the VM. All activities including coding in the IDE, web search, etc., should be done within the VM.
+1. Start PyCharm IDE by clicking the bottom dock "PC" (PyCharm Community Edition) icon.
+2. Open the warmup "Hello World" practice project `/vagrant/helloworld`.
+3. Checkout the README, and familiarize yourself with the environment! For details on coding the task, please follow the next section.
+4. Once you are familiar about the IDE, plugin and VM environment, you can start working on the real tasks!
+
+### 3. Completing Task inside VM
+1. Open a terminal by clicking the terminal icon in the bottom dock inside VM, and start the user study monitoring process by command `cd /vagrant && ./start-monitoring.sh`.
+2. Start PyCharm IDE by clicking the bottom dock "PC" (PyCharm Community Edition) icon.
 3. To open your task directory, use `File - Open Project` and navigate to `/vagrant` and select the task directory you are to complete. Find all the tasks included in this repo in their respective subdirectories under `/vagrant`, which is a mounted directory for the current directory on the host (where the `Vagrantfile` is).
 4. Before working on your task, make sure to setup your provided user ID in the PyCharm IDE. Go to `File - Settings`, find `Tools - TranX Plugin`. Make sure to enter the unique user ID designated to you for identification and data collection purposes.
 5. To start coding the task, please first read the instructions in the `README` file inside the task directory, and then write your program with the `main.py` file. Mac users should use `Control+Options+G` to ask a question with the plugin and `Options+G` to upload edits. Windows/Linux users should use `Ctrl+Alt+G` and `Alt+G` respectively. For more details about the usage of the plugin, please check out [this guide](https://github.com/neulab/tranX-plugin#usage) first.
 6. To perform web search on those questions related to the task but not appropriate for the purpose of the plugin (e.g. you may want to know if UTC is equivalent to GMT) as it is not directly related to coding itself, you should use the Chrome web browser inside the VM. It can be opened with the Internet icon in the bottom dock inside the VM. Note that your web browsing activities will be logged inside the VM for user study purposes, so please DO NOT access any sensitive information in the browser.
 
-### 3. Submitting Your Finished Task
+### 4. Submitting Your Finished Task
 After you have finished the coding and debugging, please submit your work on the task! To do so, please do the following steps inside the VM:
 1. Open a terminal by clicking the terminal icon in the bottom dock inside VM.
 2. `cd /vagrant`
