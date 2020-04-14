@@ -22,7 +22,7 @@ To setup and perform the user study, please follow the below steps to start a VM
 Starting from this stage, as you start to complete your task, you should maximize or full-screen the VM. All activities including coding in the IDE, web search, etc., should be done within the VM.
 1. Start PyCharm IDE by clicking the bottom dock "PC" (PyCharm Community Edition) icon.
 2. Open the warmup "Hello World" practice project `/vagrant/helloworld`.
-3. Checkout the README, and familiarize yourself with the environment! For details on coding the task, please follow the next section.
+3. Checkout the README, and familiarize yourself with the environment! For details on how to complete the task with IDE and plugin, please follow the next section. For more help on PyCharm IDE, please visit [JetBrain's help website](https://www.jetbrains.com/help/pycharm/quick-start-guide.html)!
 4. Once you are familiar about the IDE, plugin and VM environment, you can start working on the real tasks!
 
 ### 3. Completing Task inside VM
