@@ -4,6 +4,14 @@ After running `python main.py`, the program extracts required information from t
 
 Specifically, save all the hyperlink URLs (one URL per line) to `output/urls.txt`, all the bold text phrases (one per line) to `output/bold.txt`, and all `crimson` colored text phrases (one per line) into `output/crimson.txt`
 
+
+# Recommended Libraries (Installed)
+```
+requests
+beautifulsoup
+```
+
+
 # Example Output
 
 ```

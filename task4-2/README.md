@@ -6,7 +6,11 @@ Specifically, `populations.csv` contains two columns, `country` (name of the cou
 
 For country thumbnails, the image format should be `.png` and the filename should be country name as appeared in the `populations.csv`.
 
-
+# Recommended Libraries (Installed)
+```
+requests
+beautifulsoup
+```
 
 # Example Output
 
