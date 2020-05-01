@@ -2,6 +2,14 @@
 
 ## Tasks
 You can find all the tasks to complete in their corresponding directory under this repo, e.g `task1-2/`, and read the README file inside for instructions.
+Overall, there are 7 different categories as in task1-n to task7-n:
+1. Basic Python
+2. File 
+3. OS
+4. Web Scraping (requests & beautifulsoup libraries)
+5. Web Server & Client (requests, flask or django libraries)
+6. Data Analysis (pandas library) & Machine Learning (sklearn library)
+7. Data Visualization (matplotlib or seaborn library)
 
 
 ## Instructions
