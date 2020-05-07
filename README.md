@@ -33,8 +33,8 @@ Starting from this stage, as you start to complete your task, you should maximiz
     ./warmup.sh
     ```
     This will start the IDE and enable web browsing to test it out.
-- Checkout the README, and familiarize yourself with the environment! For details on how to complete the task with IDE and plugin, please follow the next section. For more help on PyCharm IDE, please visit [JetBrain's help website](https://www.jetbrains.com/help/pycharm/quick-start-guide.html)!
-- Once you are familiar about the IDE, plugin and VM environment, you can start working on the real tasks!
+- Checkout the README, and familiarize yourself with the environment! For details on how to complete the task with IDE and plugin, please follow the next section. For more help on PyCharm IDE, please visit [JetBrain's help website](https://www.jetbrains.com/help/pycharm/quick-start-guide.html)! Once you are familiar about the IDE, plugin and VM environment, you can start working on the real tasks!
+- Python 3.6 is used throughout the study, and can be called from terminal by `python3`.
 
 ### 3. Completing Task inside VM
 - In a terminal in the VM:
@@ -46,6 +46,7 @@ Starting from this stage, as you start to complete your task, you should maximiz
 - To start coding the task, please first read the instructions in the `README` file inside the task directory, and then write your program with the `main.py` file. Mac users should use `Control+Options+G` to ask a question with the plugin and `Options+G` to upload edits. Windows/Linux users should use `Ctrl+Alt+G` and `Alt+G` respectively. For more details about the usage of the plugin, please check out [this guide](https://github.com/neulab/tranX-plugin#usage) first.
 - To perform web search on those questions related to the task but not appropriate for the purpose of the plugin (e.g. you may want to know if UTC is equivalent to GMT) as it is not directly related to coding itself, you should use the Chrome web browser inside the VM. It can be opened from the bottom dock inside the VM. Note that your web browsing activities will be logged inside the VM for user study purposes, so please DO NOT access any sensitive information in the browser.
 - Although we encourage you to complete one task in one sitting, if you need to take a break during the task, please run `./pause.sh` and `./resume.sh` under `/vagrant/` to pause and resume the task respectively. Note that the behaviors will be recorded.
+- If you would like to use libraries that are not preinstalled, please install using `pip3 install package_name` using the terminal inside the VM.
 
 ### 4. Submitting Your Task
 After you have finished the coding and debugging, please submit your work on the task! To do so, please do the following steps inside the VM:
