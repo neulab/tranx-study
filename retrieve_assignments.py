@@ -1,4 +1,5 @@
 import sys
+import os
 import subprocess
 import xml.etree.ElementTree as ET
 
@@ -34,6 +35,21 @@ def switch_plugin_off():
                 f.write(line)
         f.write("edu.cmu.tranx.tranx_plugin\n")
 
+def set_current_user_task(userid, task):
+    path = '/home/vagrant/.user_study_current_status'
+    with open(path, "w", encoding='utf-8') as f:
+        f.write(userid + '\n')
+        f.write(task + '\n')
+
+def read_current_user_task():
+    path = '/home/vagrant/.user_study_current_status'
+    if not os.path.exists(path):
+        return None, None
+    with open(path, "r", encoding='utf-8') as f:
+        lines = f.readlines()
+        userid = lines[0].strip()
+        task = lines[1].strip()
+    return userid, task
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
@@ -47,7 +63,11 @@ if __name__ == '__main__':
         if not user_status:
             print("No assignments found for user:", userid)
         else:
+            usi, task = read_current_user_task()
             print("Showing task assignment status for user:", userid)
+            if task is not None:
+                assert usi == userid, "ERROR: Inconsistent userid"
+                print("The user is currently working on :", task)
             for task_status in user_status:
                 print(task_status['task'] + '\tUse plugin? ' + str(task_status['use_plugin']) + '\tCompleted? ' + str(task_status['completion_status']))
 
@@ -64,5 +84,11 @@ if __name__ == '__main__':
             else:
                 switch_plugin_off()
 
+            set_current_user_task(userid, task)
             subprocess.Popen(["/snap/bin/pycharm-community /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)
+    elif op == 'resume':
+        usi, task = read_current_user_task()
+        subprocess.Popen(["/snap/bin/pycharm-community /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)
 
+    else:
+        print("Not a valid opname")

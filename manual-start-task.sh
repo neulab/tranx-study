@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]
+if [ "$#" -ne 3 ]
   then
-    echo "Usage: ./start-task.sh USERID"
+    echo "Usage: ./start-task.sh USERID TASK USE_PLUGIN(0 or 1)"
     exit -1
 fi
 
@@ -20,8 +20,7 @@ else
     /usr/local/bin/mitmdump -q --set stream_large_bodies=1 -s /vagrant/browser-request-logger.py &
 fi
 
-## Retrieve task and configure & start pycharm
-python3 retrieve_assignments.py assign $1
+python3 manual.py $1 ${2%/} $3
 
 ## log
 TIMESTAMP=`date +"%s"`

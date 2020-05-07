@@ -1,12 +1,20 @@
 #!/bin/bash
 
-if [ "$#" -ne 2 ]; then
-    echo "Please run '$0 <userid> <task>' to submit! <userid> is your designated user ID and <task> is the name of the task you want to submit, which is the subdirectory name for each, e.g. 'task1-2'."
+STUDY_CONFIG_FILE="/home/vagrant/.user_study_current_status"
+if [[ ! -f $STUDY_CONFIG_FILE ]]
+then
+    echo "ERROR: study config file not found!"
     exit 1
 fi
 
-USERID=$1
-TASKNAME=$2
+#if [ "$#" -ne 2 ]; then
+#    echo "Please run '$0 <userid> <task>' to submit! <userid> is your designated user ID and <task> is the name of the task you want to submit, which is the subdirectory name for each, e.g. 'task1-2'."
+#    exit 1
+#fi
+readarray -t line < $STUDY_CONFIG_FILE
+
+USERID=${line[0]}
+TASKNAME=${line[1]}
 
 if [ ! -d $TASKNAME ]; then
     echo "Task directory $TASKNAME does not exist!"
@@ -27,9 +35,21 @@ sleep 1
 
 pushd $TASKNAME
 rm -f browser_requests.log
+rm -f timeline.log
 popd
 
-cp browser_requests.log $TASKNAME
+if [[ -f browser_requests.log ]]
+then
+    cp browser_requests.log $TASKNAME
+else
+    echo "Warning: browser_requests.log file not found!"
+fi
+
+## log
+TIMESTAMP=`date +"%s"`
+echo -e "${TIMESTAMP}\tTask submitted" >> /vagrant/timeline.log
+cp timeline.log $TASKNAME
+
 zip -r $ZIPNAME $TASKNAME
 
 echo "Submitting $ZIPNAME"
@@ -39,7 +59,7 @@ STATUS=`curl -s -o /dev/null -w "%{http_code}" -F "file=@${ZIPNAME}" http://moto
 if [ $STATUS -eq 200 ]; then
     echo "Submission success! All done!"
 else
-    echo "Submission failed! Check your UserID or Internet connection!"
+    echo "Submission failed! Check your UserID or Internet connection, or maybe you have already submitted this task."
 fi
 
 echo "Clean up..."
