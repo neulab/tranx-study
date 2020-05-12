@@ -5,13 +5,6 @@ After running `python main.py`, the program extracts required information from t
 Specifically, save all the hyperlink URLs (one URL per line) to `output/urls.txt`, all the bold text phrases (one per line) to `output/bold.txt`, all the italics text phrases (one per line) to `output/italics.txt`, and all `red (#FF0000)` colored text phrases (one per line) into `output/red.txt`
 
 
-# Recommended Libraries (Installed)
-```
-requests
-beautifulsoup
-```
-
-
 # Example Output
 
 ```

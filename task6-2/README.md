@@ -11,12 +11,6 @@ Please refer to example output for the print format.
 Also, for stable results, please set the random state to 0.
 
 
-# Recommended Libraries (Installed)
-```
-sklearn
-pandas
-```
-
 # Example Output
 
 ```

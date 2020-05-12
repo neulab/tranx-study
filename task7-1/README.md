@@ -4,14 +4,6 @@ By running `python main.py`, draw a scatter plot of the data in `shampoo.csv` an
 The legend should be put to the right of the figure (not within the figure itself).
 
 
-
-# Recommended Libraries (Installed)
-```
-pandas
-matplotlib
-seaborn
-```
-
 # Example Output
 
 ```

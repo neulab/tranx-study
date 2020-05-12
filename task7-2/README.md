@@ -14,13 +14,6 @@ Each of the 3 subplot looks similar to the following example:
 ![](https://matplotlib.org/3.1.1/_images/sphx_glr_barchart_001.png)
 
 
-# Recommended Libraries (Installed)
-```
-pandas
-matplotlib
-seaborn
-```
-
 # Example Output
 
 ```

@@ -132,11 +132,6 @@ If the arguments provided are illegal, please print `Arguments Error!` and exit 
 
 For all the above scenarios, if the given ID is not found through the API, please print `No results found!`.
 
-# Recommended Libraries (Installed)
-```
-requests
-```
-
 # Example Output
 
 ```

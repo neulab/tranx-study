@@ -18,13 +18,6 @@ Note that, if the provided value to parameter `email` is not in valid format (so
 If no matching record is found in the data file given provided query parameters, the response should be empty with HTTP code `404 Not Found`.
 
 
-# Recommended Libraries (Installed)
-```
-requests
-flask
-django
-```
-
 # Example Output
 
 ```
