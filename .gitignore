@@ -3,6 +3,7 @@
 package.box
 *.log
 *.zip
+.user_study_current_status
 __pycache__
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
