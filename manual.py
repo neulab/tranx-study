@@ -15,4 +15,4 @@ if __name__ == '__main__':
     else:
         switch_plugin_off()
 
-    subprocess.Popen(["/snap/bin/pycharm-community /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)
+    subprocess.Popen(["/opt/pycharm-community-2020.1.1/bin/pycharm.sh /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)

@@ -36,13 +36,13 @@ def switch_plugin_off():
         f.write("edu.cmu.tranx.tranx_plugin\n")
 
 def set_current_user_task(userid, task):
-    path = '/home/vagrant/.user_study_current_status'
+    path = '/vagrant/.user_study_current_status'
     with open(path, "w", encoding='utf-8') as f:
         f.write(userid + '\n')
         f.write(task + '\n')
 
 def read_current_user_task():
-    path = '/home/vagrant/.user_study_current_status'
+    path = '/vagrant/.user_study_current_status'
     if not os.path.exists(path):
         return None, None
     with open(path, "r", encoding='utf-8') as f:
@@ -85,10 +85,10 @@ if __name__ == '__main__':
                 switch_plugin_off()
 
             set_current_user_task(userid, task)
-            subprocess.Popen(["/snap/bin/pycharm-community /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)
+            subprocess.Popen(["/opt/pycharm-community-2020.1.1/bin/pycharm.sh /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)
     elif op == 'resume':
         usi, task = read_current_user_task()
-        subprocess.Popen(["/snap/bin/pycharm-community /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)
+        subprocess.Popen(["/opt/pycharm-community-2020.1.1/bin/pycharm.sh /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)
 
     else:
         print("Not a valid opname")

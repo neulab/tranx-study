@@ -6,22 +6,18 @@ if [ "$#" -ne 3 ]
     exit -1
 fi
 
-## Clear up any previous leftover logs
-rm -f /vagrant/timeline.log
-
 ## Start browser monitoring process
 if pgrep -x "mitmdump" > /dev/null
 then
-    echo "Monitoring already running? Maybe an ERROR."
-else
-    echo "Starting monitoring"
-    ## Clear up any previous leftover logs
-    rm -f /vagrant/browser_requests.log
-    /usr/local/bin/mitmdump -q --set stream_large_bodies=1 -s /vagrant/browser-request-logger.py &
+    echo "Monitoring already running? Killing."
+    pkill mitmdump
 fi
+
+echo "Starting monitoring."
+mitmdump -q --set stream_large_bodies=1 -s /vagrant/browser-request-logger.py &
+
 
 python3 manual.py $1 ${2%/} $3
 
 ## log
-TIMESTAMP=`date +"%s"`
-echo -e "${TIMESTAMP}\tTask started" >> /vagrant/timeline.log
+python3 log_user_event_timeline.py start

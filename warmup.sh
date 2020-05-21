@@ -4,9 +4,9 @@
 if pgrep -x "mitmdump" > /dev/null
 then
     echo "Proxy already running."
-else
-    echo "Starting."
-    /usr/local/bin/mitmdump -q --set stream_large_bodies=1 &
+    pkill mitmdump
 fi
+echo "Starting web proxy."
+/usr/local/bin/mitmdump -q --set stream_large_bodies=1 &
 
 python3 manual.py dummy helloworld 1

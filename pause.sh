@@ -5,12 +5,11 @@ if pgrep -x "mitmdump" > /dev/null
 then
     pkill mitmdump
 else
-    echo "Monitoring not started, why pause? Maybe an ERROR."
+    echo "Monitoring not started, why pause? Pausing anyways."
 fi
 
 ## stop pycharm
 pkill java
 
 ## log
-TIMESTAMP=`date +"%s"`
-echo -e "${TIMESTAMP}\tTask paused" >> /vagrant/timeline.log
+python3 log_user_event_timeline.py pause

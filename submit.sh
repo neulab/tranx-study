@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STUDY_CONFIG_FILE="/home/vagrant/.user_study_current_status"
+STUDY_CONFIG_FILE="/vagrant/.user_study_current_status"
 if [[ ! -f $STUDY_CONFIG_FILE ]]
 then
     echo "ERROR: study config file not found!"
@@ -31,24 +31,23 @@ TIMESTAMP=`date +"%s"`
 ZIPNAME="${USERID}_${TASKNAME%/}_${TIMESTAMP}.zip"
 
 pkill mitmdump
+## stop pycharm
+pkill java
+
 sleep 1
 
 pushd $TASKNAME
-rm -f browser_requests.log
-rm -f timeline.log
+rm -f pycharm.log
 popd
+#
+#if [[ -f browser_requests.log ]]
+#then
+#    cp browser_requests.log $TASKNAME
+#else
+#    echo "Warning: browser_requests.log file not found!"
+#fi
 
-if [[ -f browser_requests.log ]]
-then
-    cp browser_requests.log $TASKNAME
-else
-    echo "Warning: browser_requests.log file not found!"
-fi
-
-## log
-TIMESTAMP=`date +"%s"`
-echo -e "${TIMESTAMP}\tTask submitted" >> /vagrant/timeline.log
-cp timeline.log $TASKNAME
+cp pycharm.log $TASKNAME
 
 zip -r $ZIPNAME $TASKNAME
 
@@ -64,3 +63,6 @@ fi
 
 echo "Clean up..."
 rm -f $ZIPNAME
+
+## log
+python3 log_user_event_timeline.py submit
