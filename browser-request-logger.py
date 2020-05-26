@@ -22,7 +22,6 @@ class RequestsLogger:
     def done(self):
         self.s.close()
 
-
     def read_current_user_task(self):
         path = '/vagrant/.user_study_current_status'
         if not os.path.exists(path):

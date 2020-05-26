@@ -1,14 +1,33 @@
-from __future__ import print_function
-
+import json
+import requests
+import os
 import re
 import sys
 import threading
 import time
+from argparse import ArgumentParser
+from datetime import datetime
 
 from Xlib import XK, X, display, error  # noqa
 from Xlib.ext import record
 from Xlib.protocol import rq
 
+
+class ItemStore(object):
+    def __init__(self):
+        self.lock = threading.Lock()
+        self.items = []
+
+    def add(self, item):
+        with self.lock:
+            self.items.append(item)
+
+    def getAll(self):
+        with self.lock:
+            items, self.items = self.items, []
+        return items
+
+event_store = ItemStore()
 
 def print_err(*args, **kwargs):
     """ A wrapper for print() that uses stderr by default. """
@@ -112,6 +131,9 @@ class HookManager(threading.Thread):
 
     def printevent(self, event):
         print(event)
+
+    def add_to_queue(self, event):
+        event_store.add(event.to_dict())
 
     def HookKeyboard(self):
         # We don't need to do anything here anymore, since the default mask
@@ -337,6 +359,7 @@ class PyxHookKeyEvent(object):
         self.KeyID = KeyID
         self.ScanCode = ScanCode
         self.MessageName = MessageName
+        self.timestamp = int(time.time())
 
     def __str__(self):
         return '\n'.join((
@@ -350,8 +373,10 @@ class PyxHookKeyEvent(object):
             'MessageName: {s.MessageName}',
         )).format(s=self)
 
+    def to_dict(self):
+        return self.__dict__
 
-class PyxHookMouseEvent:
+class PyxHookMouseEvent(object):
     """This is the class that is returned with each key event.f
     It simply creates the variables below in the class.
     Window = The handle of the window.
@@ -368,6 +393,7 @@ class PyxHookMouseEvent:
         self.WindowProcName = WindowProcName
         self.Position = Position
         self.MessageName = MessageName
+        self.timestamp = int(time.time())
 
     def __str__(self):
         return '\n'.join((
@@ -377,9 +403,41 @@ class PyxHookMouseEvent:
             'MessageName: {s.MessageName}',
         )).format(s=self)
 
-import os
-from argparse import ArgumentParser
-from datetime import datetime
+    def to_dict(self):
+        return self.__dict__
+
+
+class ConsumerThread(threading.Thread):
+    def __init__(self):
+        super(ConsumerThread,self).__init__()
+
+    def read_current_user_task(self):
+        path = '/vagrant/.user_study_current_status'
+        if not os.path.exists(path):
+            return None, None
+        with open(path, "r", encoding='utf-8') as f:
+            lines = f.readlines()
+            userid = lines[0].strip()
+            task = lines[1].strip()
+        return userid, task
+
+
+    def run(self):
+        while True:
+            time.sleep(10)
+            userid, task = self.read_current_user_task()
+            items = event_store.getAll()
+            if items:
+                payload = {
+                    'events': items,
+                    'client_timestamp': int(time.time()),
+                    'userid': userid,
+                    'task': task
+                }
+                try:
+                    res = requests.post('http://moto.clab.cs.cmu.edu:8081/keylog', json=payload, timeout=3.0)
+                except:
+                    print('exception')
 
 
 
@@ -440,12 +498,15 @@ def main():
 
 if __name__ == '__main__':
     hm = HookManager()
+    ct = ConsumerThread()
     hm.HookKeyboard()
     hm.HookMouse()
-    hm.KeyDown = hm.printevent
-    hm.KeyUp = hm.printevent
-    hm.MouseAllButtonsDown = hm.printevent
-    hm.MouseAllButtonsUp = hm.printevent
+    hm.KeyDown = hm.add_to_queue
+    hm.KeyUp = hm.add_to_queue
+    hm.MouseAllButtonsDown = hm.add_to_queue
+    hm.MouseAllButtonsUp = hm.add_to_queue
     hm.start()
-    time.sleep(10)
-    hm.cancel()
+    ct.start()
+    # time.sleep(30)
+    # hm.cancel()
+

@@ -21,6 +21,8 @@ mitmdump -q --set stream_large_bodies=1 -s /vagrant/browser-request-logger.py &
 ## Retrieve task and configure & start pycharm
 python3 retrieve_assignments.py assign $1
 
+## start keylogger
+nohup python3 keylogger.py >/dev/null 2>&1 &
 
 ## log
 python3 log_user_event_timeline.py start

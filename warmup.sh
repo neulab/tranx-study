@@ -7,6 +7,6 @@ then
     pkill mitmdump
 fi
 echo "Starting web proxy."
-/usr/local/bin/mitmdump -q --set stream_large_bodies=1 &
+mitmdump -q --set stream_large_bodies=1 &
 
 python3 manual.py dummy helloworld 1
