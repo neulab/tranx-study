@@ -30,22 +30,21 @@ TIMESTAMP=`date +"%s"`
 
 ZIPNAME="${USERID}_${TASKNAME%/}_${TIMESTAMP}.zip"
 
+## stop web monitoring
 pkill mitmdump
 ## stop pycharm
 pkill java
+## stop keylogging
+if pgrep -f "keylogger.py" > /dev/null
+then
+    kill $(pgrep -f keylogger.py)
+fi
 
 sleep 1
 
 pushd $TASKNAME
 rm -f pycharm.log
 popd
-#
-#if [[ -f browser_requests.log ]]
-#then
-#    cp browser_requests.log $TASKNAME
-#else
-#    echo "Warning: browser_requests.log file not found!"
-#fi
 
 cp pycharm.log $TASKNAME
 
@@ -56,13 +55,16 @@ echo "Submitting $ZIPNAME"
 STATUS=`curl -s -o /dev/null -w "%{http_code}" -F "file=@${ZIPNAME}" http://moto.clab.cs.cmu.edu:8081/task_submission`
 
 if [ $STATUS -eq 200 ]; then
-    echo "Submission success! All done!"
+    echo "Submission success! Please complete the following post-task survey:"
+    python3 post_task_study
+    ## log
+    python3 log_user_event_timeline.py submit_success
 else
     echo "Submission failed! Check your UserID or Internet connection, or maybe you have already submitted this task."
+    ## log
+    python3 log_user_event_timeline.py submit_failed
 fi
 
 echo "Clean up..."
 rm -f $ZIPNAME
 
-## log
-python3 log_user_event_timeline.py submit

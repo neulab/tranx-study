@@ -14,6 +14,7 @@ then
     pkill mitmdump
 fi
 
+
 echo "Starting monitoring."
 mitmdump -q --set stream_large_bodies=1 -s /vagrant/browser-request-logger.py &
 
@@ -22,6 +23,11 @@ mitmdump -q --set stream_large_bodies=1 -s /vagrant/browser-request-logger.py &
 python3 retrieve_assignments.py assign $1
 
 ## start keylogger
+if pgrep -f "keylogger.py" > /dev/null
+then
+    echo "Keylogger already running? Killing."
+    kill $(pgrep -f keylogger.py)
+fi
 nohup python3 keylogger.py >/dev/null 2>&1 &
 
 ## log
