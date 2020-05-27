@@ -56,7 +56,7 @@ STATUS=`curl -s -o /dev/null -w "%{http_code}" -F "file=@${ZIPNAME}" http://moto
 
 if [ $STATUS -eq 200 ]; then
     echo "Submission success! Please complete the following post-task survey:"
-    python3 post_task_study
+    python3 post_task_study.py
     ## log
     python3 log_user_event_timeline.py submit_success
 else
