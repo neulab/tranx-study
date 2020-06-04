@@ -9,6 +9,12 @@ In the process directory or file names containing dates are renamed such that th
 $ python main.py
 $ ls data
  Photos_2019-03-22   ccc.txt   data-02-01-1994.txt  'mybook at 2020-04-01.txt'
+$ ls data/Photos_2019-03-22
+Personal    '2019-03-21 22.30.png'
 $ ls output
  Photos_22-03-2019   ccc.txt   data-02-01-1994.txt  'mybook at 01-04-2020.txt'
+$ ls output/Photos_22-03-2019
+Personal    '21-03-2019 22.30.png'
 ```
+
+You can also check out directory `example_output/`.
