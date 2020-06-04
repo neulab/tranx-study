@@ -13,7 +13,13 @@ Overall, there are 7 different categories as in task1-n to task7-n:
 
 
 ## Instructions
-We provision Linux desktop with PyCharm IDE, required Python environment for all the tasks and a Google Chrome browser installed (although not encouraged to use unless absolutely necessary).
+The goal of the user study is to understand how a code generation and retrieval plugin in IDE could affect the development.
+
+We provision Linux desktop with PyCharm IDE, required Python environment for all the tasks and a Google Chrome browser installed.
+
+Note that the plugin will be available for you to use only on part of your assigned tasks for controlled study.
+The plugin is not perfect, so try to use the plugin when you have a question, but feel free to use the web browser if the plugin is not helpful.
+
 To setup and perform the user study, please follow the below steps to start a VM pre-provisioned with required environments and use PyCharm IDE.
 
 ### 1. Installation and Startup
