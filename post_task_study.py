@@ -31,11 +31,10 @@ if __name__ == '__main__':
             "How would you evaluate your performance on the task? (1: very poor to 5: very good)",
             choices=list(map(str,range(1,6)))).ask()
         results['efficiency'] = questionary.select(
-            "Do you think the plugin helped your efficiency, time-wise? (1: not at all to 5: very much)",
+            "How do you think the plugin impacted your efficiency timewise, if at all? (1: hindered significantly to 5: helped significantly)",
             choices=list(map(str,range(1,6)))).ask()
         results['quality'] = questionary.select(
-            "Do you think the plugin helped your quality of life, with respect to ease of coding, "
-            "concentration, etc.? (1: not at all to 5: very much)",
+            "How do you think the plugin impacted your quality of life, with respect to ease of coding, concentration, etc., if at all? (1: hindered significantly to 5: helped significantly)",
             choices=list(map(str,range(1,6)))).ask()
         results['help'] = questionary.select(
             "How often did you need to look for help during the task outside of the plugin, "
