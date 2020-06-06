@@ -1,8 +1,8 @@
 # Task Description
 
-After running `python main.py`, the program extracts required information from the HTML page `https://frankxfz.me/`. 
+After running `python main.py`, the program extracts required information from the HTML page `https://frankxfz.me/snapshot.html`. 
 
-Specifically, save all the hyperlink URLs (one URL per line) to `output/urls.txt`, all the bold text phrases (one per line) to `output/bold.txt`, all the italics text phrases (one per line) to `output/italics.txt`, and all `red (#FF0000)` colored text phrases (one per line) into `output/red.txt`
+Specifically, save all the valid hyperlink URLs to outside of the site (one URL per line) to `output/urls.txt`, all the bold text phrases (one per line) to `output/bold.txt`, all the italics text phrases (one per line) to `output/italics.txt`, and all `red (#FF0000)` colored text phrases (one per line) into `output/red.txt`
 
 
 # Example Output
@@ -24,6 +24,7 @@ Frank F. Xu
 
 $ less output/italics.txt
 Indirect Supervision for Information Extraction
+a two-way bridge
 Proceedings of 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)
 ...
 
@@ -32,3 +33,5 @@ $ less output/red.txt
 (2nd place in the shared task)
 ...
 ```
+
+You can also check out directory `example_output/`.
