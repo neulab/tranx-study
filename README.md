@@ -61,10 +61,12 @@ In a terminal in the VM:
 cd vagrant
 ./submit.sh
 ```
-The script will automatically pack your work and upload to our server for the user study evaluations. If everything goes smoothly, you should see a message `Submission success! All done!`. In case you see any errors, probably you have already submitted, or something else is wrong.
+The script will automatically pack your work and upload to our server for the user study evaluations. If everything goes smoothly, you should see a message `Submission success! All done!`, followed by a post-task survey for our evaluation.
+In case you see any errors, probably you have already submitted, or something else is wrong.
 
 Once you have submitted your current assigned task, you should go to step 3 to start a new task assigned to you.
 If it says there's no task for you, then you are all set! Congratulations!
+After completing all tasks, please take a post-study survey to share your thoughts for our evaluation.
 
 ### 5. Useful Scripts
 - To check your assigned tasks and their configurations, your current task status, etc., run in a terminal in the VM:
