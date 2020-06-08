@@ -87,7 +87,10 @@ if __name__ == '__main__':
             set_current_user_task(userid, task)
             subprocess.Popen(["/opt/pycharm-community-2020.1.1/bin/pycharm.sh /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)
         else:
-            print("You have completed all your assigned task. Thank you! You can shutdown the VM now.")
+            print("You have completed all your assigned task. Thank you!")
+            print("Please complete the post-study survey to share your evaluation at link:")
+            print("https://forms.gle/DYTW8QW4Ggjs5YwM8")
+
     elif op == 'resume':
         usi, task = read_current_user_task()
         subprocess.Popen(["/opt/pycharm-community-2020.1.1/bin/pycharm.sh /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)
