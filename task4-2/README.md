@@ -19,8 +19,10 @@ China.png   India.png
 ...
 $ less output/populations.csv
 country,population
-China,1402335080
-India,1361382447	
+China,1402973960
+India,1363153843
 ...
 
 ```
+
+You can also check out directory `example_output/`.
