@@ -6,11 +6,10 @@ Overall, there are 7 different categories as in task1-n to task7-n:
 1. Basic Python
 2. File 
 3. OS
-4. Web Scraping (requests & beautifulsoup libraries)
-5. Web Server & Client (requests, flask or django libraries)
-6. Data Analysis (pandas library) & Machine Learning (sklearn library)
-7. Data Visualization (matplotlib or seaborn library)
-
+4. Web Scraping (e.g. `beautifulsoup`)
+5. Web Server & Client (e.g. `requests`, `flask`, `django`)
+6. Data Analysis & Machine Learning (e.g. `pandas`, `sklearn`)
+7. Data Visualization (e.g. `matplotlib`)
 
 ## Instructions
 The goal of the user study is to understand how a code generation and retrieval plugin in IDE could affect the development.
