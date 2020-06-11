@@ -23,6 +23,7 @@ def upload_survey(results):
 
 
 if __name__ == '__main__':
+    print("Please answer the following questions based on your experience with the task you just completed.")
     if read_plugin_status():
         ## used plugin
         results = {'use_plugin': 1}
@@ -55,7 +56,7 @@ if __name__ == '__main__':
             "How would you evaluate your performance on the task? (1: very poor to 5: very good)",
             choices=list(map(str,range(1,6)))).ask()
         results['help'] = questionary.select(
-            "How often did you need to look for help during the task outside of the plugin, "
+            "How often did you need to look for help during the task, "
             "including web search, looking up API references, etc.?  (1: not at all to 5: very often)",
             choices=list(map(str,range(1,6)))).ask()
 

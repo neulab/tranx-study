@@ -1,13 +1,13 @@
 # Task Description
 
-After running `python main.py`, the program trim the heading and trailing whitespaces and blank lines for all text files under `data`, normalize newlines to `\n` (LF), and convert text files from encoding `ISO-8859-15` to encoding `UTF-8`.
+After running `python3 main.py`, the program trim the heading and trailing whitespaces and blank lines for all text files under `data`, normalize newlines to `\n` (LF), and convert text files from encoding `ISO-8859-15` to encoding `UTF-8`.
 For other file types, do nothing.
 Save everything to `output` directory.
 
 # Example Output
 
 ```
-$ python main.py
+$ python3 main.py
 $ ls output
 aaa.txt  bbb.txt  ccc.txt  ddd.png
 

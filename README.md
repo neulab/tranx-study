@@ -14,7 +14,7 @@ Overall, there are 7 different categories as in task1-n to task7-n:
 ## Instructions
 The goal of the user study is to understand how a code generation and retrieval plugin in IDE could affect the development.
 
-We provision Linux desktop with PyCharm IDE, required Python environment for all the tasks and a Google Chrome browser installed.
+We provision Linux desktop with PyCharm IDE, required Python environment for all the tasks and a Firefox browser installed.
 
 Note that the plugin will be available for you to use only on part of your assigned tasks for controlled study.
 The plugin is not perfect, so try to use the plugin when you have a question, but feel free to use the web browser if the plugin is not helpful.
@@ -49,7 +49,7 @@ Starting from this stage, as you start to complete your task, you should maximiz
     ```
     This will retrieve the configuration of one of your assigned task, and automatically start the IDE.
 - To start coding the task, please first read the instructions in the `README` file inside the task directory, and then write your program with the `main.py` file. Mac users should use `Control+Options+G` to ask a question with the plugin and `Options+G` to upload edits. Windows/Linux users should use `Ctrl+Alt+G` and `Alt+G` respectively. For more details about the usage of the plugin, please check out [this guide](https://github.com/neulab/tranX-plugin#usage) first.
-- To perform web search on those questions related to the task but not appropriate for the purpose of the plugin (e.g. you may want to know if UTC is equivalent to GMT) as it is not directly related to coding itself, you should use the Chrome web browser inside the VM. It can be opened from the bottom dock inside the VM. Note that your web browsing activities will be logged inside the VM for user study purposes, so please DO NOT access any sensitive information in the browser.
+- To perform web search on those questions related to the task but not appropriate for the purpose of the plugin (e.g. you may want to know if UTC is equivalent to GMT) as it is not directly related to coding itself, you should use the web browser inside the VM. It can be opened from the bottom dock inside the VM. Note that your web browsing activities will be logged inside the VM for user study purposes, so please DO NOT access any sensitive information in the browser.
 - Although we encourage you to complete one task in one sitting, if you need to take a break during the task, please run `./pause.sh` and `./resume.sh` under `/vagrant/` to pause and resume the task respectively. Note that the behaviors will be recorded.
 - If you would like to use libraries that are not preinstalled, please install using `pip3 install package_name` using the terminal inside the VM.
 
@@ -79,9 +79,13 @@ After completing all tasks, please take a post-study survey to share your though
     ./manual-start-task.sh your_user_id task_name if_use_plugin(0 or 1)
     ```
 
+## FAQs
+### I cannot access Internet inside the VM browser.
+If you haven't executed `warmup.sh` or `start-task.sh` then it is expected. We route network access through a proxy. Please first start doing a task and then you will be able to access Internet.
+
 ## Data Collected
 - Your interaction with the plugin in PyCharm IDE, including queries and edits.
-- Your web search/browsing activities inside the VM's Chrome.
+- Your web search/browsing activities inside the VM's Firefox.
 - Your completed task.
 
 

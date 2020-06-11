@@ -11,7 +11,7 @@ Some important API usages are:
 
 
 
-The client is run through `python main.py <additional arguments>`, where `<additional arguments>` represents different interactions with the blog APIs, and will be defined below.
+The client is run through `python3 main.py <additional arguments>`, where `<additional arguments>` represents different interactions with the blog APIs, and will be defined below.
 If the arguments provided are illegal, please print `Arguments Error!` and exit the program.
 
 - `read_user_posts <userid>`: prints all the posts published by given user ID, in the following format:
@@ -135,22 +135,22 @@ For all the above scenarios, if the given ID is not found through the API, pleas
 # Example Output
 
 ```
-$ python main.py aaa
+$ python3 main.py aaa
 Arguments Error!
 
-$ python main.py read_user_posts 1
+$ python3 main.py read_user_posts 1
 (prints out information as described above)
 
-$ python main.py read_post_comments 10
+$ python3 main.py read_post_comments 10
 (prints out information as described above)
 
-$ python main.py read_user_posts_comments 2
+$ python3 main.py read_user_posts_comments 2
 (prints out information as described above)
 
-$ python main.py read_user_posts_comments 10000
+$ python3 main.py read_user_posts_comments 10000
 No results found!
 
-$ python main.py read_post_comments -2131
+$ python3 main.py read_post_comments -2131
 No results found!
 
 ```

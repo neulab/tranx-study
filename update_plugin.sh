@@ -6,4 +6,4 @@ unzip -o -q tranx_plugin-SNAPSHOT.zip -d /home/vagrant/.local/share/JetBrains/Py
 rm -f tranx_plugin-SNAPSHOT.zip
 
 ## for post-task survey
-pip3 install questionnaire
+# pip3 install questionary

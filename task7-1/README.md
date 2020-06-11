@@ -1,6 +1,6 @@
 # Task Description
 
-By running `python main.py`, draw a scatter plot of the data in `shampoo.csv` and save it to `shampoo.png`.
+By running `python3 main.py`, draw a scatter plot of the data in `shampoo.csv` and save it to `shampoo.png`.
 The plot size should be with a size of 10 inches wide and 6 inches high. 
 The `Date` column is the x axis (some dates are missing from the data and in the plot the x axis should be completed with all missing dates without sales data). 
 The date string shown on the plot should be in format (YYYY-MM-DD).
@@ -11,7 +11,7 @@ The scatter color should be in `purple`.
 # Example Output
 
 ```
-$ python main.py
+$ python3 main.py
 $ ls .
 shampoo.png ...
 

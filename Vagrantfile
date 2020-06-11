@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "frankxu2004/tranx-user-study"
-  config.vm.box_version = "1.4.0"
+  config.vm.box_version = "1.5.0"
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
@@ -53,7 +53,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = true
-    vb.cpus = 4
+    vb.cpus = 2
     # Customize the amount of memory on the VM:
     vb.memory = "2048"
     vb.customize [ "modifyvm", :id, "--uart1", "0x3F8", "4" ]

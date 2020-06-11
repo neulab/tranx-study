@@ -2,7 +2,7 @@
 
 You are expected to perform data analysis on automobile data listed in `automobile_data.csv`. Note that there might be some missing data in some columns, and in this case, please drop the whole missing data rows.
 
-After running `python main.py` the program should output several `.csv` files to `output` directory as described below:
+After running `python3 main.py` the program should output several `.csv` files to `output` directory as described below:
 In cases where some statistics could not be computed (NaN), the cell should be left in blank in the CSV file.
 
 1. `output/price_by_company.csv`: contains 5 columns `company`, `avg_price`, `max_price`, `min_price`, `stddev_price`, `total_count`, representing company name, the average, maximum, minimum and standard deviation of the price, as well as the count of all the cars manufactured by this company. The rows should be sorted from the highest average price to the lowest. Note that `avg_price`, `max_price`, `min_price`, `stddev_price` should show 2 decimals. 
@@ -12,7 +12,7 @@ In cases where some statistics could not be computed (NaN), the cell should be l
 # Example Output
 
 ```
-$ python main.py
+$ python3 main.py
 
 $ ls output/
 price_by_company.csv  price_by_horsepower.csv  for_john.csv

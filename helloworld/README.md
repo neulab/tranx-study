@@ -11,6 +11,6 @@ For the purpose of learning the IDE and the plugin, you should try asking the pl
 # Example Output
 
 ```
-$ python main.py
+$ python3 main.py
 Hello World!
 ```

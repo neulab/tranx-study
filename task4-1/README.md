@@ -1,6 +1,6 @@
 # Task Description
 
-After running `python main.py`, the program extracts required information from the HTML page `https://frankxfz.me/snapshot.html`. 
+After running `python3 main.py`, the program extracts required information from the HTML page `https://frankxfz.me/snapshot.html`. 
 
 Specifically, save all the valid hyperlink URLs to outside of the site (one URL per line) to `output/urls.txt`, all the bold text phrases (one per line) to `output/bold.txt`, all the italics text phrases (one per line) to `output/italics.txt`, and all `red (#FF0000)` colored text phrases (one per line) into `output/red.txt`
 
@@ -8,7 +8,7 @@ Specifically, save all the valid hyperlink URLs to outside of the site (one URL 
 # Example Output
 
 ```
-$ python main.py
+$ python3 main.py
 $ ls output
 urls.txt  bold.txt  italics.txt  red.txt 
 

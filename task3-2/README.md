@@ -1,6 +1,6 @@
 # Task Description
 
-After running `python main.py`, the program looks at all the subdirectories in the `data` directory. 
+After running `python3 main.py`, the program looks at all the subdirectories in the `data` directory. 
 
 In the process, the directories with `.txt` files in it are processed by concatenating all `.txt` files into one `.txt` file in `output` directory, ordered in alphanumeric order of the filenames, and named by the directory name.
 
@@ -13,7 +13,7 @@ For directories without `.txt` or `.json` files, ignore them.
 # Example Output
 
 ```
-$ python main.py
+$ python3 main.py
 $ ls data
 filelist  roster  todo
 $ ls output

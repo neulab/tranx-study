@@ -2,7 +2,7 @@
 
 You are expected to write an HTTP server that listens to `127.0.0.1 (localhost)` on port `8000`.
 
-The server should be started by running `python main.py`.
+The server should be started by running `python3 main.py`.
 
 The server exposes an HTTP GET API endpoint at `http://localhost:8000/query`, where the user should supply two query parameters: `email` and `ip`.
 The API will query the person data listed in the file `data.csv`, and find the entry with both the queried email address and IP address, and respond with the first name, last name and gender in the following JSON format:
@@ -21,7 +21,7 @@ If no matching record is found in the data file given provided query parameters,
 # Example Output
 
 ```
-$ python main.py
+$ python3 main.py
 (running, open another terminal session)
 $ curl -G -v "http://localhost:8000/query" --data-urlencode "email=mmackettrick0@latimes.com" --data-urlencode "ip=233.43.85.181"
 *   Trying localhost...
