@@ -22,7 +22,7 @@ The plugin is not perfect, so try to use the plugin when you have a question, bu
 To setup and perform the user study, please follow the below steps to start a VM pre-provisioned with required environments and use PyCharm IDE.
 
 ### 1. Installation and Startup
-- Install latest version (6.1.4) of [VirtualBox](https://www.virtualbox.org/wiki/Downloads), available for all platforms. (For MacOS users, in case you encounter error during installation, please check out [this article](https://medium.com/@DMeechan/fixing-the-installation-failed-virtualbox-error-on-mac-high-sierra-7c421362b5b5).)
+- Install 6.1.10 version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads), available for all platforms. (For MacOS users, in case you encounter error during installation, please check out [this article](https://medium.com/@DMeechan/fixing-the-installation-failed-virtualbox-error-on-mac-high-sierra-7c421362b5b5).)
 - Install latest version of [Vagrant](https://www.vagrantup.com/downloads.html), an automatic VM provisioning tool.
 - `git clone https://github.com/frankxu2004/tranx-study.git`
 - `cd tranx-study`
