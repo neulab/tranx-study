@@ -7,10 +7,6 @@ then
     exit 1
 fi
 
-#if [ "$#" -ne 2 ]; then
-#    echo "Please run '$0 <userid> <task>' to submit! <userid> is your designated user ID and <task> is the name of the task you want to submit, which is the subdirectory name for each, e.g. 'task1-2'."
-#    exit 1
-#fi
 readarray -t line < $STUDY_CONFIG_FILE
 
 USERID=${line[0]}

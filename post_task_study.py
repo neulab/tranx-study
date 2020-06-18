@@ -4,6 +4,7 @@ import questionary
 import requests
 from retrieve_assignments import read_current_user_task
 
+
 def read_plugin_status():
     path = '/home/vagrant/.config/JetBrains/PyCharmCE2020.1/disabled_plugins.txt'
     if not os.path.exists(path):
@@ -13,6 +14,7 @@ def read_plugin_status():
             if line.strip("\n") == "edu.cmu.tranx.tranx_plugin":
                 return False
     return True
+
 
 def upload_survey(results):
     usi, task = read_current_user_task()
@@ -25,39 +27,31 @@ def upload_survey(results):
 if __name__ == '__main__':
     print("Please answer the following questions based on your experience with the task you just completed.")
     if read_plugin_status():
-        ## used plugin
-        results = {'use_plugin': 1}
-        results['difficulty'] = questionary.select(
+        # used plugin
+        results = {'use_plugin': 1, 'difficulty': questionary.select(
             "How difficult did you feel the task was? (1: very easy to 5: very difficult)",
-            choices=list(map(str,range(1,6)))).ask()
-        results['performance'] = questionary.select(
+            choices=list(map(str, range(1, 6)))).ask(), 'performance': questionary.select(
             "How would you evaluate your performance on the task? (1: very poor to 5: very good)",
-            choices=list(map(str,range(1,6)))).ask()
-        results['efficiency'] = questionary.select(
+            choices=list(map(str, range(1, 6)))).ask(), 'efficiency': questionary.select(
             "How do you think the plugin impacted your efficiency timewise, if at all? "
             "(1: hindered significantly to 5: helped significantly)",
-            choices=list(map(str,range(1,6)))).ask()
-        results['quality'] = questionary.select(
+            choices=list(map(str, range(1, 6)))).ask(), 'quality': questionary.select(
             "How do you think the plugin impacted your quality of life, with respect to ease of coding, "
             "concentration, etc., if at all? (1: hindered significantly to 5: helped significantly)",
-            choices=list(map(str,range(1,6)))).ask()
-        results['help'] = questionary.select(
+            choices=list(map(str, range(1, 6)))).ask(), 'help': questionary.select(
             "How often did you need to look for help during the task outside of the plugin, "
             "including web search, looking up API references, etc.?  (1: not at all to 5: very often)",
-            choices=list(map(str,range(1,6)))).ask()
+            choices=list(map(str, range(1, 6)))).ask()}
 
     else:
-        ## not used plugin
-        results = {'use_plugin': 0}
-        results['difficulty'] = questionary.select(
+        # not used plugin
+        results = {'use_plugin': 0, 'difficulty': questionary.select(
             "How difficult did you feel the task was? (1: very easy to 5: very difficult)",
-            choices=list(map(str,range(1,6)))).ask()
-        results['performance'] = questionary.select(
+            choices=list(map(str, range(1, 6)))).ask(), 'performance': questionary.select(
             "How would you evaluate your performance on the task? (1: very poor to 5: very good)",
-            choices=list(map(str,range(1,6)))).ask()
-        results['help'] = questionary.select(
+            choices=list(map(str, range(1, 6)))).ask(), 'help': questionary.select(
             "How often did you need to look for help during the task, "
             "including web search, looking up API references, etc.?  (1: not at all to 5: very often)",
-            choices=list(map(str,range(1,6)))).ask()
+            choices=list(map(str, range(1, 6)))).ask()}
 
     upload_survey(results)

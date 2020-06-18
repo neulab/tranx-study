@@ -4,11 +4,9 @@ import time
 
 import requests
 
-LOG_FILE_PATH = "/vagrant/browser_requests.log"
-
 """
 RequestsLogger is an addon for mitmdump that logs information about request
-and response pairs to file. As it does not do any changes to the body of the
+and response pairs to server. As it does not do any changes to the body of the
 request/response, I advise to run it with `--set stream_large_bodies=1`,
 which enables streaming of the request/response body.
 """

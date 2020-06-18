@@ -27,7 +27,9 @@ class ItemStore(object):
             items, self.items = self.items, []
         return items
 
+
 event_store = ItemStore()
+
 
 def print_err(*args, **kwargs):
     """ A wrapper for print() that uses stderr by default. """
@@ -48,6 +50,7 @@ class HookManager(threading.Thread):
         anything. It hands the function an argument that is the
         PyxHookKeyEvent class.
     """
+
     def __init__(self):
         threading.Thread.__init__(self)
         self.finished = threading.Event()
@@ -376,6 +379,7 @@ class PyxHookKeyEvent(object):
     def to_dict(self):
         return self.__dict__
 
+
 class PyxHookMouseEvent(object):
     """This is the class that is returned with each key event.f
     It simply creates the variables below in the class.
@@ -407,25 +411,25 @@ class PyxHookMouseEvent(object):
         return self.__dict__
 
 
+def read_current_user_task():
+    path = '/vagrant/.user_study_current_status'
+    if not os.path.exists(path):
+        return None, None
+    with open(path, "r", encoding='utf-8') as f:
+        lines = f.readlines()
+        userid = lines[0].strip()
+        task = lines[1].strip()
+    return userid, task
+
+
 class ConsumerThread(threading.Thread):
     def __init__(self):
-        super(ConsumerThread,self).__init__()
-
-    def read_current_user_task(self):
-        path = '/vagrant/.user_study_current_status'
-        if not os.path.exists(path):
-            return None, None
-        with open(path, "r", encoding='utf-8') as f:
-            lines = f.readlines()
-            userid = lines[0].strip()
-            task = lines[1].strip()
-        return userid, task
-
+        super(ConsumerThread, self).__init__()
 
     def run(self):
         while True:
             time.sleep(10)
-            userid, task = self.read_current_user_task()
+            userid, task = read_current_user_task()
             items = event_store.getAll()
             if items:
                 payload = {
@@ -440,25 +444,24 @@ class ConsumerThread(threading.Thread):
                     print('exception')
 
 
-
 def main():
     ts = datetime.now().strftime("%d-%m-%Y_%H:%M:%S")
     parser = ArgumentParser(description='A simple keylogger for Linux.')
     parser.add_argument(
-            '--log-file',
-            default=os.path.join(os.getcwd(), 'keys-' + str(ts) + '.log'),
-            help='Save the output in this file.',
-            )
+        '--log-file',
+        default=os.path.join(os.getcwd(), 'keys-' + str(ts) + '.log'),
+        help='Save the output in this file.',
+    )
     parser.add_argument(
-            '--clean-file',
-            action='store_true',
-            default=False,
-            help='Clear the log file on startup.Default is No',
-            )
+        '--clean-file',
+        action='store_true',
+        default=False,
+        help='Clear the log file on startup.Default is No',
+    )
     parser.add_argument(
-            '--cancel-key',
-            help='A single key that use as the cancel key, Default is ` (backtick)',
-            )
+        '--cancel-key',
+        help='A single key that use as the cancel key, Default is ` (backtick)',
+    )
 
     args = parser.parse_args()
 
@@ -471,7 +474,7 @@ def main():
             # TODO: log with logging module
             pass
 
-    cancel_key = args.cancel_key[0] if args.cancel_key else  '`'
+    cancel_key = args.cancel_key[0] if args.cancel_key else '`'
 
     def OnKeyPress(event):
         with open(log_file, 'a') as f:
@@ -496,6 +499,7 @@ def main():
         with open(log_file, 'a') as f:
             f.write('\n{}'.format(msg))
 
+
 if __name__ == '__main__':
     hm = HookManager()
     ct = ConsumerThread()
@@ -503,10 +507,9 @@ if __name__ == '__main__':
     hm.HookMouse()
     hm.KeyDown = hm.add_to_queue
     hm.KeyUp = hm.add_to_queue
-    hm.MouseAllButtonsDown = hm.add_to_queue
-    hm.MouseAllButtonsUp = hm.add_to_queue
+    # hm.MouseAllButtonsDown = hm.add_to_queue
+    # hm.MouseAllButtonsUp = hm.add_to_queue
     hm.start()
     ct.start()
     # time.sleep(30)
     # hm.cancel()
-
