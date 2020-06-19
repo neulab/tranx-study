@@ -1,7 +1,7 @@
 import time
 import requests
 import sys
-from retrieve_assignments import read_current_user_task
+from utils import read_current_user_task
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:

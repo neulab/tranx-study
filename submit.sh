@@ -28,8 +28,14 @@ ZIPNAME="${USERID}_${TASKNAME%/}_${TIMESTAMP}.zip"
 
 ## stop web monitoring
 pkill mitmdump
-## stop pycharm
-pkill java
+
+## Stop any open IDEs
+if pgrep -x "java" > /dev/null
+then
+    echo "IDE running? Killing."
+    pkill java
+fi
+
 ## stop keylogging
 if pgrep -f "keylogger.py" > /dev/null
 then
@@ -44,14 +50,15 @@ popd
 
 cp pycharm.log $TASKNAME
 
-zip -r $ZIPNAME $TASKNAME
+zip -qr $ZIPNAME $TASKNAME
 
 echo "Submitting $ZIPNAME"
 
 STATUS=`curl -s -o /dev/null -w "%{http_code}" -F "file=@${ZIPNAME}" http://moto.clab.cs.cmu.edu:8081/task_submission`
 
 if [ $STATUS -eq 200 ]; then
-    echo "Submission success! Please complete the following post-task survey:"
+    echo "Submission success!"
+    echo "Please complete the following post-task survey:"
     python3 post_task_study.py
     ## log
     python3 log_user_event_timeline.py submit_success

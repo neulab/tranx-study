@@ -1,5 +1,12 @@
 #!/bin/bash
 
+## Stop any open IDEs
+if pgrep -x "java" > /dev/null
+then
+    echo "IDE already running? Killing."
+    pkill java
+fi
+
 # enable web during the warmup
 if pgrep -x "mitmdump" > /dev/null
 then
@@ -7,7 +14,9 @@ then
     pkill mitmdump
 fi
 echo "Starting web proxy."
-mitmdump -q --set stream_large_bodies=1 &
+mitmdump -q --set stream_large_bodies=1 >/dev/null 2>&1 &
+
+python3 manual.py dummy helloworld 1
 
 ## start keylogger
 if pgrep -f "keylogger.py" > /dev/null
@@ -16,5 +25,3 @@ then
     kill $(pgrep -f keylogger.py)
 fi
 nohup python3 keylogger.py >/dev/null 2>&1 &
-
-python3 manual.py dummy helloworld 1

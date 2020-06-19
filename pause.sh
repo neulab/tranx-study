@@ -4,12 +4,14 @@
 if pgrep -x "mitmdump" > /dev/null
 then
     pkill mitmdump
-else
-    echo "Monitoring not started, why pause? Pausing anyways."
 fi
 
-## stop pycharm
-pkill java
+## Stop any open IDEs
+if pgrep -x "java" > /dev/null
+then
+    echo "IDE already running? Killing."
+    pkill java
+fi
 
 ## stop keylogging
 if pgrep -f "keylogger.py" > /dev/null

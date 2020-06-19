@@ -34,7 +34,7 @@ To setup and perform the user study, please follow the below steps to start a VM
 Starting from this stage, as you start to complete your task, you should maximize or full-screen the VM. All activities including coding in the IDE, web search, etc., should be done within the VM.
 - In a terminal in the VM:
     ```
-    cd vagrant
+    cd /vagrant
     ./warmup.sh
     ```
     This will start the IDE and enable web browsing to test it out.
@@ -44,7 +44,7 @@ Starting from this stage, as you start to complete your task, you should maximiz
 ### 3. Completing Task inside VM
 - In a terminal in the VM:
     ```
-    cd vagrant
+    cd /vagrant
     ./start-task.sh your_user_id
     ```
     This will retrieve the configuration of one of your assigned task, and automatically start the IDE.
@@ -57,7 +57,7 @@ Starting from this stage, as you start to complete your task, you should maximiz
 After you have finished the coding and debugging, please submit your work on the task! To do so, please do the following steps inside the VM:
 In a terminal in the VM:
 ```
-cd vagrant
+cd /vagrant
 ./submit.sh
 ```
 The script will automatically pack your work and upload to our server for the user study evaluations. If everything goes smoothly, you should see a message `Submission success! All done!`, followed by a post-task survey for our evaluation.
@@ -70,12 +70,12 @@ After completing all tasks, please take a post-study survey to share your though
 ### 5. Useful Scripts
 - To check your assigned tasks and their configurations, your current task status, etc., run in a terminal in the VM:
     ```
-    cd vagrant
+    cd /vagrant
     ./status.sh your_user_id
     ```
 - To manually start a task with specific configuration, run in a terminal in the VM:
     ```
-    cd vagrant
+    cd /vagrant
     ./manual-start-task.sh your_user_id task_name if_use_plugin(0 or 1)
     ```
 

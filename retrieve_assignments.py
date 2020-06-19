@@ -1,55 +1,10 @@
 import sys
-import os
 import subprocess
-import xml.etree.ElementTree as ET
 
 import requests
 
-def update_plugin_config(userid):
-    path = '/home/vagrant/.config/JetBrains/PyCharmCE2020.1/options/TranXConfig.xml'
-    tree = ET.parse(path)
-    root = tree.getroot()
-    for elem in root.iter('option'):
-        if elem.get('name') == 'userName':
-            elem.set('value', userid)
-
-    tree.write(path)
-
-
-def switch_plugin_on():
-    path = '/home/vagrant/.config/JetBrains/PyCharmCE2020.1/disabled_plugins.txt'
-    with open(path, "r", encoding='utf-8') as f:
-        lines = f.readlines()
-    with open(path, "w", encoding='utf-8') as f:
-        for line in lines:
-            if line.strip("\n") != "edu.cmu.tranx.tranx_plugin":
-                f.write(line)
-
-def switch_plugin_off():
-    path = '/home/vagrant/.config/JetBrains/PyCharmCE2020.1/disabled_plugins.txt'
-    with open(path, "r", encoding='utf-8') as f:
-        lines = f.readlines()
-    with open(path, "w", encoding='utf-8') as f:
-        for line in lines:
-            if line.strip("\n") != "edu.cmu.tranx.tranx_plugin":
-                f.write(line)
-        f.write("edu.cmu.tranx.tranx_plugin\n")
-
-def set_current_user_task(userid, task):
-    path = '/vagrant/.user_study_current_status'
-    with open(path, "w", encoding='utf-8') as f:
-        f.write(userid + '\n')
-        f.write(task + '\n')
-
-def read_current_user_task():
-    path = '/vagrant/.user_study_current_status'
-    if not os.path.exists(path):
-        return None, None
-    with open(path, "r", encoding='utf-8') as f:
-        lines = f.readlines()
-        userid = lines[0].strip()
-        task = lines[1].strip()
-    return userid, task
+from utils import update_plugin_config, switch_plugin_on, switch_plugin_off, set_current_user_task, \
+    read_current_user_task
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
@@ -64,12 +19,19 @@ if __name__ == '__main__':
             print("No assignments found for user:", userid)
         else:
             usi, task = read_current_user_task()
+            assert usi == userid, "ERROR: Inconsistent userid"
             print("Showing task assignment status for user:", userid)
-            if task is not None:
-                assert usi == userid, "ERROR: Inconsistent userid"
-                print("The user is currently working on :", task)
+
+            current_task_submitted = 0
             for task_status in user_status:
-                print(task_status['task'] + '\tUse plugin? ' + str(task_status['use_plugin']) + '\tCompleted? ' + str(task_status['completion_status']))
+                if task_status['task'] == task and task_status['completion_status']:
+                    current_task_submitted = 1
+                print(task_status['task'] + '\tUse plugin? ' + str(task_status['use_plugin']) +
+                      '\tCompleted? ' + str(task_status['completion_status']))
+            if task is not None and not current_task_submitted:
+                print("The user is currently working on :", task)
+            else:
+                print("The user is currently working on nothing, please './start-task.sh userid' to get a new task.")
 
     elif op == 'assign':
         response = requests.post('http://moto.clab.cs.cmu.edu:8081/assign_task', json={'userid': userid})
@@ -90,10 +52,14 @@ if __name__ == '__main__':
             print("You have completed all your assigned task. Thank you!")
             print("Please complete the post-study survey to share your evaluation at link:")
             print("https://forms.gle/DYTW8QW4Ggjs5YwM8")
+            exit(1)
 
     elif op == 'resume':
         usi, task = read_current_user_task()
-        subprocess.Popen(["/opt/pycharm-community-2020.1.1/bin/pycharm.sh /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)
-
+        if task is not None:
+            subprocess.Popen(["/opt/pycharm-community-2020.1.1/bin/pycharm.sh /vagrant/" + task + " >pycharm.log 2>&1"], shell=True)
+        else:
+            print("No task currently running")
+            exit(1)
     else:
         print("Not a valid opname")

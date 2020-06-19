@@ -12,6 +12,8 @@ from Xlib import XK, X, display, error  # noqa
 from Xlib.ext import record
 from Xlib.protocol import rq
 
+from utils import read_current_user_task
+
 
 class ItemStore(object):
     def __init__(self):
@@ -409,17 +411,6 @@ class PyxHookMouseEvent(object):
 
     def to_dict(self):
         return self.__dict__
-
-
-def read_current_user_task():
-    path = '/vagrant/.user_study_current_status'
-    if not os.path.exists(path):
-        return None, None
-    with open(path, "r", encoding='utf-8') as f:
-        lines = f.readlines()
-        userid = lines[0].strip()
-        task = lines[1].strip()
-    return userid, task
 
 
 class ConsumerThread(threading.Thread):

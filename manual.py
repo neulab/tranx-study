@@ -1,4 +1,6 @@
-from retrieve_assignments import *
+import sys
+import subprocess
+from utils import update_plugin_config, switch_plugin_on, switch_plugin_off, set_current_user_task
 
 if __name__ == '__main__':
     if len(sys.argv) != 4:
