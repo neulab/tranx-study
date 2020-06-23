@@ -36,13 +36,14 @@ def questions():
         # plugin-related questions
         results['efficiency'] = questionary.select(
             "How do you think the plugin impacted your efficiency timewise, if at all? "
-            "(1: hindered significantly to 5: helped significantly)",
+            "(1: hindered significantly, to 3: neither hindered nor helped, to 5: helped significantly)",
             choices=list(map(str, range(1, 6)))).ask()
         if results['efficiency'] is None:
             return questions()
         results['quality'] = questionary.select(
             "How do you think the plugin impacted your quality of life, with respect to ease of coding, "
-            "concentration, etc., if at all? (1: hindered significantly to 5: helped significantly)",
+            "concentration, etc., if at all? "
+            "(1: hindered significantly, to 3: neither hindered nor helped, to 5: helped significantly)",
             choices=list(map(str, range(1, 6)))).ask()
         if results['quality'] is None:
             return questions()
