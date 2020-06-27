@@ -26,7 +26,7 @@ We recommend following below instructions to access our remote desktop environme
 ### 1. Access Remote Environment (Recommended!)
 - Start Remote Desktop Client program (RDP client). For Windows users, type "rdp" in start menu and select the remote desktop client. For Mac users, download Microsoft Remote Desktop from App Store (https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12). For Linux users, download Remmina (https://remmina.org/).
 - Connect to our remote server `5568.duckdns.org`, using the username and password provided in the email.
-- Click the "User Study" folder shortcut on the desktop. Enter your folder named by your assigned user ID.
+- Click the "User Study" folder shortcut on the desktop. Enter your folder named by your assigned user ID. **IMPORTANT: Do not enter other user's folder!**
 - Enter folder named `tranx-study`, right-click (context menu) and select `Git Bash Here`.
 - Run `vagrant up` to bring up the VM.
 - Wait until Vagrant automatically download the VM image and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. We advise you to maximize/full-screen the VirtualBox window for your best experience. The current directory (i.e. this repo) will be automatically mounted in the VM as `/vagrant` so you could find all the tasks, codes, etc. synced.
