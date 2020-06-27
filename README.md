@@ -19,16 +19,18 @@ We provision Linux desktop with PyCharm IDE, required Python environment for all
 Note that the plugin will be available for you to use only on part of your assigned tasks for controlled study.
 The plugin is not perfect, so try to use the plugin when you have a question, but feel free to use the web browser if the plugin is not helpful.
 
-To setup and perform the user study, please follow the below steps to start a VM pre-provisioned with required environments and use PyCharm IDE.
+To setup and perform the user study, please follow the below steps to access a VM pre-provisioned with required environments and use PyCharm IDE.
 
-### 1. Installation and Startup
-- Install 6.1.10 version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads), available for all platforms. (For MacOS users, in case you encounter error during installation, please check out [this article](https://medium.com/@DMeechan/fixing-the-installation-failed-virtualbox-error-on-mac-high-sierra-7c421362b5b5).)
-- Install latest version of [Vagrant](https://www.vagrantup.com/downloads.html), an automatic VM provisioning tool.
-- `git clone https://github.com/frankxu2004/tranx-study.git`
-- `cd tranx-study`
-- (Important) If you have previous versions of the provided VM installed, please remove them first with `vagrant destroy`.
-- `vagrant up`
-- Wait until Vagrant automatically download the VM and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. The current directory (i.e. this repo) will be automatically mounted in the VM as `/vagrant` so you could find all the tasks, codes, etc. synced.
+We recommend following below instructions to access our remote desktop environment.
+
+### 1. Access Remote Environment (Recommended!)
+- Start Remote Desktop Client program (RDP client). For Windows users, type "rdp" in start menu and select the remote desktop client. For Mac users, download Microsoft Remote Desktop from App Store (https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12). For Linux users, download Remmina (https://remmina.org/).
+- Connect to our remote server `5568.duckdns.org`, using the username and password provided in the email.
+- Click the "User Study" folder shortcut on the desktop. Enter your folder named by your assigned user ID.
+- Enter folder named `tranx-study`, right-click (context menu) and select `Git Bash Here`.
+- Run `vagrant up` to bring up the VM.
+- Wait until Vagrant automatically download the VM image and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. We advise you to maximize/full-screen the VirtualBox window for your best experience. The current directory (i.e. this repo) will be automatically mounted in the VM as `/vagrant` so you could find all the tasks, codes, etc. synced.
+
 
 ### 2. Warmup & Familiarize with VM Environment
 Starting from this stage, as you start to complete your task, you should maximize or full-screen the VM. All activities including coding in the IDE, web search, etc., should be done within the VM.
@@ -83,15 +85,26 @@ After completing all tasks, please take a post-study survey to share your though
 ### I cannot access Internet inside the VM browser.
 If you haven't executed `warmup.sh` or `start-task.sh` then it is expected. We route network access through a proxy. Please first start doing a task and then you will be able to access Internet.
 
-## Data Collected
-- Your interaction with the plugin in PyCharm IDE, including queries and edits.
-- Your web search/browsing activities inside the VM's Firefox.
-- Your completed task.
+### I cannot access the remote environment.
+You can use local installation to start up a VM on your own machine, but make sure your machine has enough resources. More than 4 cores CPU and more than 16GB memory is recommended.
+- Install 6.1.10 version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads), available for all platforms. (For MacOS users, in case you encounter error during installation, please check out [this article](https://medium.com/@DMeechan/fixing-the-installation-failed-virtualbox-error-on-mac-high-sierra-7c421362b5b5).)
+- Install latest version of [Vagrant](https://www.vagrantup.com/downloads.html), an automatic VM provisioning tool.
+- `git clone https://github.com/frankxu2004/tranx-study.git`
+- `cd tranx-study`
+- (Important) If you have previous versions of the provided VM installed, please remove them first with `vagrant destroy`.
+- `vagrant up`
+- Wait until Vagrant automatically download the VM and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. The current directory (i.e. this repo) will be automatically mounted in the VM as `/vagrant` so you could find all the tasks, codes, etc. synced.
 
-
-## Cleanup
 After you have completed the user study, it is safe to cleanup everything. On your host machine:
 - `vagrant destroy` to destroy the VM.
 - Delete the repo folder.
 - Delete the local VM image caches downloaded previously by deleting the folder `$HOME/.vagrant.d`.
 - Uninstall Vagrant and VirtualBox software.
+
+
+## Data Collected
+- Your interaction with the plugin in PyCharm IDE, including queries and edits.
+- Your IDE edit activities.
+- Your web search/browsing activities inside the VM's Firefox.
+- Your keystrokes.
+- Your completed task.
