@@ -3,7 +3,6 @@
 .vagrant/
 package.box
 *.log
-*.zip
 .user_study_current_status
 __pycache__
 scratch.py

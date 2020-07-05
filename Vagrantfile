@@ -67,6 +67,9 @@ Vagrant.configure("2") do |config|
   # Set the timezone to the host timezone
   config.vm.provision "shell", path: "set_timezone.sh", run: "always", privileged: false
 
+  # Initialize the adblocker in firefox
+  config.vm.provision "shell", path: "initialize_firefox.sh", run: "always", privileged: false
+
   # Auto update the tranx plugin
   config.vm.provision "shell", path: "update_plugin.sh", run: "always", privileged: false
 

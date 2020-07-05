@@ -13,13 +13,17 @@ then
     pkill java
 fi
 
-## Start browser monitoring process
+## kill browser monitoring process
 if pgrep -x "mitmdump" > /dev/null
 then
     echo "Monitoring already running? Killing."
     pkill mitmdump
 fi
 
+# manual set userid, task, use_plugin, open IDE
+python3 manual.py $1 ${2%/} $3
+
+## start browser monitoring process
 echo "Starting monitoring."
 mitmdump -q --set stream_large_bodies=1 -s /vagrant/browser-request-logger.py >/dev/null 2>&1 &
 
@@ -30,8 +34,6 @@ then
     kill $(pgrep -f keylogger.py)
 fi
 nohup python3 keylogger.py >/dev/null 2>&1 &
-
-python3 manual.py $1 ${2%/} $3
 
 ## log
 python3 log_user_event_timeline.py manual_start
