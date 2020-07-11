@@ -16,14 +16,16 @@ The goal of the user study is to understand how a code generation and retrieval 
 
 We provision Linux desktop with PyCharm IDE, required Python environment for all the tasks and a Firefox browser installed.
 
-Note that the plugin will be available for you to use only on part of your assigned tasks for controlled study.
+**Note that the plugin will be available for you to use only on part of your assigned tasks for controlled study, so please don't panic if you cannot use the plugin for some tasks!**
+
 The plugin is not perfect, so try to use the plugin when you have a question, but feel free to use the web browser if the plugin is not helpful.
 
 To setup and perform the user study, please follow the below steps to access a VM pre-provisioned with required environments and use PyCharm IDE.
 
-We recommend following below instructions to access our remote desktop environment.
+We recommend the following instructions to access our remote desktop environment.
+If your Internet connection lag makes the remote environment unusable for development tasks, please try setting up your local user study environment on your machine following [this section](#i-cannot-access-the-remote-environment). Do note that this would require quite some amounts of system resources.
 
-### 1. Access Remote Environment (Recommended!)
+### 1. Access Remote Environment (recommended & easy)
 - Start Remote Desktop Client program (RDP client). For Windows users, type "rdp" in start menu and select the remote desktop client. For Mac users, download Microsoft Remote Desktop from App Store (https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12). For Linux users, download Remmina (https://remmina.org/).
 - Connect to our remote server `5568.duckdns.org`, using the username and password provided in the email.
 - Click the "User Study" folder shortcut on the desktop. Enter your folder named by your assigned user ID. **IMPORTANT: Do not enter other user's folder!**
@@ -75,21 +77,21 @@ After completing all tasks, please take a post-study survey to share your though
     cd /vagrant
     ./status.sh your_user_id
     ```
-- To manually start a task with specific configuration, run in a terminal in the VM:
+<!-- - To manually start a task with specific configuration, run in a terminal in the VM:
     ```
     cd /vagrant
     ./manual-start-task.sh your_user_id task_name if_use_plugin(0 or 1)
-    ```
+    ``` -->
 
 ## FAQs
 ### I cannot access Internet inside the VM browser.
 If you haven't executed `warmup.sh` or `start-task.sh` then it is expected. We route network access through a proxy. Please first start doing a task and then you will be able to access Internet.
 
 ### I cannot access the remote environment.
-You can use local installation to start up a VM on your own machine, but make sure your machine has enough resources. More than 4 cores CPU and more than 16GB memory is recommended.
+You can use local installation to start up a VM on your own machine, but make sure your machine has enough resources. A machine with more than 4 cores CPU and more than 16GB memory is recommended.
 - Install 6.1.10 version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads), available for all platforms. (For MacOS users, in case you encounter error during installation, please check out [this article](https://medium.com/@DMeechan/fixing-the-installation-failed-virtualbox-error-on-mac-high-sierra-7c421362b5b5).)
 - Install latest version of [Vagrant](https://www.vagrantup.com/downloads.html), an automatic VM provisioning tool.
-- `git clone https://github.com/frankxu2004/tranx-study.git`
+- `git clone https://github.com/neulab/tranx-study.git`
 - `cd tranx-study`
 - (Important) If you have previous versions of the provided VM installed, please remove them first with `vagrant destroy`.
 - `vagrant up`
