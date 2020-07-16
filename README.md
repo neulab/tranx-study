@@ -68,6 +68,7 @@ The script will automatically pack your work and upload to our server for the us
 In case you see any errors, probably you have already submitted, or something else is wrong.
 
 Once you have submitted your current assigned task, you should go to step 3 to start a new task assigned to you.
+You are welcome to take breaks between tasks (after submission and before starting another assigned task).
 If it says there's no task for you, then you are all set! Congratulations!
 After completing all tasks, please take a post-study survey to share your thoughts for our evaluation.
 
