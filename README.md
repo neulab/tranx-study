@@ -18,7 +18,7 @@ If your Internet connection lag makes the remote environment unusable for develo
 
 ### 1. Access Remote Environment (recommended & easy)
 - Start Remote Desktop Client program (RDP client). For Windows users, type "rdp" in start menu and select the remote desktop client. For Mac users, download Microsoft Remote Desktop from App Store (https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12). For Linux users, download Remmina (https://remmina.org/).
-- Connect to our remote server `5568.duckdns.org`, using the username and password provided in the email.
+- Connect to our remote server, using the server address, username and password provided in the email.
 - Right click the "Start" shortcut on the desktop, and select "Run with PowerShell".
 - Wait until the script automatically download the VM image and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. We advise you to maximize/full-screen the VirtualBox window (VirtualBox - View - Fullscreen Mode) for your best experience. From now on, please use the Linux VM environment for everything, **including web browsing (Firefox)**.
 
