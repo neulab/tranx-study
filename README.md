@@ -1,24 +1,15 @@
 # TranX Developer Study
 
-## Tasks
-You can find all the tasks to complete in their corresponding directory under this repo, e.g `task1-2/`, and read the README file inside for instructions.
-Overall, there are 7 different categories as in task1-n to task7-n:
-1. Basic Python
-2. File 
-3. OS
-4. Web Scraping (e.g. `beautifulsoup`)
-5. Web Server & Client (e.g. `requests`, `flask`, `django`)
-6. Data Analysis & Machine Learning (e.g. `pandas`, `sklearn`)
-7. Data Visualization (e.g. `matplotlib`)
-
 ## Instructions
 The goal of the user study is to understand how a code generation and retrieval plugin in IDE could affect the development.
 
 We provision Linux desktop with PyCharm IDE, required Python environment for all the tasks and a Firefox browser installed.
 
+You will be assigned 8 tasks automatically based on your pre-study survey and completing all tasks would take about 4-5 hours so please plan ahead!
+
 **Note that the plugin will be available for you to use only on part of your assigned tasks for controlled study, so please don't panic if you cannot use the plugin for some tasks!**
 
-The plugin is not perfect, so try to use the plugin when you have a question, but feel free to use the web browser if the plugin is not helpful.
+The plugin is not perfect, so try to use the plugin when you have a question, but feel free to use the web browser **inside the Linux VM** if the plugin is not helpful.
 
 To setup and perform the user study, please follow the below steps to access a VM pre-provisioned with required environments and use PyCharm IDE.
 
@@ -31,7 +22,7 @@ If your Internet connection lag makes the remote environment unusable for develo
 - Click the "User Study" folder shortcut on the desktop. Enter your folder named by your assigned user ID. **IMPORTANT: Do not enter other user's folder!**
 - Enter folder named `tranx-study`, right-click (context menu) and select `Git Bash Here`.
 - Run `vagrant up` to bring up the VM.
-- Wait until Vagrant automatically download the VM image and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. We advise you to maximize/full-screen the VirtualBox window for your best experience. The current directory (i.e. this repo) will be automatically mounted in the VM as `/vagrant` so you could find all the tasks, codes, etc. synced.
+- Wait until Vagrant automatically download the VM image and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. We advise you to maximize/full-screen the VirtualBox window for your best experience. From now on, please use the Linux VM environment for everything, **including web browsing (Firefox)**.
 
 
 ### 2. Warmup & Familiarize with VM Environment
@@ -53,7 +44,7 @@ Starting from this stage, as you start to complete your task, you should maximiz
     ```
     This will retrieve the configuration of one of your assigned task, and automatically start the IDE.
 - To start coding the task, please first read the instructions in the `README` file inside the task directory, and then write your program with the `main.py` file. Mac users should use `Control+Options+G` to ask a question with the plugin and `Options+G` to upload edits. Windows/Linux users should use `Ctrl+Alt+G` and `Alt+G` respectively. For more details about the usage of the plugin, please check out [this guide](https://github.com/neulab/tranX-plugin#usage) first.
-- To perform web search on those questions related to the task but not appropriate for the purpose of the plugin (e.g. you may want to know if UTC is equivalent to GMT) as it is not directly related to coding itself, you should use the web browser inside the VM. It can be opened from the bottom dock inside the VM. Note that your web browsing activities will be logged inside the VM for user study purposes, so please DO NOT access any sensitive information in the browser.
+- To perform web search on those questions related to the task but not appropriate for the purpose of the plugin (e.g. you may want to know if UTC is equivalent to GMT) as it is not directly related to coding itself, you should use the web browser (Firefox) **inside the Linux VM, please do not use browsers on the Windows desktop or your own local computer**. It can be opened from the bottom dock inside the VM. Note that your web browsing activities will be logged inside the VM for user study purposes, so please **DO NOT access any sensitive information in the browser**.
 - Although we encourage you to complete one task in one sitting, if you need to take a break during the task, please run `./pause.sh` and `./resume.sh` under `/vagrant/` to pause and resume the task respectively. Note that the behaviors will be recorded.
 - If you would like to use libraries that are not preinstalled, please install using `pip3 install package_name` using the terminal inside the VM.
 
@@ -70,7 +61,7 @@ In case you see any errors, probably you have already submitted, or something el
 Once you have submitted your current assigned task, you should go to step 3 to start a new task assigned to you.
 You are welcome to take breaks between tasks (after submission and before starting another assigned task).
 If it says there's no task for you, then you are all set! Congratulations!
-After completing all tasks, please take a post-study survey to share your thoughts for our evaluation.
+After completing all tasks, you are prompted in the terminal to take a post-study survey to share your thoughts for our evaluation.
 
 ### 5. Useful Scripts
 - To check your assigned tasks and their configurations, your current task status, etc., run in a terminal in the VM:
@@ -104,6 +95,16 @@ After you have completed the user study, it is safe to cleanup everything. On yo
 - Delete the local VM image caches downloaded previously by deleting the folder `$HOME/.vagrant.d`.
 - Uninstall Vagrant and VirtualBox software.
 
+## Task Categories
+All the tasks are in their corresponding directory under this repo, e.g `task1-2/`, and read the README file inside for instructions.
+Overall, there are 7 different categories as in task1-n to task7-n and you are assigned 4 categories of them based on your expertise in the pre-study survey:
+1. Basic Python
+2. File 
+3. OS
+4. Web Scraping (e.g. `beautifulsoup`)
+5. Web Server & Client (e.g. `requests`, `flask`, `django`)
+6. Data Analysis & Machine Learning (e.g. `pandas`, `sklearn`)
+7. Data Visualization (e.g. `matplotlib`)
 
 ## Data Collected
 - Your interaction with the plugin in PyCharm IDE, including queries and edits.
