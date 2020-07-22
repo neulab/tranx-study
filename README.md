@@ -19,10 +19,8 @@ If your Internet connection lag makes the remote environment unusable for develo
 ### 1. Access Remote Environment (recommended & easy)
 - Start Remote Desktop Client program (RDP client). For Windows users, type "rdp" in start menu and select the remote desktop client. For Mac users, download Microsoft Remote Desktop from App Store (https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12). For Linux users, download Remmina (https://remmina.org/).
 - Connect to our remote server `5568.duckdns.org`, using the username and password provided in the email.
-- Click the "User Study" folder shortcut on the desktop. Enter your folder named by your assigned user ID. **IMPORTANT: Do not enter other user's folder!**
-- Enter folder named `tranx-study`, right-click (context menu) and select `Git Bash Here`.
-- Run `vagrant up` to bring up the VM.
-- Wait until Vagrant automatically download the VM image and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. We advise you to maximize/full-screen the VirtualBox window for your best experience. From now on, please use the Linux VM environment for everything, **including web browsing (Firefox)**.
+- Right click the "Start" shortcut on the desktop, and select "Run with PowerShell".
+- Wait until the script automatically download the VM image and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. We advise you to maximize/full-screen the VirtualBox window (VirtualBox - View - Fullscreen Mode) for your best experience. From now on, please use the Linux VM environment for everything, **including web browsing (Firefox)**.
 
 
 ### 2. Warmup & Familiarize with VM Environment
@@ -40,7 +38,7 @@ Starting from this stage, as you start to complete your task, you should maximiz
 - In a terminal in the VM:
     ```
     cd /vagrant
-    ./start-task.sh your_user_id
+    ./start-task.sh your_user_id(provided in the email)
     ```
     This will retrieve the configuration of one of your assigned task, and automatically start the IDE.
 - To start coding the task, please first read the instructions in the `README` file inside the task directory, and then write your program with the `main.py` file. Mac users should use `Control+Options+G` to ask a question with the plugin and `Options+G` to upload edits. Windows/Linux users should use `Ctrl+Alt+G` and `Alt+G` respectively. For more details about the usage of the plugin, please check out [this guide](https://github.com/neulab/tranX-plugin#usage) first.
