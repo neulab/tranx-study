@@ -1,5 +1,6 @@
 import os
 from xml.etree import ElementTree as ET
+from xml.etree.ElementTree import Element
 
 
 def update_plugin_config(userid):
@@ -14,34 +15,57 @@ def update_plugin_config(userid):
 
 
 def switch_plugin_on():
-    path = '/home/vagrant/.config/JetBrains/PyCharmCE2020.1/disabled_plugins.txt'
-    with open(path, "r", encoding='utf-8') as f:
-        lines = f.readlines()
-    with open(path, "w", encoding='utf-8') as f:
-        for line in lines:
-            if line.strip("\n") != "edu.cmu.tranx.tranx_plugin":
-                f.write(line)
+    path = '/home/vagrant/.config/JetBrains/PyCharmCE2020.1/options/TranXConfig.xml'
+    tree = ET.parse(path)
+    root = tree.getroot()[0]
+    # enable fine-grained edits no matter what
+    found = False
+    for elem in root.iter('option'):
+        if elem.get('name') == 'enableFineGrainedEdit':
+            found = True
+            elem.set('value', 'true')
+    if not found:
+        root.append(Element('option', attrib={'name': 'enableFineGrainedEdit', 'value': 'true'}))
+
+    found = False
+    for elem in root.iter('option'):
+        if elem.get('name') == 'enableQuery':
+            found = True
+            elem.set('value', 'true')
+    if not found:
+        root.append(Element('option', attrib={'name': 'enableQuery', 'value': 'true'}))
+    tree.write(path)
 
 
 def switch_plugin_off():
-    path = '/home/vagrant/.config/JetBrains/PyCharmCE2020.1/disabled_plugins.txt'
-    with open(path, "r", encoding='utf-8') as f:
-        lines = f.readlines()
-    with open(path, "w", encoding='utf-8') as f:
-        for line in lines:
-            if line.strip("\n") != "edu.cmu.tranx.tranx_plugin":
-                f.write(line)
-        f.write("edu.cmu.tranx.tranx_plugin\n")
+    path = '/home/vagrant/.config/JetBrains/PyCharmCE2020.1/options/TranXConfig.xml'
+    tree = ET.parse(path)
+    root = tree.getroot()[0]
+    found = False
+    for elem in root.iter('option'):
+        if elem.get('name') == 'enableFineGrainedEdit':
+            found = True
+            elem.set('value', 'true')
+    if not found:
+        root.append(Element('option', attrib={'name': 'enableFineGrainedEdit', 'value': 'true'}))
+
+    found = False
+    for elem in root.iter('option'):
+        if elem.get('name') == 'enableQuery':
+            found = True
+            elem.set('value', 'false')
+    if not found:
+        root.append(Element('option', attrib={'name': 'enableQuery', 'value': 'false'}))
+    tree.write(path)
 
 
 def read_plugin_status():
-    path = '/home/vagrant/.config/JetBrains/PyCharmCE2020.1/disabled_plugins.txt'
-    if not os.path.exists(path):
-        return True
-    with open(path, "r", encoding='utf-8') as f:
-        for line in f:
-            if line.strip("\n") == "edu.cmu.tranx.tranx_plugin":
-                return False
+    path = '/home/vagrant/.config/JetBrains/PyCharmCE2020.1/options/TranXConfig.xml'
+    tree = ET.parse(path)
+    root = tree.getroot()[0]
+    for elem in root.iter('option'):
+        if elem.get('name') == 'enableQuery':
+            return elem.get('value') == 'true'
     return True
 
 
