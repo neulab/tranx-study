@@ -14,7 +14,9 @@ The plugin is not perfect, so try to use the plugin when you have a question, bu
 To setup and perform the user study, please follow the below steps to access a VM pre-provisioned with required environments and use PyCharm IDE.
 
 We recommend the following instructions to access our remote desktop environment.
-If your Internet connection lag makes the remote environment unusable for development tasks, please try setting up your local user study environment on your machine following [this section](#i-cannot-access-the-remote-environment). Do note that this would require quite some amounts of system resources.
+Note that our remote desktop servers are located at Carnegie Mellon University (Pittsburgh, PA, USA).
+If you are located too far away from the US (e.g. Asia, Africa) that the Internet connection lags and makes the remote environment unusable for development tasks, please try setting up the user study environment on your local machine following [this section](#i-cannot-access-the-remote-environment). 
+Note that this would require a respectable amount of system resources.
 
 ### 1. Access Remote Environment (recommended & easy)
 - Start Remote Desktop Client program (RDP client). For Windows users, type "rdp" in start menu and select the remote desktop client. For Mac users, download Microsoft Remote Desktop from App Store (https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12). For Linux users, download Remmina (https://remmina.org/).
@@ -77,8 +79,8 @@ After completing all tasks, you are prompted in the terminal to take a post-stud
 ### I cannot access Internet inside the VM browser.
 If you haven't executed `warmup.sh` or `start-task.sh` then it is expected. We route network access through a proxy. Please first start doing a task and then you will be able to access Internet.
 
-### I cannot access the remote environment.
-You can use local installation to start up a VM on your own machine, but make sure your machine has enough resources. A machine with more than 4 cores CPU and more than 16GB memory is recommended.
+### I cannot use the remote environment because it is too laggy.
+You can use local installation to start up a VM on your own machine, but make sure your machine has enough resources. A machine with more than 4 CPU cores and more than 16GB memory is recommended.
 - Install 6.1.10 version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads), available for all platforms. (For MacOS users, in case you encounter error during installation, please check out [this article](https://medium.com/@DMeechan/fixing-the-installation-failed-virtualbox-error-on-mac-high-sierra-7c421362b5b5).)
 - Install latest version of [Vagrant](https://www.vagrantup.com/downloads.html), an automatic VM provisioning tool.
 - `git clone https://github.com/neulab/tranx-study.git`
