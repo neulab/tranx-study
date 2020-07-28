@@ -82,14 +82,15 @@ If you haven't executed `warmup.sh` or `start-task.sh` then it is expected. We r
 ### I cannot use the remote environment because it is too laggy.
 You can use local installation to start up a VM on your own machine, but make sure your machine has enough resources. A machine with more than 4 CPU cores and more than 16GB memory is recommended.
 - Install 6.1.10 version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads), available for all platforms. (For MacOS users, in case you encounter error during installation, please check out [this article](https://medium.com/@DMeechan/fixing-the-installation-failed-virtualbox-error-on-mac-high-sierra-7c421362b5b5).)
-- Install latest version of [Vagrant](https://www.vagrantup.com/downloads.html), an automatic VM provisioning tool.
-- `git clone https://github.com/neulab/tranx-study.git`
-- `cd tranx-study`
-- (Important) If you have previous versions of the provided VM installed, please remove them first with `vagrant destroy`.
-- `vagrant up`
-- Wait until Vagrant automatically download the VM and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. The current directory (i.e. this repo) will be automatically mounted in the VM as `/vagrant` so you could find all the tasks, codes, etc. synced.
+- Install the latest version of [Vagrant](https://www.vagrantup.com/downloads.html), an automatic VM provisioning tool.
+- Download the user study [package](https://frankxfz.me/tranx-study-master.zip) and extract the downloaded zip file.
+- Open terminal/command line and `cd` to the extracted folder `tranx-study-master`.
+- Clean up any previous versions of our VMs with `vagrant destroy`.
+- Start the VM with `vagrant up`.
+- Wait until Vagrant automatically download the VM and start it up through VirtualBox. You should now be able to see a Linux desktop environment inside a VirtualBox window. We advise you to maximize/full-screen the VirtualBox window (VirtualBox - View - Fullscreen Mode) for your best experience. From now on, please use the Linux VM environment for everything, **including web browsing (Firefox)**.
+- From this point, please continue to follow from step 2 in the instructions.
 
-After you have completed the user study, it is safe to cleanup everything. On your host machine:
+After you have completed all the tasks assigned and the whole user study, it is safe to cleanup everything. On your host machine:
 - `vagrant destroy` to destroy the VM.
 - Delete the repo folder.
 - Delete the local VM image caches downloaded previously by deleting the folder `$HOME/.vagrant.d`.
