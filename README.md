@@ -15,7 +15,7 @@ To setup and perform the user study, please follow the below steps to access a V
 
 We recommend the following instructions to access our remote desktop environment.
 Note that our remote desktop servers are located at Carnegie Mellon University (Pittsburgh, PA, USA).
-If you are located too far away from the US (e.g. Asia, Africa) that the Internet connection lags and makes the remote environment unusable for development tasks, please try setting up the user study environment on your local machine following [this section](#i-cannot-access-the-remote-environment) (FAQ No.2). 
+If you are located too far away from the US (e.g. Asia, Africa) that the Internet connection lags and makes the remote environment unusable for development tasks, please try setting up the user study environment on your local machine following [this section](#i-cannot-use-the-remote-environment-because-it-is-too-laggy) (FAQ No.2). 
 Note that this would require a respectable amount of system resources.
 
 ### 1. Access Remote Environment (recommended & easy)
