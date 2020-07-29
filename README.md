@@ -7,7 +7,7 @@ We provision Linux desktop with PyCharm IDE, required Python environment for all
 
 You will be assigned 8 tasks automatically based on your pre-study survey and completing all tasks would take about 4-5 hours so please plan ahead!
 
-**Note that the plugin will be available for you to use only on part of your assigned tasks for controlled study, so please don't panic if you cannot use the plugin for some tasks!**
+Note that the plugin will be available for you to use **only on part of your assigned tasks** for controlled study, so please don't panic if you do not have the plugin for some tasks!
 
 The plugin is not perfect, so try to use the plugin when you have a question, but feel free to use the web browser **inside the Linux VM** if the plugin is not helpful.
 
@@ -15,7 +15,7 @@ To setup and perform the user study, please follow the below steps to access a V
 
 We recommend the following instructions to access our remote desktop environment.
 Note that our remote desktop servers are located at Carnegie Mellon University (Pittsburgh, PA, USA).
-If you are located too far away from the US (e.g. Asia, Africa) that the Internet connection lags and makes the remote environment unusable for development tasks, please try setting up the user study environment on your local machine following [this section](#i-cannot-access-the-remote-environment). 
+If you are located too far away from the US (e.g. Asia, Africa) that the Internet connection lags and makes the remote environment unusable for development tasks, please try setting up the user study environment on your local machine following [this section](#i-cannot-access-the-remote-environment) (FAQ No.2). 
 Note that this would require a respectable amount of system resources.
 
 ### 1. Access Remote Environment (recommended & easy)
@@ -42,8 +42,9 @@ Starting from this stage, as you start to complete your task, you should maximiz
     cd /vagrant
     ./start-task.sh your_user_id(provided in the email)
     ```
-    This will retrieve the configuration of one of your assigned task, and automatically start the IDE.
-- To start coding the task, please first read the instructions in the `README` file inside the task directory, and then write your program with the `main.py` file. Mac users should use `Control+Options+G` to ask a question with the plugin and `Options+G` to upload edits. Windows/Linux users should use `Ctrl+Alt+G` and `Alt+G` respectively. For more details about the usage of the plugin, please check out [this guide](https://github.com/neulab/tranX-plugin#usage) first.
+    This will retrieve and set the configuration of one of your assigned task, and automatically start the IDE. **For some of your assignments, the plugin will be disabled for a controlled study.**
+- To start coding the task, please first read the instructions in the `README` file inside the task directory, and then write your program in the `main.py` file.
+- You could tell if the plugin is enabled for the current assignment by trying to use the plugin, and if it is not enabled, it means you must not use it for the assignment. With the cursor in the desired place in the editor, Mac users should use `Control+Options+G` to ask a question with the plugin and `Options+G` to upload edits. Windows/Linux users should use `Ctrl+Alt+G` and `Alt+G` respectively. For more details about the usage of the plugin, please check out [this guide](https://github.com/neulab/tranX-plugin#usage) first. **Note: please do not modify any settings for the plugin!**
 - To perform web search on those questions related to the task but not appropriate for the purpose of the plugin (e.g. you may want to know if UTC is equivalent to GMT) as it is not directly related to coding itself, you should use the web browser (Firefox) **inside the Linux VM, please do not use browsers on the Windows desktop or your own local computer**. It can be opened from the bottom dock inside the VM. Note that your web browsing activities will be logged inside the VM for user study purposes, so please **DO NOT access any sensitive information in the browser**.
 - Although we encourage you to complete one task in one sitting, if you need to take a break during the task, please run `./pause.sh` and `./resume.sh` under `/vagrant/` to pause and resume the task respectively. Note that the behaviors will be recorded.
 - If you would like to use libraries that are not preinstalled, please install using `pip3 install package_name` using the terminal inside the VM.
