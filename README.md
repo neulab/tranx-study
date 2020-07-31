@@ -36,33 +36,34 @@ Starting from this stage, as you start to complete your task, you should maximiz
 - Checkout the README, and familiarize yourself with the environment! For details on how to complete the task with IDE and plugin, please follow the next section. For more help on PyCharm IDE, please visit [JetBrain's help website](https://www.jetbrains.com/help/pycharm/quick-start-guide.html)! Once you are familiar about the IDE, plugin and VM environment, you can start working on the real tasks!
 - Python 3.6 is used throughout the study, and can be called from terminal by `python3`.
 
-### 3. Completing Task inside VM
+### 3. Starting and Completing Task inside VM
 - In a terminal in the VM:
     ```
     cd /vagrant
-    ./start-task.sh your_user_id(provided in the email)
+    ./start-task.sh your_user_id(provided in the email, the same as the remote desktop login)
     ```
     This will retrieve and set the configuration of one of your assigned task, and automatically start the IDE. **For some of your assignments, the plugin will be disabled for a controlled study.**
 - To start coding the task, please first read the instructions in the `README` file inside the task directory, and then write your program in the `main.py` file.
-- You could tell if the plugin is enabled for the current assignment by trying to use the plugin, and if it is not enabled, it means you must not use it for the assignment. With the cursor in the desired place in the editor, Mac users should use `Control+Options+G` to ask a question with the plugin and `Options+G` to upload edits. Windows/Linux users should use `Ctrl+Alt+G` and `Alt+G` respectively. For more details about the usage of the plugin, please check out [this guide](https://github.com/neulab/tranX-plugin#usage) first. **Note: please do not modify any settings for the plugin!**
+- You could tell if the plugin is enabled for the current assignment by trying to use the plugin, and if it is not enabled, it means you must not use it for the assignment. 
+- With the cursor in the desired place for generation in the editor, you could right click and "Ask a Question" (Mac: `Control+Options+G`, Windows/Linux: `Ctrl+Alt+G`) to ask a question. With the cursor inside the generated code block after your edits, right click and "Upload Edits" (Mac: `Options+G`, Windows/Linux: `Alt+G`) to upload edits. For more details about the usage of the plugin, please check out [this guide](https://github.com/neulab/tranX-plugin#usage) first. **Note: please do not modify any settings for the plugin!**
 - To perform web search on those questions related to the task but not appropriate for the purpose of the plugin (e.g. you may want to know if UTC is equivalent to GMT) as it is not directly related to coding itself, you should use the web browser (Firefox) **inside the Linux VM, please do not use browsers on the Windows desktop or your own local computer**. It can be opened from the bottom dock inside the VM. Note that your web browsing activities will be logged inside the VM for user study purposes, so please **DO NOT access any sensitive information in the browser**.
 - Although we encourage you to complete one task in one sitting, if you need to take a break during the task, please run `./pause.sh` and `./resume.sh` under `/vagrant/` to pause and resume the task respectively. Note that the behaviors will be recorded.
 - If you would like to use libraries that are not preinstalled, please install using `pip3 install package_name` using the terminal inside the VM.
 
 ### 4. Submitting Your Task
-After you have finished the coding and debugging, please submit your work on the task! To do so, please do the following steps inside the VM:
+After you have finished with coding and debugging, please submit your work. To do so, please do the following steps inside the VM:
 In a terminal in the VM:
 ```
 cd /vagrant
 ./submit.sh
 ```
 The script will automatically pack your work and upload to our server for the user study evaluations. If everything goes smoothly, you should see a message `Submission success! All done!`, followed by a post-task survey for our evaluation.
-In case you see any errors, probably you have already submitted, or something else is wrong.
+In case you see any errors, probably you have already submitted, or something else is wrong, please contact us.
 
-Once you have submitted your current assigned task, you should go to step 3 to start a new task assigned to you.
+Once you have submitted your current assigned task, **you should go back to step 3 to start a new task assigned to you until no more task could be assigned.**
 You are welcome to take breaks between tasks (after submission and before starting another assigned task).
 If it says there's no task for you, then you are all set! Congratulations!
-After completing all tasks, you are prompted in the terminal to take a post-study survey to share your thoughts for our evaluation.
+After completing all tasks, you will be prompted in the terminal to take a post-study survey to share your thoughts for our evaluation.
 
 ### 5. Useful Scripts
 - To check your assigned tasks and their configurations, your current task status, etc., run in a terminal in the VM:
