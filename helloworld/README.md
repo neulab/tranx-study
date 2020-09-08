@@ -4,8 +4,7 @@
 
 Write a program in Python 3.6 that deals with string processing following the following detailed instructions.
 
-Please familiarize yourself with the IDE environment as well as the plugin (read [quick start](https://github.com/neulab/tranX-plugin#usage) first)
-
+Please familiarize yourself with the IDE environment as well as the plugin (read [quick start](https://github.com/neulab/tranX-plugin#usage) first).
 For the purpose of learning the IDE and the plugin, you will go through the process of asking the plugin about the intent, selecting one of the desired candidates, modifying the auto-generated code snippets accordingly, and eventually finalize and upload your edit.
 
 - Open `main.py` in the PyCharm IDE editor.
