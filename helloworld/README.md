@@ -19,7 +19,7 @@ For the purpose of learning the IDE and the plugin, you will go through the proc
     ```
     between the comments inside the code block. Now we can test run the program to see if it works as desired. If so, we hit `Alt-G` (`Options+G` for Mac) or right click inside the code block to "Upload Edits". This will also remove the (annoying) chunk of comments surrounding the code snippet!
 - Second, reverse the processed string `text`, by asking "reverse \`text\`", and select the first candidate `text[::-1]`. For this, we only need to assign the result back to `text` again and upload the edit in the same way as above.
-- Third, we want to save the processed string to a text file named "out.txt". We ask "open a file "out.txt" in write mode" and select the first candidate `f = open('out.txt', 'wb')`. Note that we quote string literals with regular quotation marks ("").
+- Third, we want to save the processed string to a text file named "out.txt". We ask "open a file "out.txt" in write mode" and select the first candidate `f = open('out.txt', 'wb')`. Note that we quote string literals with regular quotation marks ("out.txt").
 - We then see the error in this generated code snippet: the write mode for text files should be `'w'` instead of `'wb'`. We modify this line of code to `f = open('out.txt', 'w')` and upload the edit to remove the comments.
 - Finally, we write the string to the opened file `f` by `f.write(text)`, and close the file by `f.close()`. Now this example task is complete. Run the program and see if it creates the correct output file shown in the Example Output section below.
 
