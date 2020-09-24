@@ -36,7 +36,11 @@ if __name__ == '__main__':
     elif op == 'assign':
         response = requests.post('http://moto.clab.cs.cmu.edu:8081/assign_task', json={'userid': userid})
         assignments = response.json()
-        if assignments:
+        if 'err' in assignments:
+            print("Error UserID")
+            print("Please check the user id you entered")
+            exit(1)
+        elif assignments:
             task = assignments[0]['task']
             use_plugin = assignments[0]['use_plugin']
             print('User:', userid, 'Assigned:', task, 'Use plugin?', use_plugin)
