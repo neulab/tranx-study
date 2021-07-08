@@ -1,3 +1,5 @@
+## For final user study data and analysis programs/scripts, please checkout `analysis`.
+
 # TranX Developer Study
 
 ## Instructions

@@ -1,0 +1,49 @@
+\renewcommand*{\arraystretch}{0.8}
+\begin{longtable}{lLL}
+\caption{Sampled user queries for the oracle analysis. Queries for
+    which the user chose a snippet from the code 
+    generation model are shown in boldface. $\bullet$ denotes 
+    queries ``good enough'' on their own; $\circ$ denotes queries
+    good enough given the rest of the source file as context; the
+    former is a strict subset of the latter.} \label{tbl:queries-sampled} \\
+\toprule
+Task & Queries & \\
+\midrule
+\endfirsthead
+\caption[]{(continued)}\\
+\toprule
+Task & Queries & \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+T1-1 & \textbf{call \texttt{\`}pick$\_$with$\_$replacement\texttt{\`} $\circ$} & defaultdict \\
+& \textbf{generate lowercase char $\bullet\circ$} & for loop on range 100 $\bullet\circ$ \\
+& \textbf{generate random between 0 and 20 $\bullet\circ$} & generate char lower case \\
+& \textbf{random sample with replacement $\bullet\circ$} & generate random letters $\bullet\circ$ \\
+& \textbf{sort key of dict $\bullet\circ$} & random characters \\
+T1-2 & \textbf{change datetime format of \texttt{\`}week$\_$date\texttt{\`} to mm-dd-yyyy hh:mm $\bullet\circ$} & format datetime \\
+& \textbf{convert \texttt{\`}week$\_$date\texttt{\`} to GMT timezone and assign to \texttt{\`}GMT$\_$week$\_$date\texttt{\`} $\bullet\circ$} & get gmt timezone $\circ$ \\
+& \textbf{print datetime in mm-dd-yyyy hh:mm  format $\bullet\circ$} & get now one week from now $\bullet\circ$ \\
+& date now $\bullet\circ$ & get time and date $\bullet\circ$ \\
+T2-1 & \textbf{remove first column from csv file $\bullet\circ$} & how to delete columns in dataframe $\circ$ \\
+& csv writer & open "data.csv" file $\bullet\circ$ \\
+& how to delete a column in a dataframe python $\circ$ \\
+T2-2 & traverse a directory $\circ$ \\
+T3-1 & \textbf{copy a file to dist $\circ$} & recursive copy files and folders $\circ$ \\
+& match regex year month day & regexp date \\
+T4-2 & download an image request & save dict to csv \\
+T5-2 & \textbf{exit program $\bullet\circ$} & argparse subprogram \\
+T6-1 & \textbf{load csv file with pandas $\bullet\circ$} & how to remove an item from a list using the index $\bullet\circ$ \\
+& \textbf{pandas round value $\circ$} & pandas create buckets by column value \\
+& \textbf{pandas to csv} & pandas group by \\
+& \textbf{read csv file $\bullet\circ$} & pandas output csv $\circ$ \\
+& \textbf{rename column pandas $\circ$} & pandas to csv decimal $\circ$ \\
+& filter df with two conditions & pandas write df to csv \\
+T6-2 & load wine dataset \\
+T7-1 & \textbf{plt create figure with size $\bullet\circ$} & \textbf{scatter $\circ$} \\
+T7-2 & \textbf{plt ax legend $\circ$} & plt create 3 subplots $\bullet\circ$ \\
+& bar plot with multiple bars per label $\circ$ \\
+
+\bottomrule
+\end{longtable}

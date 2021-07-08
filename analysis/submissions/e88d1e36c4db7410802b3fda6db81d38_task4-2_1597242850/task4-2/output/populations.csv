@@ -1,0 +1,242 @@
+country,population
+China,1,403,946,800
+India,1,365,851,196
+United States,330,115,486
+Indonesia,269,603,400
+Pakistan,220,892,331
+Brazil,211,919,229
+Nigeria,206,139,587
+Bangladesh,169,114,552
+Russia,146,748,590
+Mexico,127,792,286
+Japan,125,960,000
+Philippines,109,017,504
+Ethiopia,100,829,000
+Egypt,100,732,540
+Vietnam,96,208,984
+DR Congo,89,561,404
+Iran,83,691,186
+Germany,83,166,711
+Turkey,83,154,997
+France,67,098,000
+United Kingdom,66,796,807
+Thailand,66,539,755
+Italy,60,244,639
+South Africa,59,622,350
+Tanzania,57,637,628
+Myanmar,54,817,919
+South Korea,51,780,579
+Colombia,50,372,424
+Kenya,47,564,296
+Spain,47,329,981
+Argentina,45,376,763
+Algeria,43,900,000
+Sudan,42,740,960
+Ukraine,41,785,758
+Uganda,41,583,600
+Iraq,40,150,200
+Poland,38,356,000
+Canada,38,133,494
+Morocco,35,983,990
+Uzbekistan,34,349,140
+Saudi Arabia,34,218,169
+Afghanistan,32,890,171
+Malaysia,32,869,760
+Peru,32,625,948
+Angola,31,127,674
+Ghana,30,955,202
+Mozambique,30,066,648
+Nepal,29,996,478
+Yemen,29,825,968
+Venezuela,28,435,943
+Cameroon,26,545,864
+Ivory Coast,26,453,542
+Madagascar,26,251,309
+Australia,25,645,488
+North Korea,25,550,000
+Taiwan,23,583,823
+Niger,23,196,002
+Sri Lanka,21,803,000
+Burkina Faso,21,510,181
+Mali,20,250,833
+Chile,19,458,310
+Romania,19,405,156
+Malawi,19,129,952
+Kazakhstan,18,755,784
+Zambia,17,885,422
+Ecuador,17,545,956
+Syria,17,500,657
+Netherlands,17,497,231
+Guatemala,16,858,333
+Senegal,16,705,608
+Chad,16,244,513
+Somalia,15,893,219
+Zimbabwe,15,473,818
+Cambodia,15,288,489
+South Sudan,13,249,924
+Rwanda,12,663,116
+Guinea,12,559,623
+Benin,12,114,193
+Haiti,11,743,017
+Tunisia,11,708,370
+Bolivia,11,633,371
+Belgium,11,528,375
+Burundi,11,215,578
+Cuba,11,193,470
+Jordan,10,744,964
+Greece,10,724,599
+Czech Republic,10,694,364
+Dominican Republic,10,448,499
+Sweden,10,348,730
+Portugal,10,295,909
+Azerbaijan,10,067,108
+United Arab Emirates,9,890,400
+Hungary,9,769,526
+Belarus,9,408,400
+Tajikistan,9,313,800
+Honduras,9,304,380
+Israel,9,235,805
+Papua New Guinea,8,935,000
+Austria,8,915,382
+Switzerland,8,619,259
+Sierra Leone,8,100,318
+Togo,7,706,000
+Hong Kong (China),7,500,700
+Paraguay,7,252,672
+Laos,7,231,210
+Bulgaria,6,951,482
+Serbia,6,926,705
+Libya,6,871,287
+Lebanon,6,825,442
+Kyrgyzstan,6,563,700
+Nicaragua,6,527,691
+El Salvador,6,486,201
+Turkmenistan,6,031,187
+Denmark,5,825,337
+Singapore,5,703,600
+Central African Republic,5,633,412
+Congo,5,518,092
+Finland,5,498,827
+Slovakia,5,457,926
+Norway,5,372,355
+Costa Rica,5,111,238
+Palestine,5,038,918
+New Zealand,5,011,325
+Ireland,4,921,500
+Oman,4,578,016
+Liberia,4,568,298
+Kuwait,4,420,110
+Panama,4,278,500
+Mauritania,4,173,077
+Croatia,4,058,165
+Georgia,3,716,858
+Eritrea,3,546,000
+Uruguay,3,530,912
+Mongolia,3,332,225
+Bosnia and Herzegovina,3,281,000
+Puerto Rico (US),3,193,694
+Armenia,2,963,000
+Albania,2,845,955
+Lithuania,2,794,207
+Qatar,2,749,215
+Jamaica,2,726,667
+Moldova,2,640,438
+Namibia,2,504,498
+Gambia,2,417,000
+Botswana,2,374,698
+Gabon,2,226,000
+Slovenia,2,097,195
+North Macedonia,2,076,255
+Lesotho,2,007,201
+Latvia,1,900,800
+Kosovo,1,782,115
+Guinea-Bissau,1,624,945
+Bahrain,1,592,000
+Equatorial Guinea,1,454,789
+Trinidad and Tobago,1,363,985
+Estonia,1,328,976
+East Timor,1,299,412
+Mauritius,1,265,475
+Djibouti,1,108,567
+Eswatini,1,093,238
+Comoros,897,219
+Fiji,889,327
+Cyprus,875,900
+Guyana,787,000
+Bhutan,748,931
+Macau (China),696,100
+Solomon Islands,694,619
+Luxembourg,626,108
+Montenegro,621,873
+Western Sahara,597,000
+Suriname,587,000
+Cape Verde,556,857
+Malta,514,564
+Transnistria,469,000
+Brunei,459,500
+Belize,419,199
+Bahamas,389,410
+Maldives,383,135
+Iceland,366,700
+Northern Cyprus,351,965
+Vanuatu,304,500
+Barbados,287,025
+French Polynesia (France),275,918
+New Caledonia (France),271,407
+Abkhazia,245,246
+São Tomé and Príncipe,210,240
+Samoa,202,506
+Saint Lucia,178,696
+Guam (US),172,400
+Curaçao (Netherlands),156,223
+Republic of Artsakh,148,800
+Kiribati,120,100
+Aruba (Netherlands),112,321
+Grenada,112,003
+Saint Vincent and the Grenadines,110,696
+Jersey (UK),107,800
+F.S. Micronesia,104,650
+U.S. Virgin Islands (US),104,578
+Tonga,100,651
+Seychelles,98,055
+Antigua and Barbuda,97,895
+Isle of Man (UK),83,314
+Andorra,77,543
+Dominica,71,808
+Cayman Islands (UK),65,813
+Bermuda (UK),64,054
+Guernsey (UK),63,196
+American Samoa (US),56,700
+Greenland (Denmark),56,367
+Northern Mariana Islands (US),56,200
+Marshall Islands,55,500
+South Ossetia,53,532
+Saint Kitts and Nevis,52,823
+Faroe Islands (Denmark),52,562
+Turks and Caicos Islands (UK),42,953
+Sint Maarten (Netherlands),40,614
+Liechtenstein,38,749
+Monaco,38,100
+Saint Martin (France),35,334
+Gibraltar (UK),33,691
+San Marino,33,545
+British Virgin Islands (UK),30,030
+Åland Islands (Finland),30,028
+Palau,17,900
+Cook Islands (NZ),15,200
+Anguilla (UK),14,869
+Wallis and Futuna (France),11,558
+Nauru,11,000
+Tuvalu,10,200
+Saint Barthélemy (France),9,961
+Saint Pierre and Miquelon (France),5,997
+Saint Helena, Ascensionand Tristan da Cunha (UK),5,633
+Montserrat (UK),4,989
+Falkland Islands (UK),3,198
+Christmas Island (Australia),1,955
+Norfolk Island (Australia),1,735
+Niue (NZ),1,520
+Tokelau (NZ),1,400
+Vatican City,825
+Cocos (Keeling) Islands (Australia),555
+Pitcairn Islands (UK),50

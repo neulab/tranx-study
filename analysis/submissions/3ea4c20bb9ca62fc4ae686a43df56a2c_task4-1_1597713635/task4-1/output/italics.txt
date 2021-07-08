@@ -1,0 +1,22 @@
+Indirect Supervision for Information Extraction
+a two-way bridge
+Proceedings of 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)
+Proceedings of 58th Annual Meeting of the Association for Computational Linguistics (ACL)
+Transactions of the Association for Computational Linguistics (TACL)
+Proceedings of IEEE International Conference on Big Data
+Proceedings of IEEE International Conference on Data Mining (ICDM)
+Proceedings of 32nd Annual ACM Symposium on User Interface Software and Technology (UIST)
+Proceedings of 57th Annual Meeting of the Association for Computational Linguistics (ACL Demo)
+Proceedings of 56th Annual Meeting of the Association for Computational Linguistics (ACL)
+Proceedings of 56th Annual Meeting of the Association for Computational Linguistics (ACL)
+Proceedings of Conference on Empirical Methods in Natural Language Processing (EMNLP)
+Proceedings of Thirty-second AAAI Conference on Artificial Intelligence (AAAI)
+Proceedings of The 11th ACM International Conference on Web Search and Data Mining (WSDM)
+Proceedings of The Web Conference (WWW Poster)
+Proceedings of the Second Workshop on Subword/Character LEvel Models (SCLeM) at NAACL
+First Workshop on Knowledge Base Construction, Reasoning and Mining (KBCOM) at WSDM
+6th Workshop on Automated Knowledge Base Construction (AKBC) at NIPS
+Proceedings of the 3rd Workshop on Noisy User-generated Text (W-NUT) at EMNLP
+Proceedings of SmartIoT 2018 Workshop: AI enhanced IoT data processing for Intelligent Applications, at AAAI
+ Proceedings of the 9th ACM SIGSPATIAL International Workshop
+on Computational Transportation Science

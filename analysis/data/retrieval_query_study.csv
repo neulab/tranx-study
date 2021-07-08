@@ -1,0 +1,60 @@
+"open ""data.csv"" file",open csv file
+copy file `ddd.png`,copy file
+save `compan_df` dataframe to a file,save dataframe to a file
+save `compand_df` dataframe to a file,save dataframe to a file
+get the head of dataframe `df`,get the head of dataframe
+sort dataframe `jdf` by `scores`,sort dataframe by column
+sort dataframe `jdf` by the values of column 'scores',sort dataframe by the values of column
+"pandas read csv named ""data.csv""",pandas read csv
+"make directory ""output"" if it doesn't exist",make directory if it doesn't exist
+read a json file named `f`,read a json file
+write json in `ret` to file `outfile`,write json in variable to file 
+loop over a range of `count`,loop over a range
+randomly pick an item from `seq`,randomly pick an item
+call `pick_with_replacement`,call function
+zip `hundred_characters` with `hundred_numbers`,zip list with list
+"walk all nested files in the directory ""data""",walk all nested files in the directory
+assign current date and time to `now`,assign current date and time to variable
+convert `week_date` to GMT timezone and assign to `GMT_week_date`,convert variable to GMT timezone and assign to another variable
+display `week_date` in format mm-dd-yyyy hh:mm ,display datetime in format mm-dd-yyyy hh:mm 
+change datetime format of `week_date` to mm-dd-yyyy hh:mm,change datetime format to mm-dd-yyyy hh:mm
+"read csv file ""data.csv""",read csv file
+"write csv `output_f` to file ""output/output.csv""",write csv to file filename
+"if directory ""output"" exists",if directory exists
+check if file `output_file` exists,check if file exists
+"GET request to ""https://jsonplaceholder.typicode.com/posts"" with argument userId",GET request to url with argument
+"change directory to ""data""",change directory to another
+pair characters in `characters` and numbers in `numbers`,pair characters in list and numbers in list
+copy files and directories under `data` directory,copy files and directories under given directory
+"create list ""a_list""",create list
+"copy column from ""data.csv"" file to another ""output.csv""",copy column from csv file to another csv file
+"copy column from ""data.csv"" to ""output.csv""",copy column from csv file to csv file
+"Given list `letters` and `integers`, create a dicitonary such that the values in `letters` are keys and values in `integers` are values","Given 2 list, create a dicitonary such that the values in one are keys and values in another are values"
+print `dic` sorted by keys,print dict sorted by keys
+open a csv file `data.csv` and read the data,open a csv file and read the data
+delete first row from dataframe `df`,delete first row from dataframe
+delete first and last row from the dataframe `df`,delete first and last row from the dataframe
+save `df` to a file `output.csv` in a new directory `example_output`,save dataframe to a csv file in a new directory
+visit the url `url`,visit the url
+parse all hyperlinks from `r` using bs4,parse all hyperlinks using bs4
+visit the given url `url` and extract all hrefs from there,visit the given url and extract all hrefs from there
+visit `url` and extract hrefs using bs4,visit url and extract hrefs using bs4
+find all hrefs from `soup`,find all hrefs from beautifulsoup
+find all bold text from html `soup`,find all bold text from html beautifulsoup
+find all red colored text from html `soup`,find all red colored text from html beautifulsoup
+create a dictionary with keys `random_letters` and values `random_numbers`,create a dictionary with keys and values
+print `dic` sorted by keys,print dict sorted by keys
+print `dic` keys sorted,print dict keys sorted
+print `dic` keys on each line,print dict keys on each line
+"read ""data.csv"" file",read csv file
+"read csv file ""data.csv""",read csv file
+delete first and last column of `df`,delete first and last column of dataframe
+"write output to csv file ""output.csv""",write output to csv file
+write `output` to csv file,write output csv file
+"search for pattern ""%d%d-%d%d"" in `file`",search for pattern in file
+copy file from `src_path` to `dest_path`,copy file from source path to destination path
+check if `file` is a directory,check if is a directory
+"write `final_data` to csv file ""price.csv""",write to csv file
+get time and date in gmt in `date`,get time and date in gmt
+open csv file `data.csv` ,open csv file
+delete the first column in csv file `df`,delete the first column in csv file

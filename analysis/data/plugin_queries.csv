@@ -1,0 +1,449 @@
+,user,task,query,is_generation
+0,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task1-1,randomly generate 100 letters,0
+1,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task1-2,print current date time,1
+2,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task1-2,get date time one week from now,1
+3,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task1-2,get gmt timezone,0
+4,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task2-1,write to csv file,1
+5,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task3-1,recursively iterate over all files in a directory,1
+6,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task3-1,regex replace capture group,1
+7,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,load csv file with pandas,1
+8,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,get average of row values in pandas dataframe,1
+9,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,pandas get average of column,0
+10,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,pandas join dataframes,1
+11,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,pandas join series into dataframes,0
+12,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,pandas change dataframe column name,0
+13,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,rename pandas df columns,0
+14,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,pandas write df to csv,0
+15,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,pandas print with two decimals,0
+16,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,pandas save csv two decimal,0
+17,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,pandas create buckets by column value,0
+18,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,filter values in pandas df,0
+19,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,filter df with two conditions,0
+20,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,df set column to 7 decimals,0
+21,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,pandas add new column based on row values,0
+22,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-2,multinomial logistic regression model,0
+23,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-2,sklearn 5-fold cross validation,0
+24,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-2,disable warnings,0
+25,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-1,save plt figure,1
+26,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-1,plt set x axis tick range,0
+27,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-1,plt date as x axis,0
+28,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-1,scatter plot purple,0
+29,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-1,plt set x axis label,0
+30,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-1,plt set xtick font size,0
+31,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-1,plt create figure with size,1
+32,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,group pandas df by two columns,1
+33,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,bar plot with multiple bars per label,0
+34,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,plt create 3 subplots,0
+35,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,matplotlib theme,0
+36,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,plt show values on bar plot,0
+37,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,plt ax xlabel,0
+38,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,plt set x tick labels,0
+39,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,plt set title for subplot figure,0
+40,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,plt ax legend,1
+41,c4196119198c1bd6dce9ad020501698d,task1-1,random sample with replacement,1
+42,c4196119198c1bd6dce9ad020501698d,task1-1,print a to z,0
+43,c4196119198c1bd6dce9ad020501698d,task1-1,random sample with replacement,1
+44,c4196119198c1bd6dce9ad020501698d,task1-1,sort dict by key,1
+45,c4196119198c1bd6dce9ad020501698d,task2-2,list files in folder,1
+46,c4196119198c1bd6dce9ad020501698d,task2-2,copy file to other folder,0
+47,c4196119198c1bd6dce9ad020501698d,task2-2,text normalize newlines to \n,0
+48,c4196119198c1bd6dce9ad020501698d,task2-2,write to file,0
+49,c4196119198c1bd6dce9ad020501698d,task2-2,convert text files from encoding ISO-8859-15 to encoding UTF-8.,0
+50,c4196119198c1bd6dce9ad020501698d,task2-2,move file to other directory,1
+51,2ceafaf6a21d6cb6495038b38ab72061,task1-2,print datetime in mm-dd-yyyy hh:mm  format,1
+52,2ceafaf6a21d6cb6495038b38ab72061,task1-2,get time now,1
+53,2ceafaf6a21d6cb6495038b38ab72061,task1-2,get now one week from now,0
+54,2ceafaf6a21d6cb6495038b38ab72061,task2-1,"open ""data.csv"" file",0
+55,2ceafaf6a21d6cb6495038b38ab72061,task2-1,get specific columns by index in pandas data frame,0
+56,2ceafaf6a21d6cb6495038b38ab72061,task2-1,save pandas dataframe to a file,0
+57,2ceafaf6a21d6cb6495038b38ab72061,task2-2,get the file extension,0
+58,2ceafaf6a21d6cb6495038b38ab72061,task2-2,copy file `ddd.png`,1
+59,2ceafaf6a21d6cb6495038b38ab72061,task3-1,match regex year month day,0
+60,2ceafaf6a21d6cb6495038b38ab72061,task3-1,copy a file to dist,1
+61,2ceafaf6a21d6cb6495038b38ab72061,task3-1,make a folder recersively,0
+62,2ceafaf6a21d6cb6495038b38ab72061,task6-1,a list of dictionary to pandas dataframe,0
+63,2ceafaf6a21d6cb6495038b38ab72061,task6-1,list to an entry in pandas dataframe,0
+64,2ceafaf6a21d6cb6495038b38ab72061,task6-1,save `compan_df` dataframe to a file,0
+65,2ceafaf6a21d6cb6495038b38ab72061,task6-1,save `compand_df` dataframe to a file,0
+66,2ceafaf6a21d6cb6495038b38ab72061,task6-1,cast a float to two decimals,1
+67,2ceafaf6a21d6cb6495038b38ab72061,task6-1,cast a list to a dataframe,1
+68,2ceafaf6a21d6cb6495038b38ab72061,task6-1,get the head of dataframe `df`,0
+69,2ceafaf6a21d6cb6495038b38ab72061,task6-1,add a new column to a dataframe row,0
+70,2ceafaf6a21d6cb6495038b38ab72061,task6-1,create a dataframe from a list,1
+71,2ceafaf6a21d6cb6495038b38ab72061,task6-1,sort dataframe `jdf` by `scores`,1
+72,2ceafaf6a21d6cb6495038b38ab72061,task6-1,sort dataframe `jdf` by the values of column 'scores',1
+73,2ceafaf6a21d6cb6495038b38ab72061,task6-2,linear regressor 5 folder cross validation,0
+74,2ceafaf6a21d6cb6495038b38ab72061,task6-2,"sklearn cross validation x, y for 5 folds",0
+75,2ceafaf6a21d6cb6495038b38ab72061,task6-2,set numpy random seed to 0,0
+76,67e86a0cb1f9b6cae0e8d6c4b24711de,task1-2,datetime,1
+77,67e86a0cb1f9b6cae0e8d6c4b24711de,task1-2,get datetime,0
+78,67e86a0cb1f9b6cae0e8d6c4b24711de,task1-2,time add,1
+79,67e86a0cb1f9b6cae0e8d6c4b24711de,task1-2,format datetime,0
+80,67e86a0cb1f9b6cae0e8d6c4b24711de,task2-2,copy file,1
+81,67e86a0cb1f9b6cae0e8d6c4b24711de,task2-2,readline encoding,0
+82,34b1ef17e6625ba2350f6f1c169591a1,task1-1,random,0
+83,34b1ef17e6625ba2350f6f1c169591a1,task1-1,random,0
+84,34b1ef17e6625ba2350f6f1c169591a1,task1-1,random,0
+85,34b1ef17e6625ba2350f6f1c169591a1,task1-1,random characters,0
+86,34b1ef17e6625ba2350f6f1c169591a1,task1-1,defaultdict,0
+87,34b1ef17e6625ba2350f6f1c169591a1,task1-1,sort key of dict,1
+88,34b1ef17e6625ba2350f6f1c169591a1,task1-1,print list,1
+89,34b1ef17e6625ba2350f6f1c169591a1,task1-1,print list elements,0
+90,34b1ef17e6625ba2350f6f1c169591a1,task2-2,read all files under a folder,1
+91,34b1ef17e6625ba2350f6f1c169591a1,task2-2,open text file,1
+92,34b1ef17e6625ba2350f6f1c169591a1,task2-2,open text file,1
+93,34b1ef17e6625ba2350f6f1c169591a1,task2-2,copy file,0
+94,34b1ef17e6625ba2350f6f1c169591a1,task2-2,remove heading white space,0
+95,34b1ef17e6625ba2350f6f1c169591a1,task6-1,read csv file,1
+96,34b1ef17e6625ba2350f6f1c169591a1,task6-1,pandas dropnan,0
+97,34b1ef17e6625ba2350f6f1c169591a1,task6-1,pandas group by,0
+98,34b1ef17e6625ba2350f6f1c169591a1,task6-1,pandas output csv,0
+99,34b1ef17e6625ba2350f6f1c169591a1,task6-1,pandas to csv,1
+100,34b1ef17e6625ba2350f6f1c169591a1,task6-1,average by group pandas,1
+101,34b1ef17e6625ba2350f6f1c169591a1,task6-1,pandas round value,1
+102,34b1ef17e6625ba2350f6f1c169591a1,task6-1,two deciaml place,0
+103,34b1ef17e6625ba2350f6f1c169591a1,task6-1,pandas to csv decimal,0
+104,34b1ef17e6625ba2350f6f1c169591a1,task6-1,sort pandas dataframe,1
+105,34b1ef17e6625ba2350f6f1c169591a1,task6-1,group by range pandas ,0
+106,34b1ef17e6625ba2350f6f1c169591a1,task6-1,rename column pandas,1
+107,34b1ef17e6625ba2350f6f1c169591a1,task6-1,column to integer pandas,1
+108,34b1ef17e6625ba2350f6f1c169591a1,task7-2,horizontal subplot,1
+109,34b1ef17e6625ba2350f6f1c169591a1,task7-2,import matplotlib,0
+110,34b1ef17e6625ba2350f6f1c169591a1,task7-2,bar graph side by side,0
+111,34b1ef17e6625ba2350f6f1c169591a1,task7-2,pyplot subplots,1
+112,34b1ef17e6625ba2350f6f1c169591a1,task7-2,select row pandas,0
+113,138ca13c6ba8814e8e4aea9853d66b69,task1-1,random character between a and z,0
+114,138ca13c6ba8814e8e4aea9853d66b69,task1-1,random integer between 1 and 20,1
+115,138ca13c6ba8814e8e4aea9853d66b69,task1-1,print list as string,0
+116,138ca13c6ba8814e8e4aea9853d66b69,task2-2,trim heading whitespace,1
+117,138ca13c6ba8814e8e4aea9853d66b69,task2-2,normalize newlines to \n,1
+118,138ca13c6ba8814e8e4aea9853d66b69,task2-2,list of filenames from a folder,1
+119,2350ca5cc5bf54fca0b2499ae103d8b1,task2-2,check length of line,0
+120,2350ca5cc5bf54fca0b2499ae103d8b1,task6-2,cross validation using logistic regression sklearn,0
+121,844088c7077d499fa3533250ae504e7f,task1-1,generate random numbers,0
+122,844088c7077d499fa3533250ae504e7f,task1-1,generate random letters,0
+123,844088c7077d499fa3533250ae504e7f,task1-1,generate random letters,0
+124,844088c7077d499fa3533250ae504e7f,task1-2,get current datetime,0
+125,844088c7077d499fa3533250ae504e7f,task1-2,add a week to a datetime,0
+126,844088c7077d499fa3533250ae504e7f,task1-2,convert date timezone,0
+127,844088c7077d499fa3533250ae504e7f,task1-2,format datetime 24 hour,0
+128,844088c7077d499fa3533250ae504e7f,task2-1,read csv pure python,0
+129,844088c7077d499fa3533250ae504e7f,task2-1,python make dir,0
+130,844088c7077d499fa3533250ae504e7f,task2-2,get all files in directory,1
+131,844088c7077d499fa3533250ae504e7f,task2-2,get all files in directory,0
+132,844088c7077d499fa3533250ae504e7f,task2-2,convert file encoding,0
+133,844088c7077d499fa3533250ae504e7f,task2-2,check file encoding,0
+134,844088c7077d499fa3533250ae504e7f,task2-2,copy file,0
+135,3d15fb351f9dfabd41e2b2fb142dad71,task1-2,current time,1
+136,3d15fb351f9dfabd41e2b2fb142dad71,task1-2,date and time ,0
+137,3d15fb351f9dfabd41e2b2fb142dad71,task1-2,get curren time,1
+138,a061d03ba2e23bf8f3861f78d7d62248,task1-1,get a random letter,1
+139,a061d03ba2e23bf8f3861f78d7d62248,task1-1,random number,1
+140,a061d03ba2e23bf8f3861f78d7d62248,task2-1,pandas read csv,1
+141,a061d03ba2e23bf8f3861f78d7d62248,task2-1,"pandas read csv named ""data.csv""",1
+142,a061d03ba2e23bf8f3861f78d7d62248,task2-1,save this dataframe to a csv,1
+143,a061d03ba2e23bf8f3861f78d7d62248,task2-1,"make directory ""output"" if it doesn't exist",0
+144,a061d03ba2e23bf8f3861f78d7d62248,task3-2,read a json file named `f`,1
+145,a061d03ba2e23bf8f3861f78d7d62248,task3-2,write json in `ret` to file `outfile`,0
+146,a061d03ba2e23bf8f3861f78d7d62248,task3-2,load json from a file,0
+147,a061d03ba2e23bf8f3861f78d7d62248,task6-2,numpy load from csv,1
+148,a061d03ba2e23bf8f3861f78d7d62248,task6-2,sklearn ignore warnings,0
+149,eb8c0b297db7d9e210c3b804373339a2,task2-1,open file,1
+150,eb8c0b297db7d9e210c3b804373339a2,task2-1,file to csv,0
+151,eb8c0b297db7d9e210c3b804373339a2,task2-1,open file,1
+152,eb8c0b297db7d9e210c3b804373339a2,task2-1,open file,1
+153,eb8c0b297db7d9e210c3b804373339a2,task7-2,plot bar,1
+154,eb8c0b297db7d9e210c3b804373339a2,task7-2,plot size,0
+155,eb8c0b297db7d9e210c3b804373339a2,task7-2,plot title,0
+156,fd9d2d83c74acfbdeb44b35e7e0d1b1f,task1-1,import library random,0
+157,fd9d2d83c74acfbdeb44b35e7e0d1b1f,task1-1,loop on numbers from 0 to 100,0
+158,fd9d2d83c74acfbdeb44b35e7e0d1b1f,task1-1,generate random between 0 and 20,1
+159,fd9d2d83c74acfbdeb44b35e7e0d1b1f,task1-1,create empty dictionary,0
+160,fd9d2d83c74acfbdeb44b35e7e0d1b1f,task1-1,for loop on range 100,0
+161,fd9d2d83c74acfbdeb44b35e7e0d1b1f,task3-2,check if file ends with .json,0
+162,fd9d2d83c74acfbdeb44b35e7e0d1b1f,task3-2,import json parsing library,0
+163,9dd43727b9246d7f2220b94ff43380cf,task2-2,find character,1
+164,9dd43727b9246d7f2220b94ff43380cf,task2-2,travverse list of files,1
+165,9dd43727b9246d7f2220b94ff43380cf,task2-2,traverse a directory,0
+166,9dd43727b9246d7f2220b94ff43380cf,task2-2,open file,1
+167,9dd43727b9246d7f2220b94ff43380cf,task2-2,convert binary decoded string to ascii,0
+168,9dd43727b9246d7f2220b94ff43380cf,task2-2,convert latin-1 to utf-8,0
+169,9dd43727b9246d7f2220b94ff43380cf,task2-2,convert str to utf-8,1
+170,9dd43727b9246d7f2220b94ff43380cf,task3-2,write into txt file,0
+171,9dd43727b9246d7f2220b94ff43380cf,task3-2,load json file,1
+172,9dd43727b9246d7f2220b94ff43380cf,task3-2,convert dict to string,0
+173,9dd43727b9246d7f2220b94ff43380cf,task3-2,convert dict to string,0
+174,9dd43727b9246d7f2220b94ff43380cf,task5-1,add json file to a list,1
+175,9dd43727b9246d7f2220b94ff43380cf,task5-1,check email correctness,0
+176,4d52cf690a039273baca11d5bf55f0a7,task1-1,squence of integers from 1 to 20 inclusive,0
+177,4d52cf690a039273baca11d5bf55f0a7,task1-1,loop over a range of `count`,1
+178,4d52cf690a039273baca11d5bf55f0a7,task1-1,randomly pick an item from `seq`,1
+179,4d52cf690a039273baca11d5bf55f0a7,task1-1,call `pick_with_replacement`,1
+180,4d52cf690a039273baca11d5bf55f0a7,task1-1,zip `hundred_characters` with `hundred_numbers`,1
+181,4d52cf690a039273baca11d5bf55f0a7,task2-2,list all text files in the data directory,1
+182,4d52cf690a039273baca11d5bf55f0a7,task2-2,list all text files in the data directory,0
+183,4d52cf690a039273baca11d5bf55f0a7,task2-2,read a file and iterate over its contents,0
+184,4d52cf690a039273baca11d5bf55f0a7,task3-1,walke all files in a directory,1
+185,4d52cf690a039273baca11d5bf55f0a7,task3-1,list all filepaths in a directory,1
+186,4d52cf690a039273baca11d5bf55f0a7,task3-1,walk all files in a directory,0
+187,4d52cf690a039273baca11d5bf55f0a7,task3-1,"walk all nested files in the directory ""data""",0
+188,4d52cf690a039273baca11d5bf55f0a7,task3-1,search all matches in a string,1
+189,4d52cf690a039273baca11d5bf55f0a7,task3-1,search all matches in a string,1
+190,4d52cf690a039273baca11d5bf55f0a7,task3-1,search all matches in a string,1
+191,4d52cf690a039273baca11d5bf55f0a7,task3-1,regex digit python,0
+192,4d52cf690a039273baca11d5bf55f0a7,task3-1,regex digit python,0
+193,4d52cf690a039273baca11d5bf55f0a7,task3-1,extract year month day from string regex,0
+194,4d52cf690a039273baca11d5bf55f0a7,task3-1,move file,1
+195,4d52cf690a039273baca11d5bf55f0a7,task5-2,argparse subprogram,0
+196,4d52cf690a039273baca11d5bf55f0a7,task5-2,request with params,0
+197,638965bbb0d66a5b0eae27d1324bbf89,task1-2,assign current date and time to `now`,1
+198,638965bbb0d66a5b0eae27d1324bbf89,task1-2,add days to time,1
+199,638965bbb0d66a5b0eae27d1324bbf89,task1-2,convert `week_date` to GMT timezone and assign to `GMT_week_date`,1
+200,638965bbb0d66a5b0eae27d1324bbf89,task1-2,display `week_date` in format mm-dd-yyyy hh:mm ,1
+201,638965bbb0d66a5b0eae27d1324bbf89,task1-2,change datetime format of `week_date` to mm-dd-yyyy hh:mm,1
+202,638965bbb0d66a5b0eae27d1324bbf89,task2-1,"read csv file ""data.csv""",1
+203,638965bbb0d66a5b0eae27d1324bbf89,task2-1,number of columns of csv,1
+204,638965bbb0d66a5b0eae27d1324bbf89,task2-1,"write csv `output_f` to file ""output/output.csv""",1
+205,638965bbb0d66a5b0eae27d1324bbf89,task2-1,"if directory ""output"" exists",0
+206,638965bbb0d66a5b0eae27d1324bbf89,task2-1,print csv without row numbers,0
+207,638965bbb0d66a5b0eae27d1324bbf89,task3-2,check if file `output_file` exists,1
+208,638965bbb0d66a5b0eae27d1324bbf89,task3-2,add entry to json file,1
+209,638965bbb0d66a5b0eae27d1324bbf89,task3-2,load json file,1
+210,638965bbb0d66a5b0eae27d1324bbf89,task5-2,"GET request to ""https://jsonplaceholder.typicode.com/posts"" with argument userId",1
+211,638965bbb0d66a5b0eae27d1324bbf89,task5-2,print format,1
+212,638965bbb0d66a5b0eae27d1324bbf89,task5-2,exit program,1
+213,9337deccd10c36bab2411e51e60984bc,task1-2,get current time,1
+214,9337deccd10c36bab2411e51e60984bc,task2-1,load csv data,1
+215,9337deccd10c36bab2411e51e60984bc,task3-1,copy a file ,0
+216,2e3e8fa9d9f7b9fed260130d754b6308,task6-2,how to split dataset  in scikit learn,0
+217,2e3e8fa9d9f7b9fed260130d754b6308,task6-2,how to split dataset in scikit learn,0
+218,2e3e8fa9d9f7b9fed260130d754b6308,task6-2,how to determine cross validation mean in scikit learn,0
+219,2e3e8fa9d9f7b9fed260130d754b6308,task6-2,cross validation mean accuracy,0
+220,2e3e8fa9d9f7b9fed260130d754b6308,task6-2,cross validation in scikit learn,0
+221,2e3e8fa9d9f7b9fed260130d754b6308,task6-2,cross validation in scikit learn,0
+222,cbfad61871126c1cc4c85d8bdb7fdddf,task1-1,How to generate random letter,1
+223,cbfad61871126c1cc4c85d8bdb7fdddf,task1-1,How to generate random int in range between 1 and 20,1
+224,cbfad61871126c1cc4c85d8bdb7fdddf,task2-1,make directory,0
+225,cbfad61871126c1cc4c85d8bdb7fdddf,task2-1,get current path,1
+226,cbfad61871126c1cc4c85d8bdb7fdddf,task3-1,regexp date,0
+227,cbfad61871126c1cc4c85d8bdb7fdddf,task3-1,copy files creating directory,0
+228,cbfad61871126c1cc4c85d8bdb7fdddf,task4-2,create directory,0
+229,3290155d5f39c2cece41ce216eecac62,task1-2,date gmt,0
+230,3290155d5f39c2cece41ce216eecac62,task1-2,date now,0
+231,3290155d5f39c2cece41ce216eecac62,task2-1,cvs files,0
+232,3290155d5f39c2cece41ce216eecac62,task2-1,cvs,0
+233,3290155d5f39c2cece41ce216eecac62,task2-1,read cvs,0
+234,3290155d5f39c2cece41ce216eecac62,task2-1,csv write,0
+235,3290155d5f39c2cece41ce216eecac62,task2-1,csv writer,0
+236,3290155d5f39c2cece41ce216eecac62,task2-1,if dir exist,0
+237,3290155d5f39c2cece41ce216eecac62,task6-1,loop files recursive,0
+238,3290155d5f39c2cece41ce216eecac62,task6-1,csv,0
+239,3290155d5f39c2cece41ce216eecac62,task6-1,csv write,0
+240,baff2a3b41189071a80cebf6fdc239e3,task1-2,get time and date,0
+241,baff2a3b41189071a80cebf6fdc239e3,task1-2,get date and time one week from now,1
+242,baff2a3b41189071a80cebf6fdc239e3,task1-2,get time and date one week from now ,1
+243,baff2a3b41189071a80cebf6fdc239e3,task2-2,trim the heading and trailing whitespaces and blank lines for all text files ,1
+244,eb54774fe018001b25b8c31133f13bc9,task1-1,generate random number,1
+245,eb54774fe018001b25b8c31133f13bc9,task1-1,sort a list,1
+246,eb54774fe018001b25b8c31133f13bc9,task1-1,print without newline,0
+247,eb54774fe018001b25b8c31133f13bc9,task2-2,change directory,0
+248,eb54774fe018001b25b8c31133f13bc9,task2-2,"change directory to ""data""",1
+249,eb54774fe018001b25b8c31133f13bc9,task2-2,list files in directory,0
+250,eb54774fe018001b25b8c31133f13bc9,task2-2,read ISO-8859-15 ,0
+251,eb54774fe018001b25b8c31133f13bc9,task2-2,copy a file,0
+252,eb54774fe018001b25b8c31133f13bc9,task2-2,check if directory exists,1
+253,eb54774fe018001b25b8c31133f13bc9,task6-2,load wine dataset,0
+254,eb54774fe018001b25b8c31133f13bc9,task6-2,sklearn 5 fold cross validation,0
+255,eb54774fe018001b25b8c31133f13bc9,task7-2,pandas dataframe from csv,0
+256,eb54774fe018001b25b8c31133f13bc9,task7-2,pandas dataframe groupby column,1
+257,eb54774fe018001b25b8c31133f13bc9,task7-2,matplotlib multiple histograms,0
+258,eb54774fe018001b25b8c31133f13bc9,task7-2,matplotlib grouped bar chart,0
+259,9a6cfe2c7ca82dcb62772e83ed7327db,task1-1,generate a rondom lower case character,0
+260,9a6cfe2c7ca82dcb62772e83ed7327db,task1-1,how to append value in dict ,0
+261,9a6cfe2c7ca82dcb62772e83ed7327db,task1-1,how to check if a  key is in a dictionay ,0
+262,9a6cfe2c7ca82dcb62772e83ed7327db,task2-1,how to delete a column in a dataframe python,0
+263,9a6cfe2c7ca82dcb62772e83ed7327db,task2-1,how to delete columns in dataframe,0
+264,9a6cfe2c7ca82dcb62772e83ed7327db,task2-1,how to save a dataframe in csv file,0
+265,9a6cfe2c7ca82dcb62772e83ed7327db,task7-1,how to draw scatter plot for data in csv file,1
+266,9a6cfe2c7ca82dcb62772e83ed7327db,task7-1,how to draw scatter plot for data in csv file,0
+267,9a6cfe2c7ca82dcb62772e83ed7327db,task7-1,how to choose plot size in inches ,0
+268,9a6cfe2c7ca82dcb62772e83ed7327db,task7-1,how to create ascatter plot using matplotlib,0
+269,9a6cfe2c7ca82dcb62772e83ed7327db,task7-1,how to choose plot title in matplotlib,0
+270,e88d1e36c4db7410802b3fda6db81d38,task1-1,generate list of random charachters,0
+271,e88d1e36c4db7410802b3fda6db81d38,task1-1,generate random charachter,0
+272,e88d1e36c4db7410802b3fda6db81d38,task1-1,generate random int,1
+273,e88d1e36c4db7410802b3fda6db81d38,task1-1,dictionary of characters and int,1
+274,e88d1e36c4db7410802b3fda6db81d38,task1-1,generate dict,0
+275,e88d1e36c4db7410802b3fda6db81d38,task2-1,open csv,1
+276,e88d1e36c4db7410802b3fda6db81d38,task2-1,delete row in csv,1
+277,e88d1e36c4db7410802b3fda6db81d38,task2-1,delete row in csv,0
+278,e88d1e36c4db7410802b3fda6db81d38,task3-1,copy files from folder,0
+279,e88d1e36c4db7410802b3fda6db81d38,task3-1,rename files,0
+280,e88d1e36c4db7410802b3fda6db81d38,task3-1,rename files,1
+281,e88d1e36c4db7410802b3fda6db81d38,task3-1,recursive copy files and folders,0
+282,e88d1e36c4db7410802b3fda6db81d38,task4-2,http reques get html,1
+283,e88d1e36c4db7410802b3fda6db81d38,task4-2,save table beautifulsoup,1
+284,e88d1e36c4db7410802b3fda6db81d38,task4-2,regex [],1
+285,e88d1e36c4db7410802b3fda6db81d38,task4-2,save dict to csv,0
+286,e88d1e36c4db7410802b3fda6db81d38,task4-2,download an image request,0
+287,e78bbc00ea23e3688e035426717b63ac,task1-1,zip 2 lists,0
+288,e78bbc00ea23e3688e035426717b63ac,task1-1,rearrange dictionary keys into alphabetic order,1
+289,e78bbc00ea23e3688e035426717b63ac,task1-1,merge 2 dictionaries ,0
+290,e78bbc00ea23e3688e035426717b63ac,task1-1,sort a list x into ascending order,1
+291,e78bbc00ea23e3688e035426717b63ac,task1-1,sort a list into ascending order,1
+292,e78bbc00ea23e3688e035426717b63ac,task1-1,sort list 'values' into ascending order,1
+293,e78bbc00ea23e3688e035426717b63ac,task4-1,how to get page urls beautifulsoup,0
+294,e78bbc00ea23e3688e035426717b63ac,task6-1,round a variable to 2dp,1
+295,e78bbc00ea23e3688e035426717b63ac,task6-1,how to remove an item from a list using the index,0
+296,e78bbc00ea23e3688e035426717b63ac,task6-1,how to combine 2 lists into a dictionary,1
+297,78fdf1eb2c65019c0305daef9c7e713d,task2-2,convert txt fileencoding,0
+298,78fdf1eb2c65019c0305daef9c7e713d,task3-1,copy file and rename,0
+299,78fdf1eb2c65019c0305daef9c7e713d,task4-2,parse url into images,0
+300,10fb8132405b6c443addb06bc941f9e3,task1-2,get date after week,0
+301,10fb8132405b6c443addb06bc941f9e3,task5-2,client connection to url,1
+302,10fb8132405b6c443addb06bc941f9e3,task5-2,client connction to http url,0
+303,7ff9938c47bd8fb571d43b13872e6182,task1-1,"generate random nu,ber",0
+304,7ff9938c47bd8fb571d43b13872e6182,task1-1,generate char lower case,0
+305,7ff9938c47bd8fb571d43b13872e6182,task1-1,generate lowercase char,1
+306,7ff9938c47bd8fb571d43b13872e6182,task1-1,generate random numbers,1
+307,7ff9938c47bd8fb571d43b13872e6182,task1-1,generat integers 1-20,0
+308,7ff9938c47bd8fb571d43b13872e6182,task1-1,list to dict,1
+309,7ff9938c47bd8fb571d43b13872e6182,task1-1,list to dict,1
+310,7ff9938c47bd8fb571d43b13872e6182,task6-1,delete coloumn pd,0
+311,7ff9938c47bd8fb571d43b13872e6182,task7-1,scatter,1
+312,7ff9938c47bd8fb571d43b13872e6182,task7-1,save plot as image,1
+313,2287fbb738654ee8436be1a74b1efab7,task1-2,print date and time in GMT in 24hr format,1
+314,2287fbb738654ee8436be1a74b1efab7,task1-2,print date and time in GMT in 24hr format,0
+315,2287fbb738654ee8436be1a74b1efab7,task1-2,print date and time in GMT in 24hr format,0
+316,2287fbb738654ee8436be1a74b1efab7,task1-2,print date and time in GMT in 24hr format,0
+317,2287fbb738654ee8436be1a74b1efab7,task1-2,print date and time in GMT in 24hr format,1
+318,2287fbb738654ee8436be1a74b1efab7,task2-1,delete first and last column in csv file,0
+319,2287fbb738654ee8436be1a74b1efab7,task2-1,remove columns from csv file and save it to another csv file,0
+320,2287fbb738654ee8436be1a74b1efab7,task2-1,remove first column from csv file,1
+321,2287fbb738654ee8436be1a74b1efab7,task2-1,remove first column from csv file,0
+322,2287fbb738654ee8436be1a74b1efab7,task2-1,remove first column from csv file,0
+323,2287fbb738654ee8436be1a74b1efab7,task3-1,copy directory tree from source to destination,0
+324,2287fbb738654ee8436be1a74b1efab7,task3-1,move files from directory to directory,0
+325,2287fbb738654ee8436be1a74b1efab7,task3-1,copy directory to another directory,1
+326,2287fbb738654ee8436be1a74b1efab7,task3-1,copy directory to directory,0
+327,2287fbb738654ee8436be1a74b1efab7,task3-1,copy directory to directory,0
+328,2287fbb738654ee8436be1a74b1efab7,task3-1,rename file with regex,1
+329,15764ad439feafda6f35578b7f6253df,task1-2,format time,1
+330,15764ad439feafda6f35578b7f6253df,task1-2,import time,1
+331,15764ad439feafda6f35578b7f6253df,task1-2,mm-dd-yyyy,0
+332,15764ad439feafda6f35578b7f6253df,task2-2,read file,1
+333,15764ad439feafda6f35578b7f6253df,task2-2,read file,0
+334,15764ad439feafda6f35578b7f6253df,task2-2,iterating files in a folder,1
+335,15764ad439feafda6f35578b7f6253df,task4-2,extract imafe from html,0
+336,15764ad439feafda6f35578b7f6253df,task6-1,pandas calculate mean,1
+337,15764ad439feafda6f35578b7f6253df,task6-1,pandas read from csv,1
+338,15764ad439feafda6f35578b7f6253df,task6-1,format output to 2 decimal,1
+339,15764ad439feafda6f35578b7f6253df,task6-1,pandas write to csv file,0
+340,15764ad439feafda6f35578b7f6253df,task6-1,pandas write to file decimal,0
+341,42387deceb25d7486993e2a2d58e14ea,task1-1,pair characters in `characters` and numbers in `numbers`,1
+342,42387deceb25d7486993e2a2d58e14ea,task2-1,delete a column in csv,1
+343,42387deceb25d7486993e2a2d58e14ea,task2-1,headers in a dataframe,0
+344,42387deceb25d7486993e2a2d58e14ea,task2-1,save dataframe to csv,1
+345,42387deceb25d7486993e2a2d58e14ea,task3-1,copy files and directories under `data` directory,0
+346,42387deceb25d7486993e2a2d58e14ea,task7-1,reformat date,1
+347,27570bb3cfcc304aeede0cdf6c2e2762,task1-1,"create list ""a_list""",1
+348,27570bb3cfcc304aeede0cdf6c2e2762,task1-1,create dictionary,1
+349,27570bb3cfcc304aeede0cdf6c2e2762,task1-1,generate random number,1
+350,27570bb3cfcc304aeede0cdf6c2e2762,task1-1,generate random number,1
+351,27570bb3cfcc304aeede0cdf6c2e2762,task1-1,generate random ,0
+352,27570bb3cfcc304aeede0cdf6c2e2762,task1-1,sort list,0
+353,27570bb3cfcc304aeede0cdf6c2e2762,task2-1,"copy column from ""data.csv"" file to another ""output.csv""",1
+354,27570bb3cfcc304aeede0cdf6c2e2762,task2-1,"copy column from ""data.csv"" to ""output.csv""",0
+355,27570bb3cfcc304aeede0cdf6c2e2762,task2-1,create 'output.csv' csv file,0
+356,27570bb3cfcc304aeede0cdf6c2e2762,task2-1,write to csv file,1
+357,27570bb3cfcc304aeede0cdf6c2e2762,task2-1,new line,1
+358,27570bb3cfcc304aeede0cdf6c2e2762,task2-1,delete column from csv file,0
+359,27570bb3cfcc304aeede0cdf6c2e2762,task2-1,read csv file using pandas,1
+360,27570bb3cfcc304aeede0cdf6c2e2762,task2-1,delete column from csv ,0
+361,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,get the files that inside the folders,0
+362,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,get all files and folders ,0
+363,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,check if string has specific pattern,1
+364,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,regex dd-mm-yy,1
+365,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,regex for date,0
+366,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,replace pattern in string,0
+367,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,datetime to string,0
+368,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,copy files,0
+369,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,create folder,0
+370,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,create file,0
+371,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,rename file,0
+372,27570bb3cfcc304aeede0cdf6c2e2762,task3-1,write to file,0
+373,27570bb3cfcc304aeede0cdf6c2e2762,task6-1,read csv,1
+374,27570bb3cfcc304aeede0cdf6c2e2762,task6-1,import pandas,0
+375,27570bb3cfcc304aeede0cdf6c2e2762,task6-1,find unique data from csv,0
+376,27570bb3cfcc304aeede0cdf6c2e2762,task6-1,group of data  from csv,0
+377,27570bb3cfcc304aeede0cdf6c2e2762,task6-1,get average value from group of data in csv,0
+378,27570bb3cfcc304aeede0cdf6c2e2762,task6-1,standard deviation from group of data in csv,0
+379,27570bb3cfcc304aeede0cdf6c2e2762,task6-1,newline space,1
+380,27570bb3cfcc304aeede0cdf6c2e2762,task6-1,floating data in csv group in digit,0
+381,27570bb3cfcc304aeede0cdf6c2e2762,task6-1,remove repeated column in csv file,0
+382,27570bb3cfcc304aeede0cdf6c2e2762,task6-1,findall,1
+383,203a872af9b348b6ae1c59fbacd59e72,task1-1,generate 100 random lower-cased leters,1
+384,203a872af9b348b6ae1c59fbacd59e72,task1-1,generate random lower case letters,0
+385,203a872af9b348b6ae1c59fbacd59e72,task1-1,generate 100 integers (1-20 inclusive).,0
+386,203a872af9b348b6ae1c59fbacd59e72,task1-1,generate random numbers between 1-20 inclusive,1
+387,203a872af9b348b6ae1c59fbacd59e72,task1-1,"Given list `letters` and `integers`, create a dicitonary such that the values in `letters` are keys and values in `integers` are values",1
+388,203a872af9b348b6ae1c59fbacd59e72,task1-1,print `dic` sorted by keys,0
+389,203a872af9b348b6ae1c59fbacd59e72,task2-1,open a csv file `data.csv` and read the data,1
+390,203a872af9b348b6ae1c59fbacd59e72,task2-1,delete first row from dataframe `df`,1
+391,203a872af9b348b6ae1c59fbacd59e72,task2-1,delete first and last row from the dataframe `df`,1
+392,203a872af9b348b6ae1c59fbacd59e72,task2-1,save `df` to a file `output.csv` in a new directory `example_output`,0
+393,203a872af9b348b6ae1c59fbacd59e72,task3-1,copy all files and directories from one folder to another,0
+394,203a872af9b348b6ae1c59fbacd59e72,task4-1,go to a url,0
+395,203a872af9b348b6ae1c59fbacd59e72,task4-1,visit the url `url`,1
+396,203a872af9b348b6ae1c59fbacd59e72,task4-1,parse all hyperlinks from `r` using bs4,0
+397,203a872af9b348b6ae1c59fbacd59e72,task4-1,visit the given url `url` and extract all hrefs from there,0
+398,203a872af9b348b6ae1c59fbacd59e72,task4-1,visit `url` and extract hrefs using bs4,0
+399,203a872af9b348b6ae1c59fbacd59e72,task4-1,find all hrefs from `soup`,0
+400,203a872af9b348b6ae1c59fbacd59e72,task4-1,find all bold text from html `soup`,0
+401,203a872af9b348b6ae1c59fbacd59e72,task4-1,find all red colored text from html `soup`,0
+402,0e4f69ae91114adaaf29c8ce2c981057,task1-1,generate 100 random lowercase letters,0
+403,0e4f69ae91114adaaf29c8ce2c981057,task1-1,generate 100 random numbers,1
+404,0e4f69ae91114adaaf29c8ce2c981057,task1-1,generate 100 random numbers,1
+405,0e4f69ae91114adaaf29c8ce2c981057,task1-1,generate 100 random numbers from 1 to 20,1
+406,0e4f69ae91114adaaf29c8ce2c981057,task1-1,create a dictionary with keys `random_letters` and values `random_numbers`,1
+407,0e4f69ae91114adaaf29c8ce2c981057,task1-1,print `dic` sorted by keys,1
+408,0e4f69ae91114adaaf29c8ce2c981057,task1-1,print `dic` keys sorted,1
+409,0e4f69ae91114adaaf29c8ce2c981057,task1-1,print `dic` keys on each line,1
+410,0e4f69ae91114adaaf29c8ce2c981057,task2-1,"read ""data.csv"" file",1
+411,0e4f69ae91114adaaf29c8ce2c981057,task2-1,"read csv file ""data.csv""",1
+412,0e4f69ae91114adaaf29c8ce2c981057,task2-1,delete first and last column of `df`,0
+413,0e4f69ae91114adaaf29c8ce2c981057,task2-1,"write output to csv file ""output.csv""",1
+414,0e4f69ae91114adaaf29c8ce2c981057,task2-1,write `output` to csv file,1
+415,0e4f69ae91114adaaf29c8ce2c981057,task3-1,"search for pattern ""%d%d-%d%d"" in `file`",1
+416,0e4f69ae91114adaaf29c8ce2c981057,task3-1,copy file from `src_path` to `dest_path`,1
+417,0e4f69ae91114adaaf29c8ce2c981057,task3-1,check if `file` is a directory,1
+418,0e4f69ae91114adaaf29c8ce2c981057,task6-1,"write `final_data` to csv file ""price.csv""",1
+419,32a93c18dfe238311ad0b9add6a071d6,task1-2,import datetime,0
+420,32a93c18dfe238311ad0b9add6a071d6,task1-2,get date 7 days from today,0
+421,32a93c18dfe238311ad0b9add6a071d6,task1-2,change date format,1
+422,32a93c18dfe238311ad0b9add6a071d6,task2-2,remove header,1
+423,32a93c18dfe238311ad0b9add6a071d6,task6-2,run 5-fold accuracy,0
+424,32a93c18dfe238311ad0b9add6a071d6,task7-2,get height of bars in subplot bar gaphs,0
+425,32a93c18dfe238311ad0b9add6a071d6,task7-2,get labels above bars in subplots,0
+426,0a13493c5f0f9f75a9fa6a576a14984b,task1-2,time and date,0
+427,0a13493c5f0f9f75a9fa6a576a14984b,task1-2,gmt time 24,0
+428,0a13493c5f0f9f75a9fa6a576a14984b,task1-2,timedelta,1
+429,0a13493c5f0f9f75a9fa6a576a14984b,task1-2,time and date in certain,1
+430,0a13493c5f0f9f75a9fa6a576a14984b,task1-2,gmt,0
+431,0a13493c5f0f9f75a9fa6a576a14984b,task2-2,convert text file encoding,1
+432,0a13493c5f0f9f75a9fa6a576a14984b,task2-2,covert file to utf,0
+433,0a13493c5f0f9f75a9fa6a576a14984b,task2-2,convert file to utf,0
+434,0a13493c5f0f9f75a9fa6a576a14984b,task2-2,redirect ,0
+435,0a13493c5f0f9f75a9fa6a576a14984b,task2-2,unkown encoding,0
+436,0a13493c5f0f9f75a9fa6a576a14984b,task3-2,sorting a dictionary by key,0
+437,0a13493c5f0f9f75a9fa6a576a14984b,task3-2,convert list to dictionary,1
+438,0bd31633162f7a836160dd5b6359d29b,task1-2,get the date and time a week from now in gmt,1
+439,0bd31633162f7a836160dd5b6359d29b,task1-2,get date and time in gmt,1
+440,0bd31633162f7a836160dd5b6359d29b,task1-2,get time and date in gmt in `date`,1
+441,0bd31633162f7a836160dd5b6359d29b,task1-2,get the current date in utc,1
+442,0bd31633162f7a836160dd5b6359d29b,task1-2,get the current time in utc ,1
+443,0bd31633162f7a836160dd5b6359d29b,task1-2,date from 7 days ,0
+444,0bd31633162f7a836160dd5b6359d29b,task2-1,open csv file with read and write ,1
+445,0bd31633162f7a836160dd5b6359d29b,task2-1,open csv file `data.csv` ,1
+446,0bd31633162f7a836160dd5b6359d29b,task2-1,delete the first column in csv file `df`,0
+447,0bd31633162f7a836160dd5b6359d29b,task2-1,write to csv file,1

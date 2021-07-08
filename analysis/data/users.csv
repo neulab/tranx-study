@@ -1,0 +1,64 @@
+,user,occupation,programming_experience,python_experience,task1,task2,task3,task4,task5,task6,task7,ide,other_tools
+0,0ed2dff1d23b0de1cfcf9edb0ba35b1c,Student (computer science),5,4,5,4,3,3,3,4,3,PyCharm,"I use Mypy for static type checking. Not exactly for improving efficiency, but it reduces the probability of encountering bugs."
+1,c4196119198c1bd6dce9ad020501698d,Student (computer science),4,4,5,5,4,1,2,5,3,"PyCharm, Jupyter Notebook",Google search
+2,2ceafaf6a21d6cb6495038b38ab72061,Student (computer science),4,4,5,4,4,1,1,4,3,"VS Code, PyCharm, Jupyter Notebook",No 
+3,a72cb6827eea95ba7e96e248383729aa,Student (computer science),3,4,5,5,4,2,2,4,3,Vim,"coc.nvim (w/ sub packages: coc-python, coc-snippets), Pylint, black, isort"
+4,0d6d792ee04e3617aa46436fb3f21498,Student (computer science),4,5,5,5,5,4,4,4,2,"VS Code, PyCharm, Jupyter Notebook",Pylint
+5,138ca13c6ba8814e8e4aea9853d66b69,Student (computer science),4,4,4,4,3,2,1,3,3,Atom,Linting 
+6,ad0f9254dfb0e72652816221c254f163,Student (computer science),5,5,5,5,3,2,4,5,3,Vim,python debugger (PDB)
+7,2350ca5cc5bf54fca0b2499ae103d8b1,Student (computer science),3,3,4,3,3,3,2,4,3,"Vim, VS Code, PyCharm, Jupyter Notebook, Sublime Text",N/A
+8,d687b630d29c06e8f182403d3eacc24b,Student (computer science),4,5,5,5,4,4,4,3,3,"VS Code, Jupyter Notebook","code linting, auto complete"
+9,1f477ff95bdc7e0455ffaf06b474f4f6,Student (computer science),4,4,5,4,4,4,3,4,3,"VS Code, Jupyter Notebook, Sublime Text",pylint
+10,79c72fefe0d6c99e61fd23d297db9f10,Software Engineer,4,4,4,4,3,3,2,5,5,"VS Code, Jupyter Notebook, Sublime Text",Python linting in vscode
+11,a83ed9f38a87fdf87997e036b4697ba7,Machine Learning Engineer,5,5,5,5,4,4,4,5,5,"Vim, PyCharm, Jupyter Notebook, Sublime Text","type checking, snippet search tools, git"
+12,34b1ef17e6625ba2350f6f1c169591a1,Student (computer science),4,4,5,4,4,3,3,5,5,"VS Code, PyCharm, Jupyter Notebook",No
+13,67e86a0cb1f9b6cae0e8d6c4b24711de,Student (computer science),5,5,5,5,5,3,4,5,5,"Vim, VS Code",no
+14,25302900cc4bb4196e837103593a931e,Recent Graduate,5,5,5,5,4,5,4,5,5,"Jupyter Notebook, Sublime Text",N/A
+15,72af76352061b997953816857adbf8d8,Student (computer science),3,4,5,3,2,2,3,5,3,VS Code,"Code linting (flake8, pylint), Gitlens, Kite, Intellicode, Python for VSCode, "
+16,844088c7077d499fa3533250ae504e7f,Student (computer science),3,3,5,3,3,3,2,1,1,Vim,TabNine for autocompletion
+17,a061d03ba2e23bf8f3861f78d7d62248,Researcher,5,4,5,3,3,3,2,5,3,"Vim, Jupyter Notebook",No
+18,2b86a6492ee56f65a3303374b609ad60,Student (computer science),4,4,4,4,3,4,3,4,4,"Vim, Jupyter Notebook, Sublime Text",I only use the basic spell checker.
+19,3d15fb351f9dfabd41e2b2fb142dad71,Data Scientist,4,4,5,3,3,3,3,4,4,"PyCharm, Jupyter Notebook, Idle",No.
+20,eb8c0b297db7d9e210c3b804373339a2,Software Engineer,4,4,4,4,3,3,2,4,4,"PyCharm, Jupyter Notebook, Visual Studio",No
+21,9dd43727b9246d7f2220b94ff43380cf,Software Engineer,4,3,5,2,3,1,3,1,2,"PyCharm, Jupyter Notebook, Sublime Text, Notepad++",No
+22,fd9d2d83c74acfbdeb44b35e7e0d1b1f,Researcher,5,5,5,4,4,3,3,4,4,"VS Code, PyCharm, Jupyter Notebook",No
+23,9337deccd10c36bab2411e51e60984bc,Data Scientist,5,5,5,5,5,3,2,4,5,"PyCharm, Jupyter Notebook, notepad++",No.
+24,4d52cf690a039273baca11d5bf55f0a7,Software Engineer,3,4,5,4,4,2,3,3,3,"Vim, Jupyter Notebook","black, flake8, pylint, mypy, vim-surround, vim-unimpaired"
+25,638965bbb0d66a5b0eae27d1324bbf89,Student (computer science),3,3,5,4,2,1,4,2,2,"PyCharm, Atom",No
+26,cfa58675a463c1db741cb420355989fb,Software Engineer,4,4,5,4,4,4,5,4,4,PyCharm,No
+27,683b2c2610686fd34440a75e770114ed,Student (computer science),4,4,5,5,1,3,1,5,4,Sublime Text,No
+28,2e3e8fa9d9f7b9fed260130d754b6308,Student (computer science),3,4,5,4,2,2,2,3,4,Jupyter Notebook,I don't use any assistive tools
+29,2d2101aad29b8b348d6672f11b111c3b,Student (computer science),3,3,3,4,3,2,2,3,3,"VS Code, PyCharm, Jupyter Notebook",No
+30,cbfad61871126c1cc4c85d8bdb7fdddf,"IT manager, F&B industry",3,3,4,4,3,4,3,3,3,PyCharm,Don't use plugins
+31,3290155d5f39c2cece41ce216eecac62,Software Engineer,4,4,5,5,5,2,2,4,2,"VS Code, Jupyter Notebook, Sublime Text, Visual Studio 2019",Sometimes I may use the autocomplete
+32,baff2a3b41189071a80cebf6fdc239e3,Software Engineer,4,4,5,5,4,2,2,4,3,"Vim, VS Code, Jupyter Notebook, Sublime Text, Nano",No
+33,eb54774fe018001b25b8c31133f13bc9,Software Engineer,4,4,5,5,3,3,3,4,4,"Sublime Text, Notepad++",No
+34,9a6cfe2c7ca82dcb62772e83ed7327db,Software Engineer,4,4,5,3,3,1,1,4,4,"VS Code, Jupyter Notebook, Colab Notebook",No
+35,088b7132e94876741b7b7040fdbecbf2,Software Engineer,5,5,5,5,5,3,5,3,3,"VS Code, PyCharm, Sublime Text","Yes,pylint"
+36,e88d1e36c4db7410802b3fda6db81d38,IT Solution Architect,3,3,3,3,3,3,3,3,3,"VS Code, PyCharm, Jupyter Notebook",No
+37,e78bbc00ea23e3688e035426717b63ac,Assistant Manager (programming is a hobby),3,4,5,4,2,4,2,4,4,PyCharm,No
+38,78fdf1eb2c65019c0305daef9c7e713d,Software Engineer,4,4,4,4,3,2,2,2,2,Sublime Text,"eclipse IDE, but not with python "
+39,197550e497841d3b70dc5b165b971809,Software Engineer,4,4,5,4,3,3,3,3,3,"Jupyter Notebook, Notepad ",No
+40,10fb8132405b6c443addb06bc941f9e3,Software Engineer,5,4,5,5,5,3,4,3,3,"PyCharm, Sublime Text, notepad++",no
+41,4a76842f7d04ecfd0e6306f8edf479fe,Data Scientist,5,5,5,5,4,4,2,5,5,"PyCharm, Jupyter Notebook",No
+42,7ff9938c47bd8fb571d43b13872e6182,Software Engineer,4,4,5,3,3,1,2,5,4,"PyCharm, Jupyter Notebook",No
+43,3ea4c20bb9ca62fc4ae686a43df56a2c,Software Engineer,5,4,5,4,4,4,4,4,4,"Vim, PyCharm",No
+44,2287fbb738654ee8436be1a74b1efab7,Software Engineer,4,4,4,4,4,3,4,4,3,"Vim, Sublime Text, Notepad++",No
+45,42387deceb25d7486993e2a2d58e14ea,Student (computer science),4,4,4,4,3,3,3,3,4,VS Code,Pylint
+46,0590804d518fbfab83568d6d807dc17c,Student (computer science),4,5,5,5,2,4,2,5,4,"VS Code, PyCharm, Jupyter Notebook, Sublime Text",No
+47,40ebb8ac9dff41a89e1450c8c4c41be8,Student (computer science),5,5,5,5,5,4,4,5,4,"VS Code, PyCharm, Jupyter Notebook, Sublime Text",no
+48,ec921b9ca7e15cd9a5889ab58cffe0fa,Student (other field),4,4,4,4,4,2,2,4,3,"Vim, Emacs, PyCharm, Jupyter Notebook, Sublime Text",Sometimes I use type checking.
+49,704e3d44fbf9bc2ceb7da78e5fca48ba,Student (computer science),3,3,4,3,2,3,2,4,4,"PyCharm, Jupyter Notebook","code linting, type checking"
+50,15764ad439feafda6f35578b7f6253df,Student (other field),4,4,4,3,2,3,1,4,3,"PyCharm, Jupyter Notebook",No
+51,16a062a4659bc133153a558034fc302d,Student (computer science),5,5,5,5,3,1,1,5,5,"PyCharm, Jupyter Notebook"," code linting, type checking, snippet search tools，auto suggestion"
+52,69b40342a8784e33510dce36098775b9,Student (computer science),3,3,5,5,1,1,1,5,5,"VS Code, Jupyter Notebook",No
+53,34ea2077dcc82fc5c6847e09bd53ed41,Data Scientist,4,5,5,5,5,5,5,5,5,"VS Code, Jupyter Notebook, Atom, spyder","Linting, PEP8"
+54,27570bb3cfcc304aeede0cdf6c2e2762,Software Engineer,4,4,5,5,3,1,1,3,3,"PyCharm, Jupyter Notebook",no
+55,203a872af9b348b6ae1c59fbacd59e72,Software Engineer,4,4,5,5,4,4,1,3,2,"VS Code, Jupyter Notebook",No
+56,0e4f69ae91114adaaf29c8ce2c981057,Teaching Assistant,3,3,4,4,3,1,2,3,3,"VS Code, Jupyter Notebook, Notebook++, Atom, Spyder IDE","No particular tool, but I use Spyder IDE which has integrated type checking, and other features."
+57,32a93c18dfe238311ad0b9add6a071d6,Student (computer science),4,4,5,4,2,2,2,3,3,PyCharm,Standard plugins for Pycharm
+58,0a13493c5f0f9f75a9fa6a576a14984b,Software Engineer,4,4,4,4,3,1,1,1,3,"Jupyter Notebook, Notepad ++ ",No
+59,0bd31633162f7a836160dd5b6359d29b,Embedded System Engineer,5,4,5,5,5,3,3,3,3,"Vim, VS Code, Sublime Text",no
+60,918b4fee5149d0049e5d3faf688f31c3,Student (computer science),5,5,5,3,2,5,5,4,2,"VS Code, Jupyter Notebook","Just the standard ones - pylint, intellisense, mypy"
+61,cd886cb9ebf9d776da41e120dae7014a,Student (computer science),3,4,5,3,3,3,1,2,3,PyCharm,"code linting, type checking"
+62,aa64abcca92c3892064eaa34edf91aef,Student (computer science),4,4,5,5,5,5,3,4,4,"Vim, Emacs, PyCharm, Jupyter Notebook",not significantly

@@ -1,0 +1,1143 @@
+---
+title: "TranX User Study Data Analysis"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+
+```{r setup, include=FALSE}
+# all the preprocessing in kinit setup
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
+                      fig.width = 4, fig.height = 3,
+                      class.output = "bg-success .small",
+                      class.message = "bg-info text-info .small",
+                      class.warning = "bg-warning text-warning .small",
+                      class.error = "bg-danger text-danger .small"
+)
+
+library(readr)
+library(car)
+library(lmerTest)
+library(MuMIn)
+# library(r2glmm)
+library(parameters)
+library(sqldf)
+library(stargazer)
+library(tidyverse) # for all-things workflow
+library("dplyr")
+library("tidyr")
+library("broom.mixed")
+
+
+setwd(".")
+
+
+users = read_csv('data/users.csv')
+
+plugin_query_counts = read_csv('data/plugin_query_counts.csv')
+plugin_query_counts_user = sqldf("select user, 
+                                 count(*) as 'num_tasks',
+                                 sum(total_query_count) as 'total_query_count' 
+                                 from plugin_query_counts 
+                                 group by user")
+
+# Read submissions' completion times
+completion_times = read_csv('data/completed_time.csv')
+
+completion_times = merge(completion_times, users, by = "user")
+
+completion_times$user = as.factor(completion_times$user)
+completion_times$task = as.factor(completion_times$task)
+completion_times$category = as.factor(completion_times$category)
+completion_times$uses_plugin = as.logical(completion_times$use_plugin)
+
+# Read submissions' correctness scores
+scores = read_csv('data/scores.csv')
+scores = merge(scores, users, by = "user")
+scores$user = as.factor(scores$user)
+scores$task = as.factor(scores$task)
+scores$category = as.factor(scores$category)
+scores$uses_plugin = as.logical(scores$use_plugin)
+
+# Read submissions' code complexity data
+complexity_scores = read_csv('data/complexity_scores.csv')
+complexity_scores = merge(complexity_scores, users, by = "user")
+complexity_scores$user = as.factor(complexity_scores$user)
+complexity_scores$task = as.factor(complexity_scores$task)
+complexity_scores$category = as.factor(complexity_scores$category)
+complexity_scores$uses_plugin = as.logical(complexity_scores$use_plugin)
+
+# Some participants did not use the plugin in the treatment condition
+# Filter out participants with insufficient usage
+min_queries = 4
+
+blocked_users = plugin_query_counts_user[plugin_query_counts_user$total_query_count < min_queries,]$user
+show(blocked_users)
+completion_times = subset(completion_times, !(user %in% blocked_users) & completion_time >= 60)
+scores = subset(scores, !(user %in% blocked_users))
+complexity_scores = subset(complexity_scores, !(user %in% blocked_users))
+
+# Match task to task experience, per row
+completion_times$task_experience = NA
+for (i in 1:nrow(completion_times)) {
+  completion_times[i,]$task_experience = completion_times[i, which(names(completion_times) == completion_times[i,]$category)]
+}
+
+scores$task_experience = NA
+for (i in 1:nrow(scores)) {
+  scores[i,]$task_experience = scores[i, which(names(scores) == scores[i,]$category)]
+}
+
+complexity_scores$task_experience = NA
+for (i in 1:nrow(complexity_scores)) {
+  complexity_scores[i,]$task_experience = complexity_scores[i, which(names(complexity_scores) == complexity_scores[i,]$category)]
+}
+
+# Compute mean of task_experience for each user and then "de-mean" task_experience
+completion_times = cbind(
+  completion_times,
+  demean(completion_times, select = c("task_experience"), group = "user") # from package "parameters"
+)
+completion_times$task_experience_btw = completion_times$task_experience_between
+completion_times$task_experience_wi = completion_times$task_experience_within
+
+scores = cbind(
+  scores,
+  demean(scores, select = c("task_experience"), group = "user") # from package "parameters"
+)
+
+scores$task_experience_btw = scores$task_experience_between
+scores$task_experience_wi = scores$task_experience_within
+
+
+complexity_scores = cbind(
+  complexity_scores,
+  demean(complexity_scores, select = c("task_experience"), group = "user") # from package "parameters"
+)
+
+complexity_scores$task_experience_btw = complexity_scores$task_experience_between
+complexity_scores$task_experience_wi = complexity_scores$task_experience_within
+
+# scores = na.omit(scores)
+
+# Oracle experiment
+oracle = read_csv('data/queries_sampled.csv')
+oracle = oracle[1:50,]
+oracle$good = as.numeric(oracle$good)
+oracle$good_with_context = as.numeric(oracle$good_with_context)
+oracle$is_generation = as.numeric(oracle$is_generation)
+
+# Write out aggregated data
+write.csv(completion_times, 'data/completed_time_merged.csv')
+write.csv(scores, 'data/scores_merged.csv')
+write.csv(complexity_scores, 'data/complexity_scores_merged.csv')
+
+stargaze_dm2 <- function(m1, m2,
+                     title, label, covariate_labels, dep_var_labels){
+    tidyM1 <- broom::tidy(m1) %>% filter(effect == "fixed")
+    tidyM2 <- broom::tidy(m2) %>% filter(effect == "fixed")
+    
+    # Number of unique elements for each random effect
+    num_users <- as.numeric(sapply(ranef(m2),nrow)[1])
+    num_tasks <- as.numeric(sapply(ranef(m2),nrow)[2])
+    
+    # SD for random effects in M1
+    sd_usersM1 <- round(as.numeric(attributes(VarCorr(m1)$"user")$stddev), 2)
+    sd_tasksM1 <- round(as.numeric(attributes(VarCorr(m1)$"task")$stddev), 2)
+    
+    # SD for random effects in M2
+    sd_usersM2 <- round(as.numeric(attributes(VarCorr(m2)$"user")$stddev), 2)
+    sd_tasksM2 <- round(as.numeric(attributes(VarCorr(m2)$"task")$stddev), 2)
+    
+    tribble(~stat, ~m1, ~m2,
+            "Observations", nobs(m1), nobs(m2),
+            "Num users", num_users, num_users,
+            "Num tasks", num_tasks, num_tasks,
+            "sd(user)", sd_usersM1, sd_usersM2,
+            "sd(task)", sd_tasksM1, sd_tasksM2,
+            "R2m", round(r.squaredGLMM(m1)[1],3), round(r.squaredGLMM(m2)[1],3),
+            "R2c", round(r.squaredGLMM(m1)[2],3), round(r.squaredGLMM(m2)[2],3)
+            ) -> mod_stats
+    
+    class(m1) <- "lmerMod"
+    class(m2) <- "lmerMod"
+    
+    stargazer(m1, m2, 
+              # type="html", 
+              title=title, 
+              align=TRUE,
+              digits=2, #digits.extra=1,
+              label=label,
+              table.placement="t",
+              # ^  Notice M2 is called twice. I'm going somewhere with this.
+              # Below: manually supply tidied coefficients and standard errors
+              coef = list(tidyM1$estimate, tidyM2$estimate),
+              se = list(tidyM1$std.error, tidyM2$std.error),
+              # Omit model statistics by default...
+              # omit.table.layout = "s",
+              omit.stat=c("LL","ser","f","n"), 
+              no.space=TRUE,
+              # ci=TRUE, ci.level=0.95, 
+              # single.row=TRUE,
+              # ...but supply your own that you created (with random effects)
+              add.lines = lapply(1:nrow(mod_stats), function(i) unlist(mod_stats[i, ])),
+              covariate.labels = covariate_labels,
+              # notes="<small>Data: ESS, Round 9 (United Kingdom)</small>",
+              dep.var.labels=dep_var_labels,
+              model.names = FALSE,
+              column.labels = c("LME (default)", "LME (de-meaned)")
+              )
+  
+}
+
+
+stargaze_m4 <- function(m1, m2, m3, m4,
+                     title, label, covariate_labels, dep_var_labels){
+    tidyM1 <- broom::tidy(m1) %>% filter(effect == "fixed")
+    tidyM2 <- broom::tidy(m2) %>% filter(effect == "fixed")
+    tidyM3 <- broom::tidy(m3) %>% filter(effect == "fixed")
+    tidyM4 <- broom::tidy(m4) %>% filter(effect == "fixed")
+    
+    # Number of unique elements for each random effect
+    num_users1 <- as.numeric(sapply(ranef(m1),nrow)[1])
+    num_tasks1 <- as.numeric(sapply(ranef(m1),nrow)[2])
+    
+    num_users2 <- as.numeric(sapply(ranef(m2),nrow)[1])
+    num_tasks2 <- as.numeric(sapply(ranef(m2),nrow)[2])
+    
+    num_users3 <- as.numeric(sapply(ranef(m3),nrow)[1])
+    num_tasks3 <- as.numeric(sapply(ranef(m3),nrow)[2])
+    
+    num_users4 <- as.numeric(sapply(ranef(m3),nrow)[1])
+    num_tasks4 <- as.numeric(sapply(ranef(m3),nrow)[2])
+    
+    # SD for random effects
+    sd_usersM1 <- round(as.numeric(attributes(VarCorr(m1)$"user")$stddev), 2)
+    sd_tasksM1 <- round(as.numeric(attributes(VarCorr(m1)$"task")$stddev), 2)
+    
+    sd_usersM2 <- round(as.numeric(attributes(VarCorr(m2)$"user")$stddev), 2)
+    sd_tasksM2 <- round(as.numeric(attributes(VarCorr(m2)$"task")$stddev), 2)
+    
+    sd_usersM3 <- round(as.numeric(attributes(VarCorr(m3)$"user")$stddev), 2)
+    sd_tasksM3 <- round(as.numeric(attributes(VarCorr(m3)$"task")$stddev), 2)
+    
+    sd_usersM4 <- round(as.numeric(attributes(VarCorr(m4)$"user")$stddev), 2)
+    sd_tasksM4 <- round(as.numeric(attributes(VarCorr(m4)$"task")$stddev), 2)
+    
+    tribble(~stat, ~m1, ~m2, ~m3, ~m4,
+            "Observations", nobs(m1), nobs(m2), nobs(m3), nobs(m4),
+            "Num users", num_users1, num_users2, num_users3, num_users4, 
+            "Num tasks", num_tasks1, num_tasks2, num_tasks3, num_tasks4,
+            "sd(user)", sd_usersM1, sd_usersM2, sd_usersM3, sd_usersM4,
+            "sd(task)", sd_tasksM1, sd_tasksM2, sd_tasksM3, sd_tasksM4,
+            "R2m", round(r.squaredGLMM(m1)[1],3), round(r.squaredGLMM(m2)[1],3), round(r.squaredGLMM(m3)[1],3), round(r.squaredGLMM(m4)[1],3),
+            "R2c", round(r.squaredGLMM(m1)[2],3), round(r.squaredGLMM(m2)[2],3), round(r.squaredGLMM(m3)[2],3), round(r.squaredGLMM(m4)[2],3),
+            ) -> mod_stats
+    
+    class(m1) <- "lmerMod"
+    class(m2) <- "lmerMod"
+    class(m3) <- "lmerMod"
+    class(m4) <- "lmerMod"
+    
+    stargazer(m1, m2, m3, m4,
+              # type="html", 
+              title=title, 
+              align=TRUE,
+              digits=2, #digits.extra=1,
+              label=label,
+              table.placement="t",
+              # ^  Notice M2 is called twice. I'm going somewhere with this.
+              # Below: manually supply tidied coefficients and standard errors
+              coef = list(tidyM1$estimate, tidyM2$estimate, tidyM3$estimate, tidyM4$estimate),
+              se = list(tidyM1$std.error, tidyM2$std.error, tidyM3$std.error, tidyM4$std.error),
+              # Omit model statistics by default...
+              # omit.table.layout = "s",
+              omit.stat=c("LL","ser","f","n"), 
+              no.space=TRUE,
+              # ci=TRUE, ci.level=0.95, 
+              # single.row=TRUE,
+              # ...but supply your own that you created (with random effects)
+              add.lines = lapply(1:nrow(mod_stats), function(i) unlist(mod_stats[i, ])),
+              covariate.labels = covariate_labels,
+              # notes="<small>Data: ESS, Round 9 (United Kingdom)</small>",
+              dep.var.labels=dep_var_labels,
+              model.names = FALSE
+              # column.labels = column_labels
+              )
+  
+}
+
+
+
+stargaze_m5 <- function(m1, m2, m3, m4, m5,
+                     title, label, covariate_labels, dep_var_labels){
+    tidyM1 <- broom::tidy(m1) %>% filter(effect == "fixed")
+    tidyM2 <- broom::tidy(m2) %>% filter(effect == "fixed")
+    tidyM3 <- broom::tidy(m3) %>% filter(effect == "fixed")
+    tidyM4 <- broom::tidy(m4) %>% filter(effect == "fixed")
+    tidyM5 <- broom::tidy(m5) %>% filter(effect == "fixed")
+    
+    # Number of unique elements for each random effect
+    num_users1 <- as.numeric(sapply(ranef(m1),nrow)[1])
+    num_tasks1 <- as.numeric(sapply(ranef(m1),nrow)[2])
+    
+    num_users2 <- as.numeric(sapply(ranef(m2),nrow)[1])
+    num_tasks2 <- as.numeric(sapply(ranef(m2),nrow)[2])
+    
+    num_users3 <- as.numeric(sapply(ranef(m3),nrow)[1])
+    num_tasks3 <- as.numeric(sapply(ranef(m3),nrow)[2])
+    
+    num_users4 <- as.numeric(sapply(ranef(m4),nrow)[1])
+    num_tasks4 <- as.numeric(sapply(ranef(m4),nrow)[2])
+    
+    num_users5 <- as.numeric(sapply(ranef(m5),nrow)[1])
+    num_tasks5 <- as.numeric(sapply(ranef(m5),nrow)[2])
+
+        # SD for random effects
+    sd_usersM1 <- round(as.numeric(attributes(VarCorr(m1)$"user")$stddev), 2)
+    sd_tasksM1 <- round(as.numeric(attributes(VarCorr(m1)$"task")$stddev), 2)
+    
+    sd_usersM2 <- round(as.numeric(attributes(VarCorr(m2)$"user")$stddev), 2)
+    sd_tasksM2 <- round(as.numeric(attributes(VarCorr(m2)$"task")$stddev), 2)
+    
+    sd_usersM3 <- round(as.numeric(attributes(VarCorr(m3)$"user")$stddev), 2)
+    sd_tasksM3 <- round(as.numeric(attributes(VarCorr(m3)$"task")$stddev), 2)
+    
+    sd_usersM4 <- round(as.numeric(attributes(VarCorr(m4)$"user")$stddev), 2)
+    sd_tasksM4 <- round(as.numeric(attributes(VarCorr(m4)$"task")$stddev), 2)
+    
+    sd_usersM5 <- round(as.numeric(attributes(VarCorr(m5)$"user")$stddev), 2)
+    sd_tasksM5 <- round(as.numeric(attributes(VarCorr(m5)$"task")$stddev), 2)
+    
+    tribble(~stat, ~m1, ~m2, ~m3, ~m4, ~m5,
+            "Observations", nobs(m1), nobs(m2), nobs(m3), nobs(m4), nobs(m5),
+            "Num users", num_users1, num_users2, num_users3, num_users4, num_users5, 
+            "Num tasks", num_tasks1, num_tasks2, num_tasks3, num_tasks4, num_tasks5,
+            "sd(user)", sd_usersM1, sd_usersM2, sd_usersM3, sd_usersM4, sd_usersM5,
+            "sd(task)", sd_tasksM1, sd_tasksM2, sd_tasksM3, sd_tasksM4, sd_tasksM5,
+            "R2m", round(r.squaredGLMM(m1)[1],3), round(r.squaredGLMM(m2)[1],3), round(r.squaredGLMM(m3)[1],3), round(r.squaredGLMM(m4)[1],3), round(r.squaredGLMM(m5)[1],3),
+            "R2c", round(r.squaredGLMM(m1)[2],3), round(r.squaredGLMM(m2)[2],3), round(r.squaredGLMM(m3)[2],3), round(r.squaredGLMM(m4)[2],3), round(r.squaredGLMM(m5)[2],3),
+            ) -> mod_stats
+    
+    class(m1) <- "lmerMod"
+    class(m2) <- "lmerMod"
+    class(m3) <- "lmerMod"
+    class(m4) <- "lmerMod"
+    class(m5) <- "lmerMod"
+    
+    stargazer(m1, m2, m3, m4, m5,
+              # type="html", 
+              title=title, 
+              align=TRUE,
+              digits=2, #digits.extra=1,
+              label=label,
+              table.placement="t",
+              # ^  Notice M2 is called twice. I'm going somewhere with this.
+              # Below: manually supply tidied coefficients and standard errors
+              coef = list(tidyM1$estimate, tidyM2$estimate, tidyM3$estimate, tidyM4$estimate, tidyM5$estimate),
+              se = list(tidyM1$std.error, tidyM2$std.error, tidyM3$std.error, tidyM4$std.error, tidyM5$std.error),
+              # Omit model statistics by default...
+              # omit.table.layout = "s",
+              omit.stat=c("LL","ser","f","n"), 
+              no.space=TRUE,
+              # ci=TRUE, ci.level=0.95, 
+              # single.row=TRUE,
+              # ...but supply your own that you created (with random effects)
+              add.lines = lapply(1:nrow(mod_stats), function(i) unlist(mod_stats[i, ])),
+              covariate.labels = covariate_labels,
+              # notes="<small>Data: ESS, Round 9 (United Kingdom)</small>",
+              dep.var.labels=dep_var_labels,
+              model.names = FALSE
+              # column.labels = column_labels
+              )
+  
+}
+
+```
+
+### Correlation between participants' python expertise and programming expertise
+```{r}
+cor.test(completion_times$programming_experience, completion_times$python_experience, method = "spearman")
+cor.test(scores$programming_experience, scores$python_experience, method = "spearman")
+```
+
+
+## Edit distance
+```{r}
+# library(rstatix)
+# library(rcompanion)
+
+candidate_len = read_csv('data/candidate_lengths.csv')
+print("Candidates (r/g):")
+nrow(candidate_len)
+summary(candidate_len[candidate_len$is_generation==0,]$snippet_len)
+summary(candidate_len[candidate_len$is_generation==1,]$snippet_len)
+
+print("Uploads (num):")
+levensht = read_csv('data/edit_dists.csv')
+# levensht = subset(levensht, original_len <= 150 & final_len <= 150)
+nrow(levensht)
+
+print("Original r > g?:")
+wilcox.test(retrieved$original_len, generated$original_len, alternative='g', conf.int = TRUE)
+print("Final r > g?:")
+wilcox.test(retrieved$final_len, generated$final_len, alternative='g', conf.int = TRUE)
+
+print("Retrieved (orig/final/edit dist):")
+retrieved = levensht[levensht$is_generated==0,]
+nrow(retrieved)
+summary(retrieved$original_len)
+summary(retrieved$final_len)
+summary(retrieved$edit_dist)
+
+wilcox.test(retrieved$original_len, retrieved$final_len, paired = TRUE, conf.int = TRUE)
+# retrieved %>% wilcox_effsize(original_len ~ final_len, paired = TRUE)
+# wilcoxonPairedR(x = retrieved$original_len, g = retrieved$final_len)
+
+print("Generated (orig/final/edit dist):")
+generated = levensht[levensht$is_generated==1,]
+nrow(generated)
+summary(generated$original_len)
+summary(generated$final_len)
+summary(generated$edit_dist)
+
+wilcox.test(generated$original_len, generated$final_len, paired = TRUE, conf.int = TRUE)
+# generated %>% wilcox_effsize(original_len ~ final_len, paired = TRUE)
+
+print("R candidates vs uploaded:")
+wilcox.test(candidate_len[candidate_len$is_generation==0,]$snippet_len, retrieved$original_len, conf.int = TRUE)
+
+print("G candidates vs uploaded:")
+wilcox.test(candidate_len[candidate_len$is_generation==1,]$snippet_len, generated$original_len, conf.int = TRUE)
+```
+
+## Frank as oracle
+
+```{r}
+
+oracle = subset(oracle, user != '78fdf1eb2c65019c0305daef9c7e713d' & user != '3d15fb351f9dfabd41e2b2fb142dad71')
+
+plot(jitter(oracle$good, factor = .25), jitter(oracle$is_generation, factor = .25), xlab="good", ylab="generation", pch=15, col="blue", ylim=c(-0.05,1.05), xlim=c(-0.05,1.05))
+
+library('clusteval')
+cluster_similarity(oracle$good, oracle$is_generation, similarity="jaccard", method="independence")
+cluster_similarity(oracle$good_with_context, oracle$is_generation, similarity="jaccard", method="independence")
+
+# library(dplyr)
+# oracle.t = table(oracle[c("good","is_generation")])
+# oracle.t = addmargins(oracle.t)
+# oracle.t
+# oracle.df = as.data.frame.matrix(oracle.t)
+# 
+# oracle.tribble = tribble(~ oracle.df)
+    
+table(oracle[c("good","is_generation")])
+table(oracle[c("good_with_context","is_generation")])
+
+cor.test(oracle$good, oracle$is_generation)
+cor.test(oracle$good_with_context, oracle$is_generation)
+```
+
+## Task completion times
+
+### Descriptives
+
+Number of entries in each group (plugin = 1):
+```{r}
+table(completion_times$uses_plugin)
+```
+
+Summary statistics for the two distributions (plugin, no plugin):
+```{r}
+summary(completion_times[completion_times$uses_plugin == 1,]$completion_time)
+summary(completion_times[completion_times$uses_plugin == 0,]$completion_time)
+```
+
+Visualize the two groups:
+```{r}
+pdf('figures/completion_all.pdf', pointsize = 18)
+plugin = completion_times[completion_times$uses_plugin == 1,]$completion_time
+no_plugin = completion_times[completion_times$uses_plugin == 0,]$completion_time
+boxplot(list(plugin = plugin,
+             no_plugin = no_plugin),
+        names = c(paste("plugin (", length(plugin), ")", sep = ""),
+                    paste("no_plugin (", length(no_plugin), ")", sep = ""))
+        )
+dev.off()
+
+```
+
+The two groups are statistically indistinguishable:
+```{r}
+t.test(completion_times[completion_times$uses_plugin == 1,]$completion_time,
+       completion_times[completion_times$uses_plugin == 0,]$completion_time)
+```
+
+Visualize the two groups separately for each task:
+```{r}
+for (cate in sort(unique(completion_times$category))) {
+  plugin = completion_times[completion_times$category == cate &
+                              completion_times$uses_plugin == 1,]$completion_time
+  no_plugin = completion_times[completion_times$category == cate &
+                                 completion_times$uses_plugin == 0,]$completion_time
+  pdf(paste0('figures/completion_', cate, '.pdf'), pointsize = 18)
+  boxplot(list(plugin = plugin,
+               no_plugin = no_plugin),
+          names = c(paste("plugin (", length(plugin), ")", sep = ""),
+                    paste("no_plugin (", length(no_plugin), ")", sep = "")))
+  dev.off()
+}
+
+```
+
+Test the two groups separately for each task:
+```{r}
+for (cate in sort(unique(completion_times$category))) {
+  plugin = completion_times[completion_times$category == cate &
+                              completion_times$uses_plugin == 1,]$completion_time
+  no_plugin = completion_times[completion_times$category == cate &
+                                 completion_times$uses_plugin == 0,]$completion_time
+  if (length(plugin) > 10){
+    show(cate)
+    show(t.test(plugin, no_plugin))
+  }
+}
+
+```
+
+
+### Basic model: user and task as random effects
+
+```{r}
+m_ct0 = lmer(completion_time ~
+               uses_plugin
+             + (1 | user)
+             + (1 | task)
+            , data = completion_times
+            , REML = FALSE)
+# vif(m_ct0)
+summary(m_ct0)
+model_parameters(m_ct0)
+r.squaredGLMM(m_ct0)
+Anova(m_ct0)
+
+```
+
+Observations:
+
+- Using the plugin does not have a statistically significant effect on task completion time :(
+- The random effects are both very strong = there are huge differences between users and between tasks.
+
+### Add task category experience as fixed effect
+
+```{r}
+m_ct1 = lmer(completion_time ~
+               task_experience
+                 +
+                 uses_plugin
+                 +
+                 (1 | user)
+                 +
+                 (1 | task)
+  , data = completion_times
+  , REML = FALSE)
+vif(m_ct1)
+summary(m_ct1)
+model_parameters(m_ct1)
+r.squaredGLMM(m_ct1)
+anova(m_ct1, m_ct0)
+```
+
+Observations:
+
+- This model is not significantly better than the basic one.
+- Still no effect for plugin use.
+
+### De-mean task category experience, it may be confounded with user
+
+```{r}
+m_ct2 = lmer(completion_time ~
+               task_experience_btw
+                 +
+                 task_experience_wi
+                 +
+                 uses_plugin
+                 +
+                 (1 | user)
+                 +
+                 (1 | task)
+  , data = completion_times
+  , control = lmerControl(optimizer = "Nelder_Mead")
+  , REML = FALSE)
+vif(m_ct2)
+summary(m_ct2)
+model_parameters(m_ct2)
+r.squaredGLMM(m_ct2)
+anova(m_ct2, m_ct1)
+```
+
+Observations:
+
+- This model is also not significantly better than the basic one.
+- The same holds with a random slope (1 + task_experience_wi | user).
+- Still no effect for plugin use.
+
+```{r include=FALSE}
+stargaze(m_ct1, m_ct2,
+         title="Task Completion Time", 
+         label="tbl:task-completion",
+         covariate_labels = c("Experience","Experience BTW","Experience WI", "Uses plugin"),
+         dep_var_labels="Task Completion Time (seconds)")
+
+```
+
+
+## Task scores
+
+### Descriptives
+
+Number of entries in each group (plugin = 1):
+```{r}
+table(scores$uses_plugin)
+```
+
+Summary statistics for the two distributions (plugin, no plugin):
+```{r}
+summary(scores[scores$uses_plugin == 1,]$score)
+summary(scores[scores$uses_plugin == 0,]$score)
+```
+
+Visualize the two groups:
+```{r}
+pdf('figures/score_all.pdf', pointsize = 18)
+plugin = scores[scores$uses_plugin == 1,]$score
+no_plugin = scores[scores$uses_plugin == 0,]$score
+
+boxplot(list(plugin = plugin,
+             no_plugin = no_plugin),
+        names = c(paste("plugin (", length(plugin), ")", sep = ""),
+                    paste("no_plugin (", length(no_plugin), ")", sep = ""))
+        )
+dev.off()
+
+```
+
+The two groups are statistically indistinguishable:
+```{r}
+t.test(scores[scores$uses_plugin == 1,]$score,
+       scores[scores$uses_plugin == 0,]$score)
+```
+
+Visualize the two groups separately for each task:
+```{r}
+for (cate in sort(unique(scores$category))) {
+  plugin = scores[scores$category == cate &
+                    scores$uses_plugin == 1,]$score
+  no_plugin = scores[scores$category == cate &
+                       scores$uses_plugin == 0,]$score
+  show(cate)
+  show(t.test(plugin, no_plugin))
+
+  pdf(paste0('figures/score_', cate, '.pdf'), pointsize = 18)
+  boxplot(list(plugin = plugin,
+               no_plugin = no_plugin),
+          names = c(paste("plugin (", length(plugin), ")", sep = ""),
+                    paste("no_plugin (", length(no_plugin), ")", sep = "")))
+  dev.off()
+}
+
+```
+
+Test the two groups separately for each task:
+```{r include=FALSE}
+for (cate in sort(unique(scores$category))) {
+  plugin = scores[scores$category == cate &
+                              scores$uses_plugin == 1,]$score
+  no_plugin = scores[scores$category == cate &
+                                 scores$uses_plugin == 0,]$score
+  t.test(plugin, no_plugin)
+}
+```
+
+### Basic model: user and task as random effects
+
+```{r}
+m_ts0 = lmer(score ~
+              + uses_plugin
+              + (1 | user)
+              + (1 | task)
+  , data = scores
+  , REML = FALSE)
+# vif(m_ts0)
+summary(m_ts0)
+model_parameters(m_ts0)
+r.squaredGLMM(m_ts0)
+Anova(m_ts0)
+
+```
+
+Observations:
+
+- Using the plugin does not have a statistically significant effect on task completion time :(
+- The random effects are both very strong = there are huge differences between users and between tasks.
+
+### Add task category experience as fixed effect
+
+```{r}
+m_ts1 = lmer(score ~
+               task_experience
+              + uses_plugin
+              + (1 | user)
+              + (1 | task)
+  , data = scores
+  , REML = FALSE)
+vif(m_ts1)
+summary(m_ts1)
+model_parameters(m_ts1)
+r.squaredGLMM(m_ts1)
+anova(m_ts1, m_ts0)
+```
+
+Observations:
+
+- This model is not significantly better than the basic one.
+- Still no effect for plugin use.
+
+### De-mean task category experience, it may be confounded with user
+
+```{r}
+m_ts2 = lmer(score ~
+               task_experience_btw
+              + task_experience_wi
+              + uses_plugin
+              + (1 | user)
+              + (1 | task)
+  , data = scores
+  , control = lmerControl(optimizer = "Nelder_Mead")
+  , REML = FALSE)
+vif(m_ts2)
+summary(m_ts2)
+model_parameters(m_ts2)
+r.squaredGLMM(m_ts2)
+anova(m_ts2, m_ts1)
+```
+
+Observations:
+
+- This model is also not significantly better than the basic one.
+- The same holds with a random slope (1 + task_experience_wi | user).
+- Still no effect for plugin use.
+
+
+## Complexity Scores - CC (Cyclomatic Complexity)
+
+### Descriptives
+
+Number of entries in each group (plugin = 1):
+```{r}
+table(complexity_scores$uses_plugin)
+
+summary(complexity_scores[complexity_scores$uses_plugin == 1,]$cc)
+summary(complexity_scores[complexity_scores$uses_plugin == 0,]$cc)
+
+```
+
+Visualize all:
+```{r}
+
+pdf('figures/cc_all.pdf', pointsize = 18)
+plugin = complexity_scores[complexity_scores$uses_plugin == 1,]$cc
+no_plugin = complexity_scores[complexity_scores$uses_plugin == 0,]$cc
+
+boxplot(list(plugin = plugin,
+             no_plugin = no_plugin),
+        names = c(paste("plugin (", length(plugin), ")", sep = ""),
+                    paste("no_plugin (", length(no_plugin), ")", sep = ""))
+        )
+dev.off()
+
+```
+
+The two groups are statistically indistinguishable:
+```{r}
+t.test(complexity_scores[complexity_scores$uses_plugin == 1,]$cc,
+       complexity_scores[complexity_scores$uses_plugin == 0,]$cc)
+```
+
+Visualize the two groups separately for each task:
+```{r}
+for (category in sort(unique(complexity_scores$category))) {
+
+  pdf(paste0('figures/cc_', category, '.pdf'), pointsize = 18)
+
+  show(category)
+  show(t.test(plugin, no_plugin))
+
+  plugin = complexity_scores[complexity_scores$category == category &
+                              complexity_scores$uses_plugin == 1,]$cc
+  no_plugin = complexity_scores[complexity_scores$category == category &
+                                 complexity_scores$uses_plugin == 0,]$cc
+  boxplot(list(plugin = plugin,
+               no_plugin = no_plugin),
+          names = c(paste("plugin (", length(plugin), ")", sep = ""),
+                    paste("no_plugin (", length(no_plugin), ")", sep = "")))
+  dev.off()
+}
+
+```
+
+From the boxplots we see there's not much data for tasks 4, 5, and 7.
+
+### Basic model: user and task as random effects
+
+```{r}
+m_tc0 = lmer(cc ~
+               +uses_plugin
+                 +
+                 (1 | user)
+                 +
+                 (1 | task)
+  , data = complexity_scores
+  , REML = FALSE)
+# vif(m_tc0)
+summary(m_tc0)
+model_parameters(m_tc0)
+r.squaredGLMM(m_tc0)
+Anova(m_tc0)
+
+```
+
+### Add task category experience as fixed effect
+
+```{r}
+m_tc1 = lmer(cc ~
+               task_experience
+                 +
+                 uses_plugin
+                 +
+                 (1 | user)
+                 +
+                 (1 | task)
+  , data = complexity_scores
+  , REML = FALSE)
+vif(m_tc1)
+summary(m_tc1)
+model_parameters(m_tc1)
+r.squaredGLMM(m_tc1)
+anova(m_tc1, m_tc0)
+```
+
+### De-mean task category experience, it may be confounded with user
+
+```{r}
+m_tc2 = lmer(cc ~
+               task_experience_btw
+                 +
+                 task_experience_wi
+                 +
+                 uses_plugin
+                 +
+                 (1 | user)
+                 +
+                 (1 | task)
+  , data = complexity_scores
+  , control = lmerControl(optimizer = "Nelder_Mead")
+  , REML = FALSE)
+vif(m_tc2)
+summary(m_tc2)
+model_parameters(m_tc2)
+r.squaredGLMM(m_tc2)
+anova(m_tc2, m_tc0)
+```
+
+
+
+```{r}
+stargaze_m3(m_ct1, m_ts1, m_tc1,
+         title="LMER task performance models with our default specification", 
+         label="tbl:task-performance",
+         covariate_labels = c("Experience","Experience BTW","Experience WI", "Uses plugin"),
+         # dep_var_labels="", #"Program Correctness (score 0-10)",
+         dep_var_labels = c("Completion time", "Correctness score", "Cyclomatic complexity")
+         )
+
+```
+
+
+## Complexity Scores - LLOC (Logical Line of Code)
+
+### Descriptives
+
+Number of entries in each group (plugin = 1):
+```{r}
+table(complexity_scores$uses_plugin)
+
+summary(complexity_scores[complexity_scores$uses_plugin == 1,]$lloc)
+summary(complexity_scores[complexity_scores$uses_plugin == 0,]$lloc)
+
+```
+
+Visualize all:
+```{r}
+
+pdf('figures/sloc_all.pdf', pointsize = 18)
+plugin = complexity_scores[complexity_scores$uses_plugin == 1,]$lloc
+no_plugin = complexity_scores[complexity_scores$uses_plugin == 0,]$lloc
+
+boxplot(list(plugin = plugin,
+             no_plugin = no_plugin),
+        names = c(paste("plugin (", length(plugin), ")", sep = ""),
+                    paste("no_plugin (", length(no_plugin), ")", sep = ""))
+        )
+dev.off()
+
+```
+
+The two groups are statistically indistinguishable:
+```{r}
+t.test(complexity_scores[complexity_scores$uses_plugin == 1,]$lloc,
+       complexity_scores[complexity_scores$uses_plugin == 0,]$lloc)
+```
+
+### Add task category experience as fixed effect
+
+```{r}
+m_tc_sloc1 = lmer(lloc ~
+               task_experience
+                 +
+                 uses_plugin
+                 +
+                 (1 | user)
+                 +
+                 (1 | task)
+  , data = complexity_scores
+  , REML = FALSE)
+vif(m_tc_sloc1)
+summary(m_tc_sloc1)
+model_parameters(m_tc_sloc1)
+r.squaredGLMM(m_tc_sloc1)
+```
+
+### De-mean task category experience, it may be confounded with user
+
+```{r}
+m_tc_sloc2 = lmer(lloc ~
+               task_experience_btw
+                 +
+                 task_experience_wi
+                 +
+                 uses_plugin
+                 +
+                 (1 | user)
+                 +
+                 (1 | task)
+  , data = complexity_scores
+  , control = lmerControl(optimizer = "Nelder_Mead")
+  , REML = FALSE)
+vif(m_tc_sloc2)
+summary(m_tc_sloc2)
+model_parameters(m_tc_sloc2)
+r.squaredGLMM(m_tc_sloc2)
+anova(m_tc_sloc2, m_tc_sloc1)
+```
+
+
+
+```{r}
+stargaze_m4(m_ct1, m_ts1, m_tc_sloc1, m_tc1,
+         title="LMER task performance models (default specification).", 
+         label="tbl:task-performance",
+         covariate_labels = c("Experience","Uses plugin"),
+         # dep_var_labels="", #"Program Correctness (score 0-10)",
+         dep_var_labels = c("Completion time", "Correctness score", "SLOC", "CC")
+         )
+
+```
+
+
+```{r}
+stargaze_m4(m_ct2, m_ts2, m_tc_sloc2, m_tc2,
+         title="LMER task performance models (de-meaned experience).", 
+         label="tbl:task-performance-demean",
+         covariate_labels = c("Experience BTW", "Experience WI", "Uses plugin"),
+         # dep_var_labels="", #"Program Correctness (score 0-10)",
+         dep_var_labels = c("Completion time", "Correctness score", "SLOC", "CC")
+         )
+
+```
+
+
+## Browser Events
+
+### Setup
+```{r}
+# Read browser event counts
+browser_events = read_csv('data/browser_event_counts.csv')
+nrow(browser_events)
+browser_events = merge(browser_events, plugin_query_counts, by=c("user","task"))
+nrow(browser_events)
+
+browser_events$X1.x = NULL
+browser_events$X1.y = NULL
+
+browser_events = subset(browser_events, !(user %in% blocked_users))
+length(unique(browser_events$user))
+
+boxplot(list(plugin=browser_events[browser_events$total_query_count>0,]$total_browse_count,
+             no_plugin=browser_events[browser_events$total_query_count==0,]$total_browse_count))
+
+boxplot(list(plugin=browser_events[browser_events$total_query_count>0,]$search_count,
+             no_plugin=browser_events[browser_events$total_query_count==0,]$search_count))
+
+# plot(browser_events[browser_events$total_query_count>0,]$total_query_count, 
+     # browser_events[browser_events$total_query_count>0,]$total_browse_count)
+```
+
+### Descriptives
+Total urls visited per task through browser:
+```{r}
+hist(browser_events$total_browse_count)
+```
+Total searches per task through browser:
+```{r}
+hist(browser_events$search_count)
+```
+
+### Correlation with completion time
+```{r}
+completion_times_browser = merge(completion_times, browser_events, by=c("user","task"))
+plot(completion_times_browser$total_browse_count, completion_times_browser$completion_time)
+plot(completion_times_browser$search_count, completion_times_browser$completion_time)
+
+```
+
+## Add task category experience as fixed effect
+
+```{r}
+m_browse1 = lmer(search_count ~
+               task_experience
+                 +
+                 uses_plugin
+                 +
+                 (1 | user)
+                 +
+                 (1 | task)
+  , data = completion_times_browser
+  , REML = FALSE)
+vif(m_browse1)
+summary(m_browse1)
+# model_parameters(m_browse1)
+r.squaredGLMM(m_browse1)
+```
+
+### De-mean task category experience, it may be confounded with user
+
+```{r}
+completion_times_browser$total_search_count = completion_times_browser$total_query_count + completion_times_browser$search_count
+
+m_browse2 = lmer(search_count ~
+                  task_experience_btw
+                 +
+                 task_experience_wi
+                 +
+                 uses_plugin
+                 +
+                 (1 | user)
+                 +
+                 (1 | task)
+  , data = completion_times_browser
+  , control = lmerControl(optimizer = "Nelder_Mead")
+  , REML = FALSE)
+vif(m_tc_sloc2)
+summary(m_browse2)
+model_parameters(m_browse2)
+r.squaredGLMM(m_browse2)
+# anova(m_browse1, m_browse2)
+```
+
+
+
+```{r}
+stargaze_m5(m_ct1, m_browse1, m_ts1, m_tc_sloc1, m_tc1,
+         title="LMER task performance models (default specification).", 
+         label="tbl:task-performance",
+         covariate_labels = c("Experience","Uses plugin"),
+         # dep_var_labels="", #"Program Correctness (score 0-10)",
+         dep_var_labels = c("Completion time", "In-browser searches", "Correctness score", "SLOC", "CC")
+         )
+
+```
+
+
+```{r}
+stargaze_m5(m_ct2, m_browse2, m_ts2, m_tc_sloc2, m_tc2,
+         title="LMER task performance models (de-meaned experience).", 
+         label="tbl:task-performance-demean",
+         covariate_labels = c("Experience BTW", "Experience WI", "Uses plugin"),
+         # dep_var_labels="", #"Program Correctness (score 0-10)",
+         dep_var_labels = c("Completion time", "In-browser searches", "Correctness score", "SLOC", "CC")
+         )
+
+```
+
+
+
+
+Calculate correlations:
+
+```{r}
+cor.test(completion_times_browser$total_browse_count, completion_times_browser$completion_time, method = "spearman")
+cor.test(completion_times_browser$search_count, completion_times_browser$completion_time, method = "spearman")
+```
+
+### Correlation with scores
+
+```{r}
+scores_browser = merge(scores, browser_events, by=c("user","task"))
+plot(scores_browser$total_browse_count, scores_browser$score)
+plot(scores_browser$search_count, scores_browser$score)
+
+```
+
+
+Calculate correlations:
+
+```{r}
+cor.test(scores_browser$total_browse_count, scores_browser$score, method = "spearman")
+cor.test(scores_browser$search_count, scores_browser$score, method = "spearman")
+```
+## Relationship with plugin query counts
+
+### Completion time, browser events, and plugin queries
+
+```{r}
+completion_times_query_counts = merge(completion_times_browser, plugin_query_counts, by=c("user","task"))
+query_without_zero = completion_times_query_counts[completion_times_query_counts$total_query_count > 0,]
+plot(query_without_zero$total_browse_count, query_without_zero$total_query_count)
+plot(query_without_zero$search_count, query_without_zero$total_query_count)
+plot(query_without_zero$total_query_count, query_without_zero$completion_time)
+```
+
+
+Calculate correlations:
+```{r}
+cor.test(query_without_zero$total_query_count, query_without_zero$completion_time, method = "spearman")
+cor.test(query_without_zero$total_browse_count, query_without_zero$total_query_count, method = "spearman")
+```
+### Scores, browser events, and plugin queries
+
+```{r}
+scores_query_counts = merge(scores_browser, plugin_query_counts, by=c("user","task"))
+plot(scores_query_counts$total_browse_count, scores_query_counts$total_query_count)
+plot(scores_query_counts$search_count, scores_query_counts$total_query_count)
+plot(scores_query_counts$total_query_count, scores_query_counts$score)
+```
+
+
+
+Calculate correlations:
+```{r}
+cor.test(scores_query_counts$total_query_count, scores_query_counts$score, method = "spearman")
+cor.test(scores_query_counts$total_browse_count, scores_query_counts$total_query_count, method = "spearman")
+```

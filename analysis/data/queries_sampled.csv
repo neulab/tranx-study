@@ -1,0 +1,51 @@
+,user,task,query,good,good_with_context,is_generation
+99,34b1ef17e6625ba2350f6f1c169591a1,task6-1,pandas to csv,0,0,1
+79,67e86a0cb1f9b6cae0e8d6c4b24711de,task1-2,format datetime,0,0,0
+14,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,pandas write df to csv,0,0,0
+286,e88d1e36c4db7410802b3fda6db81d38,task4-2,download an image request,0,0,0
+179,4d52cf690a039273baca11d5bf55f0a7,task1-1,call `pick_with_replacement`,0,1,1
+53,2ceafaf6a21d6cb6495038b38ab72061,task1-2,get now one week from now,1,1,0
+226,cbfad61871126c1cc4c85d8bdb7fdddf,task3-1,regexp date,0,0,0
+34,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,plt create 3 subplots,1,1,0
+33,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,bar plot with multiple bars per label,0,1,0
+3,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task1-2,get gmt timezone,0,1,0
+315,2287fbb738654ee8436be1a74b1efab7,task2-1,remove first column from csv file,1,1,1
+31,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-1,plt create figure with size,1,1,1
+97,34b1ef17e6625ba2350f6f1c169591a1,task6-1,pandas group by,0,0,0
+160,fd9d2d83c74acfbdeb44b35e7e0d1b1f,task1-1,for loop on range 100,1,1,0
+230,3290155d5f39c2cece41ce216eecac62,task1-2,date now,1,1,0
+19,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,filter df with two conditions,0,0,0
+300,7ff9938c47bd8fb571d43b13872e6182,task1-1,generate lowercase char,1,1,1
+201,638965bbb0d66a5b0eae27d1324bbf89,task1-2,change datetime format of `week_date` to mm-dd-yyyy hh:mm,1,1,1
+158,fd9d2d83c74acfbdeb44b35e7e0d1b1f,task1-1,generate random between 0 and 20,1,1,1
+280,e88d1e36c4db7410802b3fda6db81d38,task4-2,save dict to csv,0,0,0
+103,34b1ef17e6625ba2350f6f1c169591a1,task6-1,pandas to csv decimal,0,1,0
+98,34b1ef17e6625ba2350f6f1c169591a1,task6-1,pandas output csv,0,1,0
+240,baff2a3b41189071a80cebf6fdc239e3,task1-2,get time and date,1,1,0
+235,3290155d5f39c2cece41ce216eecac62,task2-1,csv writer,0,0,0
+43,c4196119198c1bd6dce9ad020501698d,task1-1,random sample with replacement,1,1,1
+165,9dd43727b9246d7f2220b94ff43380cf,task2-2,traverse a directory,0,1,0
+290,e78bbc00ea23e3688e035426717b63ac,task6-1,how to remove an item from a list using the index,1,1,0
+7,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,load csv file with pandas,1,1,1
+212,638965bbb0d66a5b0eae27d1324bbf89,task5-2,exit program,1,1,1
+17,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task6-1,pandas create buckets by column value,0,0,0
+276,e88d1e36c4db7410802b3fda6db81d38,task3-1,recursive copy files and folders,0,1,0
+85,34b1ef17e6625ba2350f6f1c169591a1,task1-1,random characters,0,0,0
+54,2ceafaf6a21d6cb6495038b38ab72061,task2-1,"open ""data.csv"" file",1,1,0
+59,2ceafaf6a21d6cb6495038b38ab72061,task3-1,match regex year month day,0,0,0
+40,0ed2dff1d23b0de1cfcf9edb0ba35b1c,task7-2,plt ax legend,0,1,1
+95,34b1ef17e6625ba2350f6f1c169591a1,task6-1,read csv file,1,1,1
+306,7ff9938c47bd8fb571d43b13872e6182,task7-1,scatter,0,1,1
+262,9a6cfe2c7ca82dcb62772e83ed7327db,task2-1,how to delete a column in a dataframe python,0,1,0
+253,eb54774fe018001b25b8c31133f13bc9,task6-2,load wine dataset,0,0,0
+60,2ceafaf6a21d6cb6495038b38ab72061,task3-1,copy a file to dist,0,1,1
+123,844088c7077d499fa3533250ae504e7f,task1-1,generate random letters,1,1,0
+263,9a6cfe2c7ca82dcb62772e83ed7327db,task2-1,how to delete columns in dataframe,0,1,0
+199,638965bbb0d66a5b0eae27d1324bbf89,task1-2,convert `week_date` to GMT timezone and assign to `GMT_week_date`,1,1,1
+86,34b1ef17e6625ba2350f6f1c169591a1,task1-1,defaultdict,0,0,0
+101,34b1ef17e6625ba2350f6f1c169591a1,task6-1,pandas round value,0,1,1
+299,7ff9938c47bd8fb571d43b13872e6182,task1-1,generate char lower case,0,0,0
+195,4d52cf690a039273baca11d5bf55f0a7,task5-2,argparse subprogram,0,0,0
+87,34b1ef17e6625ba2350f6f1c169591a1,task1-1,sort key of dict,1,1,1
+51,2ceafaf6a21d6cb6495038b38ab72061,task1-2,print datetime in mm-dd-yyyy hh:mm  format,1,1,1
+106,34b1ef17e6625ba2350f6f1c169591a1,task6-1,rename column pandas,0,1,1

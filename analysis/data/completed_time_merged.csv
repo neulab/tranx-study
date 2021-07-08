@@ -1,0 +1,225 @@
+"","user","X1.x","category","task","completion_time","use_plugin","X1.y","occupation","programming_experience","python_experience","task1","task2","task3","task4","task5","task6","task7","ide","other_tools","uses_plugin","task_experience","task_experience_between","task_experience_within","task_experience_btw","task_experience_wi"
+"1","fd9d2d83c74acfbdeb44b35e7e0d1b1f",85,"task1","task1-1",684,1,22,"Researcher",5,5,5,4,4,3,3,4,4,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,5,4.25,0.75,4.25,0.75
+"2","fd9d2d83c74acfbdeb44b35e7e0d1b1f",86,"task1","task1-2",452,0,22,"Researcher",5,5,5,4,4,3,3,4,4,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,5,4.25,0.75,4.25,0.75
+"3","fd9d2d83c74acfbdeb44b35e7e0d1b1f",87,"task2","task2-1",500,0,22,"Researcher",5,5,5,4,4,3,3,4,4,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,4,4.25,-0.25,4.25,-0.25
+"4","fd9d2d83c74acfbdeb44b35e7e0d1b1f",88,"task2","task2-2",712,1,22,"Researcher",5,5,5,4,4,3,3,4,4,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,4,4.25,-0.25,4.25,-0.25
+"5","fd9d2d83c74acfbdeb44b35e7e0d1b1f",89,"task3","task3-1",2220,0,22,"Researcher",5,5,5,4,4,3,3,4,4,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,4,4.25,-0.25,4.25,-0.25
+"6","fd9d2d83c74acfbdeb44b35e7e0d1b1f",90,"task3","task3-2",1978,1,22,"Researcher",5,5,5,4,4,3,3,4,4,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,4,4.25,-0.25,4.25,-0.25
+"7","fd9d2d83c74acfbdeb44b35e7e0d1b1f",91,"task6","task6-1",1985,0,22,"Researcher",5,5,5,4,4,3,3,4,4,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,4,4.25,-0.25,4.25,-0.25
+"8","fd9d2d83c74acfbdeb44b35e7e0d1b1f",92,"task6","task6-2",1692,1,22,"Researcher",5,5,5,4,4,3,3,4,4,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,4,4.25,-0.25,4.25,-0.25
+"9","9a6cfe2c7ca82dcb62772e83ed7327db",177,"task1","task1-1",1006,1,34,"Software Engineer",4,4,5,3,3,1,1,4,4,"VS Code, Jupyter Notebook, Colab Notebook","No",TRUE,5,4,1,4,1
+"10","9a6cfe2c7ca82dcb62772e83ed7327db",178,"task1","task1-2",2783,0,34,"Software Engineer",4,4,5,3,3,1,1,4,4,"VS Code, Jupyter Notebook, Colab Notebook","No",FALSE,5,4,1,4,1
+"11","9a6cfe2c7ca82dcb62772e83ed7327db",179,"task2","task2-1",1056,1,34,"Software Engineer",4,4,5,3,3,1,1,4,4,"VS Code, Jupyter Notebook, Colab Notebook","No",TRUE,3,4,-1,4,-1
+"12","9a6cfe2c7ca82dcb62772e83ed7327db",180,"task2","task2-2",6862,0,34,"Software Engineer",4,4,5,3,3,1,1,4,4,"VS Code, Jupyter Notebook, Colab Notebook","No",FALSE,3,4,-1,4,-1
+"13","9a6cfe2c7ca82dcb62772e83ed7327db",181,"task6","task6-2",3133,1,34,"Software Engineer",4,4,5,3,3,1,1,4,4,"VS Code, Jupyter Notebook, Colab Notebook","No",TRUE,4,4,0,4,0
+"14","9a6cfe2c7ca82dcb62772e83ed7327db",182,"task7","task7-1",5718,1,34,"Software Engineer",4,4,5,3,3,1,1,4,4,"VS Code, Jupyter Notebook, Colab Notebook","No",TRUE,4,4,0,4,0
+"31","9dd43727b9246d7f2220b94ff43380cf",93,"task1","task1-1",2188,1,21,"Software Engineer",4,3,5,2,3,1,3,1,2,"PyCharm, Jupyter Notebook, Sublime Text, Notepad++","No",TRUE,5,3.5,1.5,3.5,1.5
+"32","9dd43727b9246d7f2220b94ff43380cf",94,"task1","task1-2",2259,0,21,"Software Engineer",4,3,5,2,3,1,3,1,2,"PyCharm, Jupyter Notebook, Sublime Text, Notepad++","No",FALSE,5,3.5,1.5,3.5,1.5
+"33","9dd43727b9246d7f2220b94ff43380cf",95,"task2","task2-1",3275,0,21,"Software Engineer",4,3,5,2,3,1,3,1,2,"PyCharm, Jupyter Notebook, Sublime Text, Notepad++","No",FALSE,2,3.5,-1.5,3.5,-1.5
+"35","9dd43727b9246d7f2220b94ff43380cf",97,"task3","task3-1",3690,0,21,"Software Engineer",4,3,5,2,3,1,3,1,2,"PyCharm, Jupyter Notebook, Sublime Text, Notepad++","No",FALSE,3,3.5,-0.5,3.5,-0.5
+"36","9dd43727b9246d7f2220b94ff43380cf",98,"task3","task3-2",6347,1,21,"Software Engineer",4,3,5,2,3,1,3,1,2,"PyCharm, Jupyter Notebook, Sublime Text, Notepad++","No",TRUE,3,3.5,-0.5,3.5,-0.5
+"37","9dd43727b9246d7f2220b94ff43380cf",99,"task5","task5-2",4056,0,21,"Software Engineer",4,3,5,2,3,1,3,1,2,"PyCharm, Jupyter Notebook, Sublime Text, Notepad++","No",FALSE,3,3.5,-0.5,3.5,-0.5
+"38","e78bbc00ea23e3688e035426717b63ac",199,"task1","task1-1",7048,1,37,"Assistant Manager (programming is a hobby)",3,4,5,4,2,4,2,4,4,"PyCharm","No",TRUE,5,4.28571428571429,0.714285714285714,4.28571428571429,0.714285714285714
+"39","e78bbc00ea23e3688e035426717b63ac",200,"task1","task1-2",1344,0,37,"Assistant Manager (programming is a hobby)",3,4,5,4,2,4,2,4,4,"PyCharm","No",FALSE,5,4.28571428571429,0.714285714285714,4.28571428571429,0.714285714285714
+"40","e78bbc00ea23e3688e035426717b63ac",201,"task2","task2-1",1533,1,37,"Assistant Manager (programming is a hobby)",3,4,5,4,2,4,2,4,4,"PyCharm","No",TRUE,4,4.28571428571429,-0.285714285714286,4.28571428571429,-0.285714285714286
+"41","e78bbc00ea23e3688e035426717b63ac",202,"task2","task2-2",5447,0,37,"Assistant Manager (programming is a hobby)",3,4,5,4,2,4,2,4,4,"PyCharm","No",FALSE,4,4.28571428571429,-0.285714285714286,4.28571428571429,-0.285714285714286
+"42","e78bbc00ea23e3688e035426717b63ac",203,"task4","task4-1",3093,1,37,"Assistant Manager (programming is a hobby)",3,4,5,4,2,4,2,4,4,"PyCharm","No",TRUE,4,4.28571428571429,-0.285714285714286,4.28571428571429,-0.285714285714286
+"43","e78bbc00ea23e3688e035426717b63ac",204,"task4","task4-2",7037,0,37,"Assistant Manager (programming is a hobby)",3,4,5,4,2,4,2,4,4,"PyCharm","No",FALSE,4,4.28571428571429,-0.285714285714286,4.28571428571429,-0.285714285714286
+"44","e78bbc00ea23e3688e035426717b63ac",205,"task6","task6-2",2831,0,37,"Assistant Manager (programming is a hobby)",3,4,5,4,2,4,2,4,4,"PyCharm","No",FALSE,4,4.28571428571429,-0.285714285714286,4.28571428571429,-0.285714285714286
+"45","0a13493c5f0f9f75a9fa6a576a14984b",300,"task1","task1-2",8042,1,58,"Software Engineer",4,4,4,4,3,1,1,1,3,"Jupyter Notebook, Notepad ++","No",TRUE,4,3.4,0.6,3.4,0.6
+"46","0a13493c5f0f9f75a9fa6a576a14984b",301,"task2","task2-1",5272,0,58,"Software Engineer",4,4,4,4,3,1,1,1,3,"Jupyter Notebook, Notepad ++","No",FALSE,4,3.4,0.6,3.4,0.6
+"47","0a13493c5f0f9f75a9fa6a576a14984b",302,"task3","task3-1",7943,0,58,"Software Engineer",4,4,4,4,3,1,1,1,3,"Jupyter Notebook, Notepad ++","No",FALSE,3,3.4,-0.4,3.4,-0.4
+"48","0a13493c5f0f9f75a9fa6a576a14984b",303,"task3","task3-2",8286,1,58,"Software Engineer",4,4,4,4,3,1,1,1,3,"Jupyter Notebook, Notepad ++","No",TRUE,3,3.4,-0.4,3.4,-0.4
+"49","0a13493c5f0f9f75a9fa6a576a14984b",304,"task7","task7-1",9986,0,58,"Software Engineer",4,4,4,4,3,1,1,1,3,"Jupyter Notebook, Notepad ++","No",FALSE,3,3.4,-0.4,3.4,-0.4
+"50","a061d03ba2e23bf8f3861f78d7d62248",69,"task1","task1-1",735,1,17,"Researcher",5,4,5,3,3,3,2,5,3,"Vim, Jupyter Notebook","No",TRUE,5,4,1,4,1
+"51","a061d03ba2e23bf8f3861f78d7d62248",70,"task1","task1-2",580,0,17,"Researcher",5,4,5,3,3,3,2,5,3,"Vim, Jupyter Notebook","No",FALSE,5,4,1,4,1
+"52","a061d03ba2e23bf8f3861f78d7d62248",71,"task2","task2-1",1187,1,17,"Researcher",5,4,5,3,3,3,2,5,3,"Vim, Jupyter Notebook","No",TRUE,3,4,-1,4,-1
+"53","a061d03ba2e23bf8f3861f78d7d62248",72,"task2","task2-2",1048,0,17,"Researcher",5,4,5,3,3,3,2,5,3,"Vim, Jupyter Notebook","No",FALSE,3,4,-1,4,-1
+"54","a061d03ba2e23bf8f3861f78d7d62248",73,"task3","task3-1",1277,0,17,"Researcher",5,4,5,3,3,3,2,5,3,"Vim, Jupyter Notebook","No",FALSE,3,4,-1,4,-1
+"55","a061d03ba2e23bf8f3861f78d7d62248",74,"task3","task3-2",1619,1,17,"Researcher",5,4,5,3,3,3,2,5,3,"Vim, Jupyter Notebook","No",TRUE,3,4,-1,4,-1
+"56","a061d03ba2e23bf8f3861f78d7d62248",75,"task6","task6-1",4603,0,17,"Researcher",5,4,5,3,3,3,2,5,3,"Vim, Jupyter Notebook","No",FALSE,5,4,1,4,1
+"57","a061d03ba2e23bf8f3861f78d7d62248",76,"task6","task6-2",1910,1,17,"Researcher",5,4,5,3,3,3,2,5,3,"Vim, Jupyter Notebook","No",TRUE,5,4,1,4,1
+"58","4d52cf690a039273baca11d5bf55f0a7",100,"task1","task1-1",1984,1,24,"Software Engineer",3,4,5,4,4,2,3,3,3,"Vim, Jupyter Notebook","black, flake8, pylint, mypy, vim-surround, vim-unimpaired",TRUE,5,4,1,4,1
+"59","4d52cf690a039273baca11d5bf55f0a7",101,"task1","task1-2",216,0,24,"Software Engineer",3,4,5,4,4,2,3,3,3,"Vim, Jupyter Notebook","black, flake8, pylint, mypy, vim-surround, vim-unimpaired",FALSE,5,4,1,4,1
+"60","4d52cf690a039273baca11d5bf55f0a7",102,"task2","task2-1",330,0,24,"Software Engineer",3,4,5,4,4,2,3,3,3,"Vim, Jupyter Notebook","black, flake8, pylint, mypy, vim-surround, vim-unimpaired",FALSE,4,4,0,4,0
+"61","4d52cf690a039273baca11d5bf55f0a7",103,"task2","task2-2",1263,1,24,"Software Engineer",3,4,5,4,4,2,3,3,3,"Vim, Jupyter Notebook","black, flake8, pylint, mypy, vim-surround, vim-unimpaired",TRUE,4,4,0,4,0
+"62","4d52cf690a039273baca11d5bf55f0a7",104,"task3","task3-1",2590,1,24,"Software Engineer",3,4,5,4,4,2,3,3,3,"Vim, Jupyter Notebook","black, flake8, pylint, mypy, vim-surround, vim-unimpaired",TRUE,4,4,0,4,0
+"63","4d52cf690a039273baca11d5bf55f0a7",105,"task3","task3-2",1194,0,24,"Software Engineer",3,4,5,4,4,2,3,3,3,"Vim, Jupyter Notebook","black, flake8, pylint, mypy, vim-surround, vim-unimpaired",FALSE,4,4,0,4,0
+"64","4d52cf690a039273baca11d5bf55f0a7",106,"task5","task5-1",1613,0,24,"Software Engineer",3,4,5,4,4,2,3,3,3,"Vim, Jupyter Notebook","black, flake8, pylint, mypy, vim-surround, vim-unimpaired",FALSE,3,4,-1,4,-1
+"65","4d52cf690a039273baca11d5bf55f0a7",107,"task5","task5-2",3139,1,24,"Software Engineer",3,4,5,4,4,2,3,3,3,"Vim, Jupyter Notebook","black, flake8, pylint, mypy, vim-surround, vim-unimpaired",TRUE,3,4,-1,4,-1
+"66","638965bbb0d66a5b0eae27d1324bbf89",108,"task1","task1-1",2753,0,25,"Student (computer science)",3,3,5,4,2,1,4,2,2,"PyCharm, Atom","No",FALSE,5,3.75,1.25,3.75,1.25
+"67","638965bbb0d66a5b0eae27d1324bbf89",109,"task1","task1-2",1823,1,25,"Student (computer science)",3,3,5,4,2,1,4,2,2,"PyCharm, Atom","No",TRUE,5,3.75,1.25,3.75,1.25
+"68","638965bbb0d66a5b0eae27d1324bbf89",110,"task2","task2-1",1380,1,25,"Student (computer science)",3,3,5,4,2,1,4,2,2,"PyCharm, Atom","No",TRUE,4,3.75,0.25,3.75,0.25
+"69","638965bbb0d66a5b0eae27d1324bbf89",111,"task2","task2-2",2613,0,25,"Student (computer science)",3,3,5,4,2,1,4,2,2,"PyCharm, Atom","No",FALSE,4,3.75,0.25,3.75,0.25
+"70","638965bbb0d66a5b0eae27d1324bbf89",112,"task3","task3-1",7640,0,25,"Student (computer science)",3,3,5,4,2,1,4,2,2,"PyCharm, Atom","No",FALSE,2,3.75,-1.75,3.75,-1.75
+"71","638965bbb0d66a5b0eae27d1324bbf89",113,"task3","task3-2",5012,1,25,"Student (computer science)",3,3,5,4,2,1,4,2,2,"PyCharm, Atom","No",TRUE,2,3.75,-1.75,3.75,-1.75
+"72","638965bbb0d66a5b0eae27d1324bbf89",114,"task5","task5-1",9573,0,25,"Student (computer science)",3,3,5,4,2,1,4,2,2,"PyCharm, Atom","No",FALSE,4,3.75,0.25,3.75,0.25
+"73","638965bbb0d66a5b0eae27d1324bbf89",115,"task5","task5-2",2893,1,25,"Student (computer science)",3,3,5,4,2,1,4,2,2,"PyCharm, Atom","No",TRUE,4,3.75,0.25,3.75,0.25
+"74","cbfad61871126c1cc4c85d8bdb7fdddf",140,"task1","task1-1",1915,1,30,"IT manager, F&B industry",3,3,4,4,3,4,3,3,3,"PyCharm","Don't use plugins",TRUE,4,3.75,0.25,3.75,0.25
+"75","cbfad61871126c1cc4c85d8bdb7fdddf",141,"task1","task1-2",1032,0,30,"IT manager, F&B industry",3,3,4,4,3,4,3,3,3,"PyCharm","Don't use plugins",FALSE,4,3.75,0.25,3.75,0.25
+"76","cbfad61871126c1cc4c85d8bdb7fdddf",142,"task2","task2-1",1408,1,30,"IT manager, F&B industry",3,3,4,4,3,4,3,3,3,"PyCharm","Don't use plugins",TRUE,4,3.75,0.25,3.75,0.25
+"77","cbfad61871126c1cc4c85d8bdb7fdddf",143,"task2","task2-2",2460,0,30,"IT manager, F&B industry",3,3,4,4,3,4,3,3,3,"PyCharm","Don't use plugins",FALSE,4,3.75,0.25,3.75,0.25
+"78","cbfad61871126c1cc4c85d8bdb7fdddf",144,"task3","task3-1",3259,1,30,"IT manager, F&B industry",3,3,4,4,3,4,3,3,3,"PyCharm","Don't use plugins",TRUE,3,3.75,-0.75,3.75,-0.75
+"79","cbfad61871126c1cc4c85d8bdb7fdddf",145,"task3","task3-2",3897,0,30,"IT manager, F&B industry",3,3,4,4,3,4,3,3,3,"PyCharm","Don't use plugins",FALSE,3,3.75,-0.75,3.75,-0.75
+"80","cbfad61871126c1cc4c85d8bdb7fdddf",146,"task4","task4-1",1939,0,30,"IT manager, F&B industry",3,3,4,4,3,4,3,3,3,"PyCharm","Don't use plugins",FALSE,4,3.75,0.25,3.75,0.25
+"81","cbfad61871126c1cc4c85d8bdb7fdddf",147,"task4","task4-2",4528,1,30,"IT manager, F&B industry",3,3,4,4,3,4,3,3,3,"PyCharm","Don't use plugins",TRUE,4,3.75,0.25,3.75,0.25
+"90","2e3e8fa9d9f7b9fed260130d754b6308",132,"task1","task1-1",1423,1,28,"Student (computer science)",3,4,5,4,2,2,2,3,4,"Jupyter Notebook","I don't use any assistive tools",TRUE,5,4,1,4,1
+"91","2e3e8fa9d9f7b9fed260130d754b6308",133,"task1","task1-2",1962,0,28,"Student (computer science)",3,4,5,4,2,2,2,3,4,"Jupyter Notebook","I don't use any assistive tools",FALSE,5,4,1,4,1
+"92","2e3e8fa9d9f7b9fed260130d754b6308",134,"task2","task2-1",785,1,28,"Student (computer science)",3,4,5,4,2,2,2,3,4,"Jupyter Notebook","I don't use any assistive tools",TRUE,4,4,0,4,0
+"93","2e3e8fa9d9f7b9fed260130d754b6308",135,"task2","task2-2",1357,0,28,"Student (computer science)",3,4,5,4,2,2,2,3,4,"Jupyter Notebook","I don't use any assistive tools",FALSE,4,4,0,4,0
+"94","2e3e8fa9d9f7b9fed260130d754b6308",136,"task6","task6-1",3007,0,28,"Student (computer science)",3,4,5,4,2,2,2,3,4,"Jupyter Notebook","I don't use any assistive tools",FALSE,3,4,-1,4,-1
+"95","2e3e8fa9d9f7b9fed260130d754b6308",137,"task6","task6-2",3527,1,28,"Student (computer science)",3,4,5,4,2,2,2,3,4,"Jupyter Notebook","I don't use any assistive tools",TRUE,3,4,-1,4,-1
+"96","2e3e8fa9d9f7b9fed260130d754b6308",138,"task7","task7-1",1083,0,28,"Student (computer science)",3,4,5,4,2,2,2,3,4,"Jupyter Notebook","I don't use any assistive tools",FALSE,4,4,0,4,0
+"97","2e3e8fa9d9f7b9fed260130d754b6308",139,"task7","task7-2",3446,1,28,"Student (computer science)",3,4,5,4,2,2,2,3,4,"Jupyter Notebook","I don't use any assistive tools",TRUE,4,4,0,4,0
+"98","eb8c0b297db7d9e210c3b804373339a2",77,"task1","task1-1",1993,1,20,"Software Engineer",4,4,4,4,3,3,2,4,4,"PyCharm, Jupyter Notebook, Visual Studio","No",TRUE,4,4,0,4,0
+"99","eb8c0b297db7d9e210c3b804373339a2",78,"task1","task1-2",498,0,20,"Software Engineer",4,4,4,4,3,3,2,4,4,"PyCharm, Jupyter Notebook, Visual Studio","No",FALSE,4,4,0,4,0
+"100","eb8c0b297db7d9e210c3b804373339a2",79,"task2","task2-1",1773,1,20,"Software Engineer",4,4,4,4,3,3,2,4,4,"PyCharm, Jupyter Notebook, Visual Studio","No",TRUE,4,4,0,4,0
+"101","eb8c0b297db7d9e210c3b804373339a2",80,"task2","task2-2",1513,0,20,"Software Engineer",4,4,4,4,3,3,2,4,4,"PyCharm, Jupyter Notebook, Visual Studio","No",FALSE,4,4,0,4,0
+"102","eb8c0b297db7d9e210c3b804373339a2",81,"task6","task6-1",7707,0,20,"Software Engineer",4,4,4,4,3,3,2,4,4,"PyCharm, Jupyter Notebook, Visual Studio","No",FALSE,4,4,0,4,0
+"103","eb8c0b297db7d9e210c3b804373339a2",82,"task6","task6-2",1698,1,20,"Software Engineer",4,4,4,4,3,3,2,4,4,"PyCharm, Jupyter Notebook, Visual Studio","No",TRUE,4,4,0,4,0
+"104","eb8c0b297db7d9e210c3b804373339a2",83,"task7","task7-1",1640,0,20,"Software Engineer",4,4,4,4,3,3,2,4,4,"PyCharm, Jupyter Notebook, Visual Studio","No",FALSE,4,4,0,4,0
+"105","eb8c0b297db7d9e210c3b804373339a2",84,"task7","task7-2",4577,1,20,"Software Engineer",4,4,4,4,3,3,2,4,4,"PyCharm, Jupyter Notebook, Visual Studio","No",TRUE,4,4,0,4,0
+"106","42387deceb25d7486993e2a2d58e14ea",262,"task1","task1-1",838,1,45,"Student (computer science)",4,4,4,4,3,3,3,3,4,"VS Code","Pylint",TRUE,4,3.75,0.25,3.75,0.25
+"107","42387deceb25d7486993e2a2d58e14ea",263,"task1","task1-2",595,0,45,"Student (computer science)",4,4,4,4,3,3,3,3,4,"VS Code","Pylint",FALSE,4,3.75,0.25,3.75,0.25
+"108","42387deceb25d7486993e2a2d58e14ea",264,"task2","task2-1",921,1,45,"Student (computer science)",4,4,4,4,3,3,3,3,4,"VS Code","Pylint",TRUE,4,3.75,0.25,3.75,0.25
+"109","42387deceb25d7486993e2a2d58e14ea",265,"task2","task2-2",1363,0,45,"Student (computer science)",4,4,4,4,3,3,3,3,4,"VS Code","Pylint",FALSE,4,3.75,0.25,3.75,0.25
+"110","42387deceb25d7486993e2a2d58e14ea",266,"task3","task3-1",2387,1,45,"Student (computer science)",4,4,4,4,3,3,3,3,4,"VS Code","Pylint",TRUE,3,3.75,-0.75,3.75,-0.75
+"111","42387deceb25d7486993e2a2d58e14ea",267,"task3","task3-2",1260,0,45,"Student (computer science)",4,4,4,4,3,3,3,3,4,"VS Code","Pylint",FALSE,3,3.75,-0.75,3.75,-0.75
+"112","42387deceb25d7486993e2a2d58e14ea",268,"task7","task7-1",2177,1,45,"Student (computer science)",4,4,4,4,3,3,3,3,4,"VS Code","Pylint",TRUE,4,3.75,0.25,3.75,0.25
+"113","42387deceb25d7486993e2a2d58e14ea",269,"task7","task7-2",2212,0,45,"Student (computer science)",4,4,4,4,3,3,3,3,4,"VS Code","Pylint",FALSE,4,3.75,0.25,3.75,0.25
+"114","203a872af9b348b6ae1c59fbacd59e72",277,"task1","task1-1",1473,1,55,"Software Engineer",4,4,5,5,4,4,1,3,2,"VS Code, Jupyter Notebook","No",TRUE,5,4.5,0.5,4.5,0.5
+"115","203a872af9b348b6ae1c59fbacd59e72",278,"task1","task1-2",690,0,55,"Software Engineer",4,4,5,5,4,4,1,3,2,"VS Code, Jupyter Notebook","No",FALSE,5,4.5,0.5,4.5,0.5
+"116","203a872af9b348b6ae1c59fbacd59e72",279,"task2","task2-1",1053,1,55,"Software Engineer",4,4,5,5,4,4,1,3,2,"VS Code, Jupyter Notebook","No",TRUE,5,4.5,0.5,4.5,0.5
+"117","203a872af9b348b6ae1c59fbacd59e72",280,"task2","task2-2",1003,0,55,"Software Engineer",4,4,5,5,4,4,1,3,2,"VS Code, Jupyter Notebook","No",FALSE,5,4.5,0.5,4.5,0.5
+"118","203a872af9b348b6ae1c59fbacd59e72",281,"task3","task3-1",2069,1,55,"Software Engineer",4,4,5,5,4,4,1,3,2,"VS Code, Jupyter Notebook","No",TRUE,4,4.5,-0.5,4.5,-0.5
+"119","203a872af9b348b6ae1c59fbacd59e72",282,"task3","task3-2",1559,0,55,"Software Engineer",4,4,5,5,4,4,1,3,2,"VS Code, Jupyter Notebook","No",FALSE,4,4.5,-0.5,4.5,-0.5
+"120","203a872af9b348b6ae1c59fbacd59e72",283,"task4","task4-1",1642,1,55,"Software Engineer",4,4,5,5,4,4,1,3,2,"VS Code, Jupyter Notebook","No",TRUE,4,4.5,-0.5,4.5,-0.5
+"121","203a872af9b348b6ae1c59fbacd59e72",284,"task4","task4-2",2953,0,55,"Software Engineer",4,4,5,5,4,4,1,3,2,"VS Code, Jupyter Notebook","No",FALSE,4,4.5,-0.5,4.5,-0.5
+"130","e88d1e36c4db7410802b3fda6db81d38",191,"task1","task1-1",1406,1,36,"IT Solution Architect",3,3,3,3,3,3,3,3,3,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,3,3,0,3,0
+"131","e88d1e36c4db7410802b3fda6db81d38",192,"task1","task1-2",2789,0,36,"IT Solution Architect",3,3,3,3,3,3,3,3,3,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,3,3,0,3,0
+"132","e88d1e36c4db7410802b3fda6db81d38",193,"task2","task2-1",961,1,36,"IT Solution Architect",3,3,3,3,3,3,3,3,3,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,3,3,0,3,0
+"133","e88d1e36c4db7410802b3fda6db81d38",194,"task2","task2-2",7223,0,36,"IT Solution Architect",3,3,3,3,3,3,3,3,3,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,3,3,0,3,0
+"134","e88d1e36c4db7410802b3fda6db81d38",195,"task3","task3-1",6987,1,36,"IT Solution Architect",3,3,3,3,3,3,3,3,3,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,3,3,0,3,0
+"135","e88d1e36c4db7410802b3fda6db81d38",196,"task3","task3-2",3722,0,36,"IT Solution Architect",3,3,3,3,3,3,3,3,3,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,3,3,0,3,0
+"136","e88d1e36c4db7410802b3fda6db81d38",197,"task4","task4-1",5712,0,36,"IT Solution Architect",3,3,3,3,3,3,3,3,3,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,3,3,0,3,0
+"137","e88d1e36c4db7410802b3fda6db81d38",198,"task4","task4-2",8788,1,36,"IT Solution Architect",3,3,3,3,3,3,3,3,3,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,3,3,0,3,0
+"149","0bd31633162f7a836160dd5b6359d29b",305,"task1","task1-1",4494,0,59,"Embedded System Engineer",5,4,5,5,5,3,3,3,3,"Vim, VS Code, Sublime Text","no",FALSE,5,5,0,5,0
+"150","0bd31633162f7a836160dd5b6359d29b",306,"task1","task1-2",1462,1,59,"Embedded System Engineer",5,4,5,5,5,3,3,3,3,"Vim, VS Code, Sublime Text","no",TRUE,5,5,0,5,0
+"151","0bd31633162f7a836160dd5b6359d29b",307,"task2","task2-1",2779,1,59,"Embedded System Engineer",5,4,5,5,5,3,3,3,3,"Vim, VS Code, Sublime Text","no",TRUE,5,5,0,5,0
+"153","0e4f69ae91114adaaf29c8ce2c981057",285,"task1","task1-1",2064,1,56,"Teaching Assistant",3,3,4,4,3,1,2,3,3,"VS Code, Jupyter Notebook, Notebook++, Atom, Spyder IDE","No particular tool, but I use Spyder IDE which has integrated type checking, and other features.",TRUE,4,3.5,0.5,3.5,0.5
+"154","0e4f69ae91114adaaf29c8ce2c981057",286,"task1","task1-2",1234,0,56,"Teaching Assistant",3,3,4,4,3,1,2,3,3,"VS Code, Jupyter Notebook, Notebook++, Atom, Spyder IDE","No particular tool, but I use Spyder IDE which has integrated type checking, and other features.",FALSE,4,3.5,0.5,3.5,0.5
+"155","0e4f69ae91114adaaf29c8ce2c981057",287,"task2","task2-1",912,1,56,"Teaching Assistant",3,3,4,4,3,1,2,3,3,"VS Code, Jupyter Notebook, Notebook++, Atom, Spyder IDE","No particular tool, but I use Spyder IDE which has integrated type checking, and other features.",TRUE,4,3.5,0.5,3.5,0.5
+"156","0e4f69ae91114adaaf29c8ce2c981057",288,"task2","task2-2",1742,0,56,"Teaching Assistant",3,3,4,4,3,1,2,3,3,"VS Code, Jupyter Notebook, Notebook++, Atom, Spyder IDE","No particular tool, but I use Spyder IDE which has integrated type checking, and other features.",FALSE,4,3.5,0.5,3.5,0.5
+"157","0e4f69ae91114adaaf29c8ce2c981057",289,"task3","task3-1",2499,1,56,"Teaching Assistant",3,3,4,4,3,1,2,3,3,"VS Code, Jupyter Notebook, Notebook++, Atom, Spyder IDE","No particular tool, but I use Spyder IDE which has integrated type checking, and other features.",TRUE,3,3.5,-0.5,3.5,-0.5
+"158","0e4f69ae91114adaaf29c8ce2c981057",290,"task3","task3-2",1085,0,56,"Teaching Assistant",3,3,4,4,3,1,2,3,3,"VS Code, Jupyter Notebook, Notebook++, Atom, Spyder IDE","No particular tool, but I use Spyder IDE which has integrated type checking, and other features.",FALSE,3,3.5,-0.5,3.5,-0.5
+"159","0e4f69ae91114adaaf29c8ce2c981057",291,"task6","task6-1",4686,1,56,"Teaching Assistant",3,3,4,4,3,1,2,3,3,"VS Code, Jupyter Notebook, Notebook++, Atom, Spyder IDE","No particular tool, but I use Spyder IDE which has integrated type checking, and other features.",TRUE,3,3.5,-0.5,3.5,-0.5
+"160","0e4f69ae91114adaaf29c8ce2c981057",292,"task6","task6-2",2648,0,56,"Teaching Assistant",3,3,4,4,3,1,2,3,3,"VS Code, Jupyter Notebook, Notebook++, Atom, Spyder IDE","No particular tool, but I use Spyder IDE which has integrated type checking, and other features.",FALSE,3,3.5,-0.5,3.5,-0.5
+"161","3290155d5f39c2cece41ce216eecac62",156,"task1","task1-1",1471,0,31,"Software Engineer",4,4,5,5,5,2,2,4,2,"VS Code, Jupyter Notebook, Sublime Text, Visual Studio 2019","Sometimes I may use the autocomplete",FALSE,5,4.85714285714286,0.142857142857143,4.85714285714286,0.142857142857143
+"162","3290155d5f39c2cece41ce216eecac62",157,"task1","task1-2",737,1,31,"Software Engineer",4,4,5,5,5,2,2,4,2,"VS Code, Jupyter Notebook, Sublime Text, Visual Studio 2019","Sometimes I may use the autocomplete",TRUE,5,4.85714285714286,0.142857142857143,4.85714285714286,0.142857142857143
+"163","3290155d5f39c2cece41ce216eecac62",158,"task2","task2-1",1634,1,31,"Software Engineer",4,4,5,5,5,2,2,4,2,"VS Code, Jupyter Notebook, Sublime Text, Visual Studio 2019","Sometimes I may use the autocomplete",TRUE,5,4.85714285714286,0.142857142857143,4.85714285714286,0.142857142857143
+"164","3290155d5f39c2cece41ce216eecac62",159,"task2","task2-2",4393,0,31,"Software Engineer",4,4,5,5,5,2,2,4,2,"VS Code, Jupyter Notebook, Sublime Text, Visual Studio 2019","Sometimes I may use the autocomplete",FALSE,5,4.85714285714286,0.142857142857143,4.85714285714286,0.142857142857143
+"165","3290155d5f39c2cece41ce216eecac62",160,"task3","task3-1",4994,1,31,"Software Engineer",4,4,5,5,5,2,2,4,2,"VS Code, Jupyter Notebook, Sublime Text, Visual Studio 2019","Sometimes I may use the autocomplete",TRUE,5,4.85714285714286,0.142857142857143,4.85714285714286,0.142857142857143
+"166","3290155d5f39c2cece41ce216eecac62",161,"task3","task3-2",4311,0,31,"Software Engineer",4,4,5,5,5,2,2,4,2,"VS Code, Jupyter Notebook, Sublime Text, Visual Studio 2019","Sometimes I may use the autocomplete",FALSE,5,4.85714285714286,0.142857142857143,4.85714285714286,0.142857142857143
+"167","3290155d5f39c2cece41ce216eecac62",162,"task6","task6-2",2473,0,31,"Software Engineer",4,4,5,5,5,2,2,4,2,"VS Code, Jupyter Notebook, Sublime Text, Visual Studio 2019","Sometimes I may use the autocomplete",FALSE,4,4.85714285714286,-0.857142857142857,4.85714285714286,-0.857142857142857
+"176","baff2a3b41189071a80cebf6fdc239e3",163,"task1","task1-1",3866,0,32,"Software Engineer",4,4,5,5,4,2,2,4,3,"Vim, VS Code, Jupyter Notebook, Sublime Text, Nano","No",FALSE,5,4.66666666666667,0.333333333333333,4.66666666666667,0.333333333333333
+"177","baff2a3b41189071a80cebf6fdc239e3",164,"task1","task1-2",1305,1,32,"Software Engineer",4,4,5,5,4,2,2,4,3,"Vim, VS Code, Jupyter Notebook, Sublime Text, Nano","No",TRUE,5,4.66666666666667,0.333333333333333,4.66666666666667,0.333333333333333
+"178","baff2a3b41189071a80cebf6fdc239e3",165,"task2","task2-1",3592,0,32,"Software Engineer",4,4,5,5,4,2,2,4,3,"Vim, VS Code, Jupyter Notebook, Sublime Text, Nano","No",FALSE,5,4.66666666666667,0.333333333333333,4.66666666666667,0.333333333333333
+"179","baff2a3b41189071a80cebf6fdc239e3",166,"task2","task2-2",4800,1,32,"Software Engineer",4,4,5,5,4,2,2,4,3,"Vim, VS Code, Jupyter Notebook, Sublime Text, Nano","No",TRUE,5,4.66666666666667,0.333333333333333,4.66666666666667,0.333333333333333
+"180","baff2a3b41189071a80cebf6fdc239e3",167,"task3","task3-1",3669,0,32,"Software Engineer",4,4,5,5,4,2,2,4,3,"Vim, VS Code, Jupyter Notebook, Sublime Text, Nano","No",FALSE,4,4.66666666666667,-0.666666666666667,4.66666666666667,-0.666666666666667
+"181","baff2a3b41189071a80cebf6fdc239e3",168,"task3","task3-2",2181,1,32,"Software Engineer",4,4,5,5,4,2,2,4,3,"Vim, VS Code, Jupyter Notebook, Sublime Text, Nano","No",TRUE,4,4.66666666666667,-0.666666666666667,4.66666666666667,-0.666666666666667
+"189","eb54774fe018001b25b8c31133f13bc9",169,"task1","task1-1",2621,1,33,"Software Engineer",4,4,5,5,3,3,3,4,4,"Sublime Text, Notepad++","No",TRUE,5,4.5,0.5,4.5,0.5
+"190","eb54774fe018001b25b8c31133f13bc9",170,"task1","task1-2",1028,0,33,"Software Engineer",4,4,5,5,3,3,3,4,4,"Sublime Text, Notepad++","No",FALSE,5,4.5,0.5,4.5,0.5
+"191","eb54774fe018001b25b8c31133f13bc9",171,"task2","task2-1",879,0,33,"Software Engineer",4,4,5,5,3,3,3,4,4,"Sublime Text, Notepad++","No",FALSE,5,4.5,0.5,4.5,0.5
+"192","eb54774fe018001b25b8c31133f13bc9",172,"task2","task2-2",1484,1,33,"Software Engineer",4,4,5,5,3,3,3,4,4,"Sublime Text, Notepad++","No",TRUE,5,4.5,0.5,4.5,0.5
+"193","eb54774fe018001b25b8c31133f13bc9",173,"task6","task6-1",7603,0,33,"Software Engineer",4,4,5,5,3,3,3,4,4,"Sublime Text, Notepad++","No",FALSE,4,4.5,-0.5,4.5,-0.5
+"194","eb54774fe018001b25b8c31133f13bc9",174,"task6","task6-2",1837,1,33,"Software Engineer",4,4,5,5,3,3,3,4,4,"Sublime Text, Notepad++","No",TRUE,4,4.5,-0.5,4.5,-0.5
+"195","eb54774fe018001b25b8c31133f13bc9",175,"task7","task7-1",5177,0,33,"Software Engineer",4,4,5,5,3,3,3,4,4,"Sublime Text, Notepad++","No",FALSE,4,4.5,-0.5,4.5,-0.5
+"196","eb54774fe018001b25b8c31133f13bc9",176,"task7","task7-2",8133,1,33,"Software Engineer",4,4,5,5,3,3,3,4,4,"Sublime Text, Notepad++","No",TRUE,4,4.5,-0.5,4.5,-0.5
+"197","2287fbb738654ee8436be1a74b1efab7",246,"task1","task1-1",2164,0,44,"Software Engineer",4,4,4,4,4,3,4,4,3,"Vim, Sublime Text, Notepad++","No",FALSE,4,4,0,4,0
+"198","2287fbb738654ee8436be1a74b1efab7",247,"task1","task1-2",2025,1,44,"Software Engineer",4,4,4,4,4,3,4,4,3,"Vim, Sublime Text, Notepad++","No",TRUE,4,4,0,4,0
+"199","2287fbb738654ee8436be1a74b1efab7",248,"task2","task2-1",1517,1,44,"Software Engineer",4,4,4,4,4,3,4,4,3,"Vim, Sublime Text, Notepad++","No",TRUE,4,4,0,4,0
+"200","2287fbb738654ee8436be1a74b1efab7",249,"task2","task2-2",2399,0,44,"Software Engineer",4,4,4,4,4,3,4,4,3,"Vim, Sublime Text, Notepad++","No",FALSE,4,4,0,4,0
+"201","2287fbb738654ee8436be1a74b1efab7",250,"task3","task3-1",7802,1,44,"Software Engineer",4,4,4,4,4,3,4,4,3,"Vim, Sublime Text, Notepad++","No",TRUE,4,4,0,4,0
+"202","2287fbb738654ee8436be1a74b1efab7",251,"task3","task3-2",2403,0,44,"Software Engineer",4,4,4,4,4,3,4,4,3,"Vim, Sublime Text, Notepad++","No",FALSE,4,4,0,4,0
+"203","2287fbb738654ee8436be1a74b1efab7",252,"task5","task5-1",2969,0,44,"Software Engineer",4,4,4,4,4,3,4,4,3,"Vim, Sublime Text, Notepad++","No",FALSE,4,4,0,4,0
+"204","2287fbb738654ee8436be1a74b1efab7",253,"task5","task5-2",980,1,44,"Software Engineer",4,4,4,4,4,3,4,4,3,"Vim, Sublime Text, Notepad++","No",TRUE,4,4,0,4,0
+"213","27570bb3cfcc304aeede0cdf6c2e2762",270,"task1","task1-1",1399,1,54,"Software Engineer",4,4,5,5,3,1,1,3,3,"PyCharm, Jupyter Notebook","no",TRUE,5,4.14285714285714,0.857142857142857,4.14285714285714,0.857142857142857
+"214","27570bb3cfcc304aeede0cdf6c2e2762",271,"task1","task1-2",1038,0,54,"Software Engineer",4,4,5,5,3,1,1,3,3,"PyCharm, Jupyter Notebook","no",FALSE,5,4.14285714285714,0.857142857142857,4.14285714285714,0.857142857142857
+"215","27570bb3cfcc304aeede0cdf6c2e2762",272,"task2","task2-1",4844,1,54,"Software Engineer",4,4,5,5,3,1,1,3,3,"PyCharm, Jupyter Notebook","no",TRUE,5,4.14285714285714,0.857142857142857,4.14285714285714,0.857142857142857
+"216","27570bb3cfcc304aeede0cdf6c2e2762",273,"task2","task2-2",9251,0,54,"Software Engineer",4,4,5,5,3,1,1,3,3,"PyCharm, Jupyter Notebook","no",FALSE,5,4.14285714285714,0.857142857142857,4.14285714285714,0.857142857142857
+"217","27570bb3cfcc304aeede0cdf6c2e2762",274,"task3","task3-1",6987,1,54,"Software Engineer",4,4,5,5,3,1,1,3,3,"PyCharm, Jupyter Notebook","no",TRUE,3,4.14285714285714,-1.14285714285714,4.14285714285714,-1.14285714285714
+"218","27570bb3cfcc304aeede0cdf6c2e2762",275,"task3","task3-2",5130,0,54,"Software Engineer",4,4,5,5,3,1,1,3,3,"PyCharm, Jupyter Notebook","no",FALSE,3,4.14285714285714,-1.14285714285714,4.14285714285714,-1.14285714285714
+"219","27570bb3cfcc304aeede0cdf6c2e2762",276,"task6","task6-2",9097,0,54,"Software Engineer",4,4,5,5,3,1,1,3,3,"PyCharm, Jupyter Notebook","no",FALSE,3,4.14285714285714,-1.14285714285714,4.14285714285714,-1.14285714285714
+"220","32a93c18dfe238311ad0b9add6a071d6",293,"task1","task1-1",3559,0,57,"Student (computer science)",4,4,5,4,2,2,2,3,3,"PyCharm","Standard plugins for Pycharm",FALSE,5,3.85714285714286,1.14285714285714,3.85714285714286,1.14285714285714
+"221","32a93c18dfe238311ad0b9add6a071d6",294,"task1","task1-2",459,1,57,"Student (computer science)",4,4,5,4,2,2,2,3,3,"PyCharm","Standard plugins for Pycharm",TRUE,5,3.85714285714286,1.14285714285714,3.85714285714286,1.14285714285714
+"222","32a93c18dfe238311ad0b9add6a071d6",295,"task2","task2-1",465,0,57,"Student (computer science)",4,4,5,4,2,2,2,3,3,"PyCharm","Standard plugins for Pycharm",FALSE,4,3.85714285714286,0.142857142857143,3.85714285714286,0.142857142857143
+"223","32a93c18dfe238311ad0b9add6a071d6",296,"task2","task2-2",5817,1,57,"Student (computer science)",4,4,5,4,2,2,2,3,3,"PyCharm","Standard plugins for Pycharm",TRUE,4,3.85714285714286,0.142857142857143,3.85714285714286,0.142857142857143
+"224","32a93c18dfe238311ad0b9add6a071d6",297,"task6","task6-2",3971,1,57,"Student (computer science)",4,4,5,4,2,2,2,3,3,"PyCharm","Standard plugins for Pycharm",TRUE,3,3.85714285714286,-0.857142857142857,3.85714285714286,-0.857142857142857
+"225","32a93c18dfe238311ad0b9add6a071d6",298,"task7","task7-1",5897,0,57,"Student (computer science)",4,4,5,4,2,2,2,3,3,"PyCharm","Standard plugins for Pycharm",FALSE,3,3.85714285714286,-0.857142857142857,3.85714285714286,-0.857142857142857
+"226","32a93c18dfe238311ad0b9add6a071d6",299,"task7","task7-2",5871,1,57,"Student (computer science)",4,4,5,4,2,2,2,3,3,"PyCharm","Standard plugins for Pycharm",TRUE,3,3.85714285714286,-0.857142857142857,3.85714285714286,-0.857142857142857
+"235","844088c7077d499fa3533250ae504e7f",58,"task1","task1-1",483,1,16,"Student (computer science)",3,3,5,3,3,3,2,1,1,"Vim","TabNine for autocompletion",TRUE,5,3.5,1.5,3.5,1.5
+"236","844088c7077d499fa3533250ae504e7f",59,"task1","task1-2",433,1,16,"Student (computer science)",3,3,5,3,3,3,2,1,1,"Vim","TabNine for autocompletion",TRUE,5,3.5,1.5,3.5,1.5
+"237","844088c7077d499fa3533250ae504e7f",60,"task2","task2-1",413,1,16,"Student (computer science)",3,3,5,3,3,3,2,1,1,"Vim","TabNine for autocompletion",TRUE,3,3.5,-0.5,3.5,-0.5
+"238","844088c7077d499fa3533250ae504e7f",61,"task2","task2-2",1164,1,16,"Student (computer science)",3,3,5,3,3,3,2,1,1,"Vim","TabNine for autocompletion",TRUE,3,3.5,-0.5,3.5,-0.5
+"239","844088c7077d499fa3533250ae504e7f",62,"task3","task3-1",939,0,16,"Student (computer science)",3,3,5,3,3,3,2,1,1,"Vim","TabNine for autocompletion",FALSE,3,3.5,-0.5,3.5,-0.5
+"240","844088c7077d499fa3533250ae504e7f",63,"task3","task3-2",759,1,16,"Student (computer science)",3,3,5,3,3,3,2,1,1,"Vim","TabNine for autocompletion",TRUE,3,3.5,-0.5,3.5,-0.5
+"241","844088c7077d499fa3533250ae504e7f",64,"task4","task4-1",851,0,16,"Student (computer science)",3,3,5,3,3,3,2,1,1,"Vim","TabNine for autocompletion",FALSE,3,3.5,-0.5,3.5,-0.5
+"242","844088c7077d499fa3533250ae504e7f",65,"task4","task4-2",1275,1,16,"Student (computer science)",3,3,5,3,3,3,2,1,1,"Vim","TabNine for autocompletion",TRUE,3,3.5,-0.5,3.5,-0.5
+"243","15764ad439feafda6f35578b7f6253df",254,"task1","task1-1",2696,0,50,"Student (other field)",4,4,4,3,2,3,1,4,3,"PyCharm, Jupyter Notebook","No",FALSE,4,3.5,0.5,3.5,0.5
+"244","15764ad439feafda6f35578b7f6253df",255,"task1","task1-2",817,1,50,"Student (other field)",4,4,4,3,2,3,1,4,3,"PyCharm, Jupyter Notebook","No",TRUE,4,3.5,0.5,3.5,0.5
+"245","15764ad439feafda6f35578b7f6253df",256,"task2","task2-1",1513,0,50,"Student (other field)",4,4,4,3,2,3,1,4,3,"PyCharm, Jupyter Notebook","No",FALSE,3,3.5,-0.5,3.5,-0.5
+"246","15764ad439feafda6f35578b7f6253df",257,"task2","task2-2",1905,1,50,"Student (other field)",4,4,4,3,2,3,1,4,3,"PyCharm, Jupyter Notebook","No",TRUE,3,3.5,-0.5,3.5,-0.5
+"247","15764ad439feafda6f35578b7f6253df",258,"task4","task4-1",2156,0,50,"Student (other field)",4,4,4,3,2,3,1,4,3,"PyCharm, Jupyter Notebook","No",FALSE,3,3.5,-0.5,3.5,-0.5
+"248","15764ad439feafda6f35578b7f6253df",259,"task4","task4-2",1577,1,50,"Student (other field)",4,4,4,3,2,3,1,4,3,"PyCharm, Jupyter Notebook","No",TRUE,3,3.5,-0.5,3.5,-0.5
+"249","15764ad439feafda6f35578b7f6253df",260,"task6","task6-1",3483,1,50,"Student (other field)",4,4,4,3,2,3,1,4,3,"PyCharm, Jupyter Notebook","No",TRUE,4,3.5,0.5,3.5,0.5
+"250","15764ad439feafda6f35578b7f6253df",261,"task6","task6-2",2205,0,50,"Student (other field)",4,4,4,3,2,3,1,4,3,"PyCharm, Jupyter Notebook","No",FALSE,4,3.5,0.5,3.5,0.5
+"251","2ceafaf6a21d6cb6495038b38ab72061",14,"task1","task1-1",897,0,2,"Student (computer science)",4,4,5,4,4,1,1,4,3,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,5,4.25,0.75,4.25,0.75
+"252","2ceafaf6a21d6cb6495038b38ab72061",15,"task1","task1-2",506,1,2,"Student (computer science)",4,4,5,4,4,1,1,4,3,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,5,4.25,0.75,4.25,0.75
+"253","2ceafaf6a21d6cb6495038b38ab72061",16,"task2","task2-1",581,1,2,"Student (computer science)",4,4,5,4,4,1,1,4,3,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,4,4.25,-0.25,4.25,-0.25
+"254","2ceafaf6a21d6cb6495038b38ab72061",17,"task2","task2-2",1169,1,2,"Student (computer science)",4,4,5,4,4,1,1,4,3,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,4,4.25,-0.25,4.25,-0.25
+"255","2ceafaf6a21d6cb6495038b38ab72061",18,"task3","task3-1",1141,1,2,"Student (computer science)",4,4,5,4,4,1,1,4,3,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,4,4.25,-0.25,4.25,-0.25
+"256","2ceafaf6a21d6cb6495038b38ab72061",19,"task3","task3-2",437,1,2,"Student (computer science)",4,4,5,4,4,1,1,4,3,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,4,4.25,-0.25,4.25,-0.25
+"257","2ceafaf6a21d6cb6495038b38ab72061",20,"task6","task6-1",3463,1,2,"Student (computer science)",4,4,5,4,4,1,1,4,3,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,4,4.25,-0.25,4.25,-0.25
+"258","2ceafaf6a21d6cb6495038b38ab72061",21,"task6","task6-2",1293,1,2,"Student (computer science)",4,4,5,4,4,1,1,4,3,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,4,4.25,-0.25,4.25,-0.25
+"262","138ca13c6ba8814e8e4aea9853d66b69",38,"task1","task1-1",1666,1,5,"Student (computer science)",4,4,4,4,3,2,1,3,3,"Atom","Linting",TRUE,4,4,0,4,0
+"263","138ca13c6ba8814e8e4aea9853d66b69",39,"task1","task1-2",395,0,5,"Student (computer science)",4,4,4,4,3,2,1,3,3,"Atom","Linting",FALSE,4,4,0,4,0
+"264","138ca13c6ba8814e8e4aea9853d66b69",40,"task2","task2-1",563,0,5,"Student (computer science)",4,4,4,4,3,2,1,3,3,"Atom","Linting",FALSE,4,4,0,4,0
+"265","138ca13c6ba8814e8e4aea9853d66b69",41,"task2","task2-2",2278,1,5,"Student (computer science)",4,4,4,4,3,2,1,3,3,"Atom","Linting",TRUE,4,4,0,4,0
+"266","67e86a0cb1f9b6cae0e8d6c4b24711de",22,"task1","task1-1",448,0,13,"Student (computer science)",5,5,5,5,5,3,4,5,5,"Vim, VS Code","no",FALSE,5,5,0,5,0
+"267","67e86a0cb1f9b6cae0e8d6c4b24711de",23,"task1","task1-2",1266,1,13,"Student (computer science)",5,5,5,5,5,3,4,5,5,"Vim, VS Code","no",TRUE,5,5,0,5,0
+"268","67e86a0cb1f9b6cae0e8d6c4b24711de",24,"task2","task2-1",299,0,13,"Student (computer science)",5,5,5,5,5,3,4,5,5,"Vim, VS Code","no",FALSE,5,5,0,5,0
+"269","67e86a0cb1f9b6cae0e8d6c4b24711de",25,"task2","task2-2",604,1,13,"Student (computer science)",5,5,5,5,5,3,4,5,5,"Vim, VS Code","no",TRUE,5,5,0,5,0
+"270","67e86a0cb1f9b6cae0e8d6c4b24711de",26,"task3","task3-1",729,0,13,"Student (computer science)",5,5,5,5,5,3,4,5,5,"Vim, VS Code","no",FALSE,5,5,0,5,0
+"271","67e86a0cb1f9b6cae0e8d6c4b24711de",27,"task3","task3-2",755,1,13,"Student (computer science)",5,5,5,5,5,3,4,5,5,"Vim, VS Code","no",TRUE,5,5,0,5,0
+"272","67e86a0cb1f9b6cae0e8d6c4b24711de",28,"task6","task6-1",2362,0,13,"Student (computer science)",5,5,5,5,5,3,4,5,5,"Vim, VS Code","no",FALSE,5,5,0,5,0
+"273","67e86a0cb1f9b6cae0e8d6c4b24711de",29,"task6","task6-2",1031,1,13,"Student (computer science)",5,5,5,5,5,3,4,5,5,"Vim, VS Code","no",TRUE,5,5,0,5,0
+"274","7ff9938c47bd8fb571d43b13872e6182",237,"task1","task1-1",4780,1,42,"Software Engineer",4,4,5,3,3,1,2,5,4,"PyCharm, Jupyter Notebook","No",TRUE,5,4.25,0.75,4.25,0.75
+"275","7ff9938c47bd8fb571d43b13872e6182",238,"task1","task1-2",2302,0,42,"Software Engineer",4,4,5,3,3,1,2,5,4,"PyCharm, Jupyter Notebook","No",FALSE,5,4.25,0.75,4.25,0.75
+"276","7ff9938c47bd8fb571d43b13872e6182",239,"task2","task2-1",1057,1,42,"Software Engineer",4,4,5,3,3,1,2,5,4,"PyCharm, Jupyter Notebook","No",TRUE,3,4.25,-1.25,4.25,-1.25
+"277","7ff9938c47bd8fb571d43b13872e6182",240,"task2","task2-2",5705,0,42,"Software Engineer",4,4,5,3,3,1,2,5,4,"PyCharm, Jupyter Notebook","No",FALSE,3,4.25,-1.25,4.25,-1.25
+"278","7ff9938c47bd8fb571d43b13872e6182",241,"task6","task6-1",9900,1,42,"Software Engineer",4,4,5,3,3,1,2,5,4,"PyCharm, Jupyter Notebook","No",TRUE,5,4.25,0.75,4.25,0.75
+"279","7ff9938c47bd8fb571d43b13872e6182",242,"task6","task6-2",2382,0,42,"Software Engineer",4,4,5,3,3,1,2,5,4,"PyCharm, Jupyter Notebook","No",FALSE,5,4.25,0.75,4.25,0.75
+"280","7ff9938c47bd8fb571d43b13872e6182",243,"task7","task7-1",2933,1,42,"Software Engineer",4,4,5,3,3,1,2,5,4,"PyCharm, Jupyter Notebook","No",TRUE,4,4.25,-0.25,4.25,-0.25
+"281","7ff9938c47bd8fb571d43b13872e6182",244,"task7","task7-2",2500,0,42,"Software Engineer",4,4,5,3,3,1,2,5,4,"PyCharm, Jupyter Notebook","No",FALSE,4,4.25,-0.25,4.25,-0.25
+"290","0ed2dff1d23b0de1cfcf9edb0ba35b1c",0,"task1","task1-1",309,0,0,"Student (computer science)",5,4,5,4,3,3,3,4,3,"PyCharm","I use Mypy for static type checking. Not exactly for improving efficiency, but it reduces the probability of encountering bugs.",FALSE,5,3.8,1.2,3.8,1.2
+"291","0ed2dff1d23b0de1cfcf9edb0ba35b1c",1,"task1","task1-2",359,1,0,"Student (computer science)",5,4,5,4,3,3,3,4,3,"PyCharm","I use Mypy for static type checking. Not exactly for improving efficiency, but it reduces the probability of encountering bugs.",TRUE,5,3.8,1.2,3.8,1.2
+"292","0ed2dff1d23b0de1cfcf9edb0ba35b1c",2,"task2","task2-1",298,1,0,"Student (computer science)",5,4,5,4,3,3,3,4,3,"PyCharm","I use Mypy for static type checking. Not exactly for improving efficiency, but it reduces the probability of encountering bugs.",TRUE,4,3.8,0.2,3.8,0.2
+"293","0ed2dff1d23b0de1cfcf9edb0ba35b1c",3,"task2","task2-2",211,0,0,"Student (computer science)",5,4,5,4,3,3,3,4,3,"PyCharm","I use Mypy for static type checking. Not exactly for improving efficiency, but it reduces the probability of encountering bugs.",FALSE,4,3.8,0.2,3.8,0.2
+"294","0ed2dff1d23b0de1cfcf9edb0ba35b1c",4,"task3","task3-1",488,1,0,"Student (computer science)",5,4,5,4,3,3,3,4,3,"PyCharm","I use Mypy for static type checking. Not exactly for improving efficiency, but it reduces the probability of encountering bugs.",TRUE,3,3.8,-0.8,3.8,-0.8
+"295","0ed2dff1d23b0de1cfcf9edb0ba35b1c",5,"task3","task3-2",566,0,0,"Student (computer science)",5,4,5,4,3,3,3,4,3,"PyCharm","I use Mypy for static type checking. Not exactly for improving efficiency, but it reduces the probability of encountering bugs.",FALSE,3,3.8,-0.8,3.8,-0.8
+"296","0ed2dff1d23b0de1cfcf9edb0ba35b1c",6,"task6","task6-1",3105,1,0,"Student (computer science)",5,4,5,4,3,3,3,4,3,"PyCharm","I use Mypy for static type checking. Not exactly for improving efficiency, but it reduces the probability of encountering bugs.",TRUE,4,3.8,0.2,3.8,0.2
+"297","0ed2dff1d23b0de1cfcf9edb0ba35b1c",7,"task6","task6-2",633,1,0,"Student (computer science)",5,4,5,4,3,3,3,4,3,"PyCharm","I use Mypy for static type checking. Not exactly for improving efficiency, but it reduces the probability of encountering bugs.",TRUE,4,3.8,0.2,3.8,0.2
+"298","0ed2dff1d23b0de1cfcf9edb0ba35b1c",8,"task7","task7-1",650,1,0,"Student (computer science)",5,4,5,4,3,3,3,4,3,"PyCharm","I use Mypy for static type checking. Not exactly for improving efficiency, but it reduces the probability of encountering bugs.",TRUE,3,3.8,-0.8,3.8,-0.8
+"299","0ed2dff1d23b0de1cfcf9edb0ba35b1c",9,"task7","task7-2",1778,1,0,"Student (computer science)",5,4,5,4,3,3,3,4,3,"PyCharm","I use Mypy for static type checking. Not exactly for improving efficiency, but it reduces the probability of encountering bugs.",TRUE,3,3.8,-0.8,3.8,-0.8
+"300","34b1ef17e6625ba2350f6f1c169591a1",30,"task1","task1-1",1580,1,12,"Student (computer science)",4,4,5,4,4,3,3,5,5,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,5,4.75,0.25,4.75,0.25
+"301","34b1ef17e6625ba2350f6f1c169591a1",31,"task1","task1-2",2331,0,12,"Student (computer science)",4,4,5,4,4,3,3,5,5,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,5,4.75,0.25,4.75,0.25
+"302","34b1ef17e6625ba2350f6f1c169591a1",32,"task2","task2-1",357,0,12,"Student (computer science)",4,4,5,4,4,3,3,5,5,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,4,4.75,-0.75,4.75,-0.75
+"303","34b1ef17e6625ba2350f6f1c169591a1",33,"task2","task2-2",2871,1,12,"Student (computer science)",4,4,5,4,4,3,3,5,5,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,4,4.75,-0.75,4.75,-0.75
+"304","34b1ef17e6625ba2350f6f1c169591a1",34,"task6","task6-1",5197,1,12,"Student (computer science)",4,4,5,4,4,3,3,5,5,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,5,4.75,0.25,4.75,0.25
+"305","34b1ef17e6625ba2350f6f1c169591a1",35,"task6","task6-2",2763,0,12,"Student (computer science)",4,4,5,4,4,3,3,5,5,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,5,4.75,0.25,4.75,0.25
+"306","34b1ef17e6625ba2350f6f1c169591a1",36,"task7","task7-1",5311,0,12,"Student (computer science)",4,4,5,4,4,3,3,5,5,"VS Code, PyCharm, Jupyter Notebook","No",FALSE,5,4.75,0.25,4.75,0.25
+"307","34b1ef17e6625ba2350f6f1c169591a1",37,"task7","task7-2",2987,1,12,"Student (computer science)",4,4,5,4,4,3,3,5,5,"VS Code, PyCharm, Jupyter Notebook","No",TRUE,5,4.75,0.25,4.75,0.25
+"308","c4196119198c1bd6dce9ad020501698d",10,"task1","task1-1",1647,1,1,"Student (computer science)",4,4,5,5,4,1,2,5,3,"PyCharm, Jupyter Notebook","Google search",TRUE,5,5,0,5,0
+"309","c4196119198c1bd6dce9ad020501698d",11,"task1","task1-2",2071,0,1,"Student (computer science)",4,4,5,5,4,1,2,5,3,"PyCharm, Jupyter Notebook","Google search",FALSE,5,5,0,5,0
+"310","c4196119198c1bd6dce9ad020501698d",12,"task2","task2-1",1195,0,1,"Student (computer science)",4,4,5,5,4,1,2,5,3,"PyCharm, Jupyter Notebook","Google search",FALSE,5,5,0,5,0
+"311","c4196119198c1bd6dce9ad020501698d",13,"task2","task2-2",4982,1,1,"Student (computer science)",4,4,5,5,4,1,2,5,3,"PyCharm, Jupyter Notebook","Google search",TRUE,5,5,0,5,0

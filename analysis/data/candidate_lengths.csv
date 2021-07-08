@@ -1,0 +1,1666 @@
+,is_generation,query,snippet_len,snippet
+0,0,randomly generate 100 letters,16,''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(N))
+1,1,print current date time,25,print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+2,1,get date time one week from now,11,"datetime.datetime.combine(datetime.date.today(), datetime.timedelta(days=12))"
+3,0,get gmt timezone,7,"from datetime import datetime
+datetime.utcnow()"
+4,1,write to csv file,4,writer.writerow(write)
+5,1,recursively iterate over all files in a directory,33,"for dirname, dirnames, filenames in os.walk('file.txt'):
+    for subdirname in dirnames:
+        print(os.path.join(dirname, subdirname))
+    for filename in filenames:
+        pass"
+6,1,regex replace capture group,14,"re.sub('#(\\w+)', '\\1', text)"
+7,1,load csv file with pandas,10,"pandas.read_csv(file, sep='\t', lineterminator='\r')"
+8,1,get average of row values in pandas dataframe,19,"df.groupby(np.arange(len(df.columns)) // 2 + 1, axis=1).mean()"
+9,0,pandas get average of column,50,"In [479]: df
+Out[479]: 
+         ID  birthyear    weight
+0    619040       1962  0.123123
+1    600161       1963  0.981742
+2  25602033       1963  1.312312
+3    624870       1987  0.942120
+
+In [480]: df[""weight""].mean()
+Out[480]: 0.83982437500000007"
+10,1,pandas join dataframes,10,"pd.concat([df1, df2], axis=1)"
+11,0,pandas join series into dataframes,120,"In [1]: s1 = pd.Series([1, 2], index=['A', 'B'], name='s1')
+
+In [2]: s2 = pd.Series([3, 4], index=['A', 'B'], name='s2')
+
+In [3]: pd.concat([s1, s2], axis=1)
+Out[3]:
+   s1  s2
+A   1   3
+B   2   4
+
+In [4]: pd.concat([s1, s2], axis=1).reset_index()
+Out[4]:
+  index  s1  s2
+0     A   1   3
+1     B   2   4"
+12,0,pandas change dataframe column name,51,"df = df.rename(columns={'oldName1': 'newName1', 'oldName2': 'newName2'})
+# Or rename the existing DataFrame (rather than creating a copy) 
+df.rename(columns={'oldName1': 'newName1', 'oldName2': 'newName2'}, inplace=True)"
+13,0,rename pandas df columns,54,"df2 = df.set_axis(['V', 'W', 'X', 'Y', 'Z'], axis=1, inplace=False)
+df2
+
+   V  W  X  Y  Z
+0  x  x  x  x  x
+1  x  x  x  x  x
+2  x  x  x  x  x"
+14,0,pandas write df to csv,7,"df.to_csv(file_name, sep='\t')"
+15,0,pandas print with two decimals,52,"import pandas as pd
+pd.options.display.float_format = '${:,.2f}'.format
+df = pd.DataFrame([123.4567, 234.5678, 345.6789, 456.7890],
+                  index=['foo','bar','baz','quux'],
+                  columns=['cost'])
+print(df)"
+16,0,pandas save csv two decimal,36,"with open('foo.csv', 'w') as f:
+    data.to_csv(f, index=True, header=True, decimal=',', sep=' ', float_format='%.3f')"
+17,0,pandas create buckets by column value,67,"bins = [0, 1, 5, 10, 25, 50, 100]
+df['binned'] = pd.cut(df['percentage'], bins)
+print (df)
+   percentage     binned
+0       46.50   (25, 50]
+1       44.20   (25, 50]
+2      100.00  (50, 100]
+3       42.12   (25, 50]"
+18,0,filter values in pandas df,10,df.loc[df['column_name'] == some_value]
+19,0,filter df with two conditions,98,"In [11]: df.loc[df['col1'] >= 1, 'col1']
+Out[11]: 
+1    1
+2    2
+Name: col1
+
+In [12]: df[df['col1'] >= 1]
+Out[12]: 
+   col1  col2
+1     1    11
+2     2    12
+
+In [13]: df[(df['col1'] >= 1) & (df['col1'] <=1 )]
+Out[13]: 
+   col1  col2
+1     1    11"
+20,0,df set column to 7 decimals,42,"output = df.to_string(formatters={
+    'var1': '{:,.2f}'.format,
+    'var2': '{:,.2f}'.format,
+    'var3': '{:,.2%}'.format
+})
+print(output)"
+21,0,pandas add new column based on row values,18,"df['race_label'] = df.apply (lambda row: label_race(row), axis=1)"
+22,0,multinomial logistic regression model,15,"LogisticRegression(multi_class='multinomial',solver ='newton-cg').fit(X_train,y_train)"
+23,0,sklearn 5-fold cross validation,43,"from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import cross_val_score
+import numpy as np
+
+clf = RandomForestClassifier() #Initialize with whatever parameters you want to
+
+# 10-Fold Cross validation
+print np.mean(cross_val_score(clf, X_train, y_train, cv=10))"
+24,0,disable warnings,7,"import warnings
+warnings.filterwarnings('ignore')"
+25,1,save plt figure,7,"plt.savefig('plt', dpi=1000)"
+26,0,plt set x axis tick range,18,"plt.xticks(np.arange(min(x), max(x)+1, 1.0))"
+27,0,plt date as x axis,12,"dates = matplotlib.dates.date2num(list_of_datetimes)
+matplotlib.pyplot.plot_date(dates, values)"
+28,0,scatter plot purple,14,"plt.plot([1,2], lw=4, c='#8f9805')"
+29,0,plt set x axis label,42,"from matplotlib import pyplot as plt    
+
+fig = plt.figure()
+plt.plot(data)
+fig.suptitle('test title', fontsize=20)
+plt.xlabel('xlabel', fontsize=18)
+plt.ylabel('ylabel', fontsize=16)
+fig.savefig('test.jpg')"
+30,0,plt set xtick font size,45,"import matplotlib.pyplot as plt
+# We prepare the plot  
+fig, ax = plt.subplots()
+
+# We change the fontsize of minor ticks label 
+ax.tick_params(axis='both', which='major', labelsize=10)
+ax.tick_params(axis='both', which='minor', labelsize=8)"
+31,1,plt create figure with size,9,"plt.figure(figsize=(3, 4))"
+32,1,group pandas df by two columns,14,"df.groupby(['A', 'B'], axis=1)"
+33,0,bar plot with multiple bars per label,145,"import matplotlib.pyplot as plt
+from matplotlib.dates import date2num
+import datetime
+
+x = [
+    datetime.datetime(2011, 1, 4, 0, 0),
+    datetime.datetime(2011, 1, 5, 0, 0),
+    datetime.datetime(2011, 1, 6, 0, 0)
+]
+x = date2num(x)
+
+y = [4, 9, 2]
+z = [1, 2, 3]
+k = [11, 12, 13]
+
+ax = plt.subplot(111)
+ax.bar(x-0.2, y, width=0.2, color='b', align='center')
+ax.bar(x, z, width=0.2, color='g', align='center')
+ax.bar(x+0.2, k, width=0.2, color='r', align='center')
+ax.xaxis_date()
+
+plt.show()"
+34,0,plt create 3 subplots,45,"import matplotlib.pyplot as plt
+
+x = range(10)
+y = range(10)
+
+fig, ax = plt.subplots(nrows=2, ncols=2)
+
+for row in ax:
+    for col in row:
+        col.plot(x, y)
+
+plt.show()"
+35,0,matplotlib theme,11,"from matplotlib import pyplot as plt
+plt.style.use('ggplot')"
+36,0,plt show values on bar plot,31,"for i, v in enumerate(y):
+    ax.text(v + 3, i + .25, str(v), color='blue', fontweight='bold')"
+37,0,plt ax xlabel,194,"import random
+import matplotlib.pyplot as plt
+
+x = range(1, 101)
+y1 = [random.randint(1, 100) for _ in xrange(len(x))]
+y2 = [random.randint(1, 100) for _ in xrange(len(x))]
+
+fig = plt.figure()
+ax = fig.add_subplot(111)    # The big subplot
+ax1 = fig.add_subplot(211)
+ax2 = fig.add_subplot(212)
+
+# Turn off axis lines and ticks of the big subplot
+ax.spines['top'].set_color('none')
+ax.spines['bottom'].set_color('none')
+ax.spines['left'].set_color('none')
+ax.spines['right'].set_color('none')
+ax.tick_params(labelcolor='w', top=False, bottom=False, left=False, right=False)
+
+ax1.loglog(x, y1)
+ax2.loglog(x, y2)
+
+# Set common labels
+ax.set_xlabel('common xlabel')
+ax.set_ylabel('common ylabel')
+
+ax1.set_title('ax1 title')
+ax2.set_title('ax2 title')
+
+plt.savefig('common_labels.png', dpi=300)"
+38,0,plt set x tick labels,18,"start, end = ax.get_xlim()
+ax.xaxis.set_ticks(np.arange(start, end, stepsize))"
+39,0,plt set title for subplot figure,42,"from matplotlib import pyplot as plt    
+
+fig = plt.figure()
+plt.plot(data)
+fig.suptitle('test title', fontsize=20)
+plt.xlabel('xlabel', fontsize=18)
+plt.ylabel('ylabel', fontsize=16)
+fig.savefig('test.jpg')"
+40,1,plt ax legend,4,plt.legend(frameon=False)
+41,1,random sample with replacement,9,"random.choice(random.choice(sample), repeat=n)"
+42,0,print a to z,145,">>> list(map(chr, range(97, 123))) #or list(map(chr, range(ord('a'), ord('z')+1)))
+['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']"
+43,1,random sample with replacement,9,"random.choice(random.choice(sample), repeat=n)"
+44,1,sort dict by key,17,"sorted(list(dict.items()), key=lambda x: x[1])"
+45,1,list files in folder,8,os.listdir('<unk>')
+46,0,copy file to other folder,10,"from shutil import copyfile
+copyfile(src, dst)"
+47,0,text normalize newlines to \n,15,">>> ""Hello\n\n\n"".rstrip(""\n"")
+""Hello"""
+48,0,write to file,21,"with open(""test.txt"", ""a"") as myfile:
+    myfile.write(""appended text"")"
+49,0,convert text files from encoding ISO-8859-15 to encoding UTF-8.,121,">>> u8 = v.decode(""iso-8859-1"").encode(""utf-8"")
+>>> u8
+'\xc3\x84pple'    # convert iso-8859-1 to unicode to utf-8
+
+>>> tell_me_about(u8)
+(<type 'str'>, '\xc3\x84pple')
+
+>>> u16 = v.decode('iso-8859-1').encode('utf-16')
+>>> tell_me_about(u16)
+(<type 'str'>, '\xff\xfe\xc4\x00p\x00p\x00l\x00e\x00')
+
+>>> tell_me_about(u8.decode('utf8'))
+(<type 'unicode'>, u'\xc4pple')
+
+>>> tell_me_about(u16.decode('utf16'))
+(<type 'unicode'>, u'\xc4pple')"
+50,1,move file to other directory,14,"shutil.copy2('<unk>', '<unk>')"
+51,1,print datetime in mm-dd-yyyy hh:mm  format,19,time.strftime('%Y-%m-%d %H:%M:%S')
+52,1,get time now,3,datetime.datetime.now()
+53,0,get now one week from now,16,"from datetime import datetime, timedelta
+
+d = datetime.today() - timedelta(days=days_to_subtract)"
+54,0,"open ""data.csv"" file",39,"import pandas as pd
+df=pd.read_csv('myfile.csv', sep=',',header=None)
+df.values
+array([[ 1. ,  2. ,  3. ],
+       [ 4. ,  5.5,  6. ]])"
+55,0,get specific columns by index in pandas data frame,21,"df1 = df.iloc[:, 0:2] # Remember that Python does not slice inclusive of the ending index."
+56,0,save pandas dataframe to a file,7,"df.to_csv(file_name, sep='\t')"
+57,0,get the file extension,28,">>> import os
+>>> filename, file_extension = os.path.splitext('/path/to/somefile.ext')
+>>> filename
+'/path/to/somefile'
+>>> file_extension
+'.ext'"
+58,1,copy file `ddd.png`,7,"shutil.copy2(ddd.png, 'ddd.png')"
+59,0,match regex year month day,74,"In [140]: datetime.datetime.strptime(""11/12/98"",""%m/%d/%y"")
+Out[140]: datetime.datetime(1998, 11, 12, 0, 0)
+
+In [141]: datetime.datetime.strptime(""11/12/98"",""%d/%m/%y"")
+Out[141]: datetime.datetime(1998, 12, 11, 0, 0)"
+60,1,copy a file to dist,7,"shutil.copy2(file, 'en_US')"
+61,0,make a folder recersively,13,"import os
+if not os.path.exists(directory):
+    os.makedirs(directory)"
+62,0,a list of dictionary to pandas dataframe,51,">>> df = pd.DataFrame({'a': ['red', 'yellow', 'blue'], 'b': [0.5, 0.25, 0.125]})
+>>> df
+        a      b
+0     red  0.500
+1  yellow  0.250
+2    blue  0.125"
+63,0,list to an entry in pandas dataframe,47,"df = pd.DataFrame({'oldcol':[1,2,3]})
+
+#add column to existing df 
+df['col'] = L
+print (df)
+   oldcol                  col
+0       1           Thanks You
+1       2  Its fine no problem
+2       3         Are you sure"
+64,0,save `compan_df` dataframe to a file,7,"df.to_csv(file_name, sep='\t')"
+65,0,save `compand_df` dataframe to a file,8,"df.to_csv(""output.csv"", index=False)"
+66,1,cast a float to two decimals,13,float('{0:.2f}'.format(cast))
+67,1,cast a list to a dataframe,19,"pd.DataFrame(values, columns=['R_Number', 'C_Number', 'Avg', 'Std'])"
+68,0,get the head of dataframe `df`,4,list(my_dataframe.columns.values)
+69,0,add a new column to a dataframe row,13,df1 = df1.assign(e=pd.Series(np.random.randn(sLength)).values)
+70,1,create a dataframe from a list,17,"pd.DataFrame(data, columns=['x', 'y'], axis=1)"
+71,1,sort dataframe `jdf` by `scores`,4,jdf.sort_values(by=scores.columns)
+72,1,sort dataframe `jdf` by the values of column 'scores',5,jdf.sort_values(by='scores')
+73,0,linear regressor 5 folder cross validation,100,"from sklearn.linear_model import LogisticRegression
+from sklearn import metrics, cross_validation
+from sklearn import datasets
+iris = datasets.load_iris()
+predicted = cross_validation.cross_val_predict(LogisticRegression(), iris['data'], iris['target'], cv=10)
+print metrics.accuracy_score(iris['target'], predicted)
+
+Out [1] : 0.9537
+
+print metrics.classification_report(iris['target'], predicted) 
+
+Out [2] :
+                     precision    recall  f1-score   support
+
+                0       1.00      1.00      1.00        50
+                1       0.96      0.90      0.93        50
+                2       0.91      0.96      0.93        50
+
+      avg / total       0.95      0.95      0.95       150"
+74,0,"sklearn cross validation x, y for 5 folds",58,"from sklearn.svm import SVC
+from sklearn.datasets import load_iris
+from sklearn.model_selection import cross_validate
+iris = load_iris()
+scoring = ['precision', 'recall', 'f1']
+clf = SVC(kernel='linear', C=1, random_state=0)
+scores = cross_validate(clf, iris.data, iris.target == 1, cv=5,
+                        scoring=scoring, return_train_score=False)"
+75,0,set numpy random seed to 0,48,">>> numpy.random.seed(0) ; numpy.random.rand(4)
+array([ 0.55,  0.72,  0.6 ,  0.54])
+>>> numpy.random.seed(0) ; numpy.random.rand(4)
+array([ 0.55,  0.72,  0.6 ,  0.54])"
+76,1,datetime,25,"datetime.datetime.strptime('<unk>', '%Y-%m-%dT%H:%M:%S')"
+77,0,get datetime,38,">>> from time import gmtime, strftime
+>>> strftime(""%Y-%m-%d %H:%M:%S"", gmtime())
+'2009-01-05 22:14:39'"
+78,1,time add,13,"datetime.datetime.now().time() + datetime.timedelta(days=1, hours=3)"
+79,0,format datetime,22,datetime.today().strftime('%Y-%m-%d-%H:%M:%S')
+80,1,copy file,7,"shutil.copy2(file, 'rb')"
+81,0,readline encoding,24,"import codecs
+with codecs.open('unicode.rst', encoding='utf-8') as f:
+    for line in f:
+        print repr(line)"
+82,0,random,31,"import random
+
+foo = ['a', 'b', 'c', 'd', 'e']
+print(random.choice(foo))"
+83,0,random,31,"import random
+
+foo = ['a', 'b', 'c', 'd', 'e']
+print(random.choice(foo))"
+84,0,random,31,"import random
+
+foo = ['a', 'b', 'c', 'd', 'e']
+print(random.choice(foo))"
+85,0,random characters,61,">>> import string
+>>> import random
+>>> def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+...    return ''.join(random.choice(chars) for _ in range(size))
+...
+>>> id_generator()
+'G5G74W'
+>>> id_generator(3, ""6793YUIO"")
+'Y3U'"
+86,0,defaultdict,7,>>> from collections import defaultdict
+87,1,sort key of dict,17,"sorted(list(dict.items()), key=lambda x: x[1])"
+88,1,print list,10,"print('%s,' % my_list)"
+89,0,print list elements,7,"print(*myList, sep='\n')"
+90,1,read all files under a folder,8,os.listdir('<unk>')
+91,1,open text file,27,"with open('file.txt', 'r') as f:
+    f = f.open('open', 'r', encoding='utf-8')"
+92,1,open text file,27,"with open('file.txt', 'r') as f:
+    f = f.open('file.txt', 'r', encoding='utf-8')"
+93,0,copy file,10,"from shutil import copyfile
+copyfile(src, dst)"
+94,0,remove heading white space,5,s = s.lstrip()
+95,1,read csv file,14,"df = pd.read_csv('myfile.txt', sep=',', header=None)"
+96,0,pandas dropnan,63,"In [30]: df.dropna(subset=[1])   #Drop only if NaN in specific column (as asked in the question)
+Out[30]:
+          0         1         2
+1  2.677677 -1.466923 -0.750366
+2       NaN  0.798002 -0.906038
+3  0.672201  0.964789       NaN
+5 -1.250970  0.030561 -2.678622
+6       NaN  1.036043       NaN
+7  0.049896 -0.308003  0.823295
+9 -0.310130  0.078891       NaN"
+97,0,pandas group by,55,"In [36]: DataFrame({'count' : df1.groupby( [ ""Name"", ""City""] ).size()}).reset_index()
+Out[36]: 
+      Name      City  count
+0    Alice   Seattle      1
+1      Bob   Seattle      2
+2  Mallory  Portland      2
+3  Mallory   Seattle      1"
+98,0,pandas output csv,7,"df.to_csv(file_name, sep='\t')"
+99,1,pandas to csv,10,"df.to_csv('<unk>', index=False)"
+100,1,average by group pandas,15,df.groupby(np.arange(len(df.columns)) // 3).mean()
+101,1,pandas round value,3,df.round()
+102,0,two deciaml place,10,"""{:.2f}"".format(13.949999999999999)"
+103,0,pandas to csv decimal,36,"with open('foo.csv', 'w') as f:
+    data.to_csv(f, index=True, header=True, decimal=',', sep=' ', float_format='%.3f')"
+104,1,sort pandas dataframe,5,df.sort_values(by='*')
+105,0,group by range pandas ,102,"np.random.seed(0)
+df = pd.DataFrame({""a"": np.random.random_integers(1, high=100, size=100)})
+ranges = [0,10,20,30,40,50,60,70,80,90,100]
+df.groupby(pd.cut(df.a, ranges)).count()
+
+            a
+a            
+(0, 10]    11
+(10, 20]   10
+(20, 30]    8
+(30, 40]   13
+(40, 50]   11
+(50, 60]    9
+(60, 70]   10
+(70, 80]   11
+(80, 90]   13
+(90, 100]   4"
+106,1,rename column pandas,13,"df.rename(columns={'row': 'row'}, inplace=True)"
+107,1,column to integer pandas,12,"df.apply(lambda row: int(row), axis=1)"
+108,1,horizontal subplot,13,"f, axs = plt.subplots(2,2,figsize=(15,15))"
+109,0,import matplotlib,23,"from matplotlib import pyplot as plt
+
+import matplotlib.pyplot as plt1
+
+print(dir(plt) == dir(plt1))
+True"
+110,0,bar graph side by side,195,"import numpy as np
+import matplotlib.pyplot as plt
+
+N = 5
+menMeans = (20, 35, 30, 35, 27)
+menStd =   (2, 3, 4, 1, 2)
+
+ind = np.arange(N)  # the x locations for the groups
+width = 0.35       # the width of the bars
+
+fig = plt.figure()
+ax = fig.add_subplot(111)
+rects1 = ax.bar(ind, menMeans, width, color='royalblue', yerr=menStd)
+
+womenMeans = (25, 32, 34, 20, 25)
+womenStd =   (3, 5, 2, 3, 3)
+rects2 = ax.bar(ind+width, womenMeans, width, color='seagreen', yerr=womenStd)
+
+# add some
+ax.set_ylabel('Scores')
+ax.set_title('Scores by group and gender')
+ax.set_xticks(ind + width / 2)
+ax.set_xticklabels( ('G1', 'G2', 'G3', 'G4', 'G5') )
+
+ax.legend( (rects1[0], rects2[0]), ('Men', 'Women') )
+
+plt.show()"
+111,1,pyplot subplots,8,"fig.add_subplot(1, 1, 1)"
+112,0,select row pandas,10,df.loc[df['column_name'] == some_value]
+113,0,random character between a and z,16,''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(N))
+114,1,random integer between 1 and 20,9,"print(random.randint(0, 9))"
+115,0,print list as string,22,"list1 = ['1', '2', '3']
+str1 = ''.join(list1)"
+116,1,trim heading whitespace,9,"re.sub('\\s+', '', string)"
+117,1,normalize newlines to \n,8,os.path.chr().encode('utf-8')
+118,1,list of filenames from a folder,4,os.walk(filenames)
+119,0,check length of line,18,"a = dostuff(blahblah1, blahblah2, blahblah3, blahblah4, blahblah5, 
+            blahblah6, blahblah7)"
+120,0,cross validation using logistic regression sklearn,111,"# Doing linear regression with leave one out cross val
+
+from sklearn import cross_validation, linear_model
+import numpy as np
+
+# Including this to remind you that it is necessary to use numpy arrays rather 
+# than lists otherwise you will get an error
+X_digits = np.array(x)
+Y_digits = np.array(y)
+
+loo = cross_validation.LeaveOneOut(len(Y_digits))
+
+regr = linear_model.LinearRegression()
+
+scores = cross_validation.cross_val_score(regr, X_digits, Y_digits, scoring='mean_squared_error', cv=loo,)
+
+# This will print the mean of the list of errors that were output and 
+# provide your metric for evaluation
+print scores.mean()"
+121,0,generate random numbers,11,"from random import randrange
+print(randrange(10))"
+122,0,generate random letters,11,"''.join(random.choices(string.ascii_uppercase + string.digits, k=N))"
+123,0,generate random letters,11,"''.join(random.choices(string.ascii_uppercase + string.digits, k=N))"
+124,0,get current datetime,38,">>> import datetime
+>>> datetime.datetime.now()
+datetime.datetime(2009, 1, 6, 15, 8, 24, 78915)
+
+>>> print(datetime.datetime.now())
+2009-01-06 15:08:24.789150"
+125,0,add a week to a datetime,23,"date_1 = datetime.datetime.strptime(start_date, ""%m/%d/%y"")
+
+end_date = date_1 + datetime.timedelta(days=10)"
+126,0,convert date timezone,16,"import datetime
+datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
+>>> 2020-03-20T01:31:12.467113+00:00"
+127,0,format datetime 24 hour,36,">>> import datetime
+>>> '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
+'2014-02-07 11:52:21'"
+128,0,read csv pure python,52,"import csv
+
+with open(""test.csv"", ""r"") as f:
+    reader = csv.reader(f, delimiter=""\t"")
+    for i, line in enumerate(reader):
+        print 'line[{}] = {}'.format(i, line)"
+129,0,python make dir,13,"import os
+if not os.path.exists(directory):
+    os.makedirs(directory)"
+130,1,get all files in directory,36,"for dirname, dirnames, filenames in os.walk('<unk>'):
+    for subdirname in dirnames:
+        print(os.path.join(dirname, subdirname))
+    for filename in filenames:
+        pass"
+131,0,get all files in directory,32,"from os import listdir
+from os.path import isfile, join
+onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]"
+132,0,convert file encoding,153,">>> u8.encode('iso8859-1')
+Traceback (most recent call last):
+  File ""<stdin>"", line 1, in <module>
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 0:
+  ordinal not in range(128)
+
+>>> u16.encode('iso8859-1')
+Traceback (most recent call last):
+  File ""<stdin>"", line 1, in <module>
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xff in position 0:
+  ordinal not in range(128)
+
+>>> v.encode('iso8859-1')
+Traceback (most recent call last):
+  File ""<stdin>"", line 1, in <module>
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4 in position 0:
+  ordinal not in range(128)"
+133,0,check file encoding,40,"def whatisthis(s):
+    if isinstance(s, str):
+        print ""ordinary string""
+    elif isinstance(s, unicode):
+        print ""unicode string""
+    else:
+        print ""not a string"""
+134,0,copy file,10,"from shutil import copyfile
+copyfile(src, dst)"
+135,1,current time,6,datetime.datetime.now().time()
+136,0,date and time ,6,datetime.datetime.now().date()
+137,1,get curren time,6,datetime.datetime.now().time()
+138,1,get a random letter,10,s = random.choice('<unk>')
+139,1,random number,9,"random.choice(random.randint(0, 10))"
+140,1,pandas read csv,21,"df = pd.read_csv('my.csv', na_values=['%H:%M:%S'])"
+141,1,"pandas read csv named ""data.csv""",10,"df = pd.read_csv('data.csv', sep='data.csv')"
+142,1,save this dataframe to a csv,7,"df.to_csv('skiprows', index=False)"
+143,0,"make directory ""output"" if it doesn't exist",13,"import os
+if not os.path.exists(directory):
+    os.makedirs(directory)"
+144,1,read a json file named `f`,6,data = json.loads(f)
+145,0,write json in `ret` to file `outfile`,21,"import json
+with open('data.json', 'w') as f:
+    json.dump(data, f)"
+146,0,load json from a file,21,"import json
+
+with open('strings.json') as f:
+    d = json.load(f)
+    print(d)"
+147,1,numpy load from csv,13,"np.genfromtxt('<unk>', delimiter=',')"
+148,0,sklearn ignore warnings,7,"import warnings
+warnings.filterwarnings('ignore')"
+149,1,open file,13,"with open(file) as f:
+    f = f.readlines()"
+150,0,file to csv,7,"df.to_csv(file_name, sep='\t')"
+151,1,open file,10,"f = open(file, 'r')"
+152,1,open file,13,"with open(file) as f:
+    f = f.readlines()"
+153,1,plot bar,5,bar.plot(kind='bar')
+154,0,plot size,13,"f, axs = plt.subplots(2,2,figsize=(15,15))"
+155,0,plot title,85,"import matplotlib.pyplot as plt
+
+if __name__ == ""__main__"":
+    data = [1, 2, 3, 4, 5]
+
+    fig = plt.figure()
+    fig.suptitle(""Title for whole figure"", fontsize=16)
+    ax = plt.subplot(""211"")
+    ax.set_title(""Title for first plot"")
+    ax.plot(data)
+
+    ax = plt.subplot(""212"")
+    ax.set_title(""Title for second plot"")
+    ax.plot(data)
+
+    plt.show()"
+156,0,import library random,2,import random
+157,0,loop on numbers from 0 to 100,16,"for x in range(0, 100, 2):
+    print(x)"
+158,1,generate random between 0 and 20,9,"random.randint(0, 9)[0]"
+159,0,create empty dictionary,5,new_dict = dict()
+160,0,for loop on range 100,16,"for x in range(0, 100, 2):
+    print(x)"
+161,0,check if file ends with .json,16,"m.lower().endswith(('.png', '.jpg', '.jpeg'))"
+162,0,import json parsing library,40,"import json
+data = json.loads('{""one"" : ""1"", ""two"" : ""2"", ""three"" : ""3""}')
+print data['two']"
+163,1,find character,10,"re.findall('<unk>', character)"
+164,1,travverse list of files,4,shutil.from_iterable(my_list)
+165,0,traverse a directory,29,"import os
+ arr = os.listdir()
+ print(arr)
+
+ >>> ['$RECYCLE.BIN', 'work.txt', '3ebooks.txt', 'documents']"
+166,1,open file,10,"f = open(file, 'r')"
+167,0,convert binary decoded string to ascii,15,">>> b'a string'.decode('ascii')
+'a string'"
+168,0,convert latin-1 to utf-8,22,">>> s = ""Hello!""
+>>> u = unicode(s, ""utf-8"")"
+169,1,convert str to utf-8,23,""""""""""""".join(str(c) for c in 'AndrÃ©').decode('utf8')"
+170,0,write into txt file,27,"text_file = open(""Output.txt"", ""w"")
+text_file.write(""Purchase Amount: %s"" % TotalAmount)
+text_file.close()"
+171,1,load json file,7,json.loads(json.loads(json))
+172,0,convert dict to string,17,">>> str(10)
+'10'
+>>> int('10')
+10"
+173,0,convert dict to string,39,">>> import ast
+>>> ast.literal_eval(""{'muffin' : 'lolz', 'foo' : 'kitty'}"")
+{'muffin': 'lolz', 'foo': 'kitty'}"
+174,1,add json file to a list,6,data = json.loads(data)
+175,0,check email correctness,23,"import re
+
+EMAIL_REGEX = re.compile(r""... regex here ..."")
+
+if not EMAIL_REGEX.match(email):
+  # whatever"
+176,0,squence of integers from 1 to 20 inclusive,48,"In [46]: import numpy as np
+In [47]: np.linspace(0,5,10)
+Out[47]: 
+array([ 0.        ,  0.55555556,  1.11111111,  1.66666667,  2.22222222,
+        2.77777778,  3.33333333,  3.88888889,  4.44444444,  5.        ])"
+177,1,loop over a range of `count`,11,"for x in range(0, 10):
+    pass"
+178,1,randomly pick an item from `seq`,7,random.choice(random.choice(seq.random))
+179,1,call `pick_with_replacement`,3,pick_with_replacement()
+180,1,zip `hundred_characters` with `hundred_numbers`,18,"[(x + y) for x, y in zip(hundred_characters, hundred_numbers)]"
+181,1,list all text files in the data directory,49,"for dirname, dirnames, filenames in os.walk('<unk>'):
+    for line in f:
+        e = f.read()
+    for line in os.listdir('<unk>'):
+        e = f.read()
+    for line in filenames:
+        pass"
+182,0,list all text files in the data directory,38,"import os
+for root, dirs, files in os.walk(""/mydir""):
+    for file in files:
+        if file.endswith("".txt""):
+             print(os.path.join(root, file))"
+183,0,read a file and iterate over its contents,23,"with open(""file.txt"") as file_in:
+    lines = []
+    for line in file_in:
+        lines.append(line)"
+184,1,walke all files in a directory,5,os.listdir('..')
+185,1,list all filepaths in a directory,5,glob.glob('*')
+186,0,walk all files in a directory,32,"from os import listdir
+from os.path import isfile, join
+onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]"
+187,0,"walk all nested files in the directory ""data""",32,"import os
+rootdir = 'C:/Users/sid/Desktop/test'
+
+for subdir, dirs, files in os.walk(rootdir):
+    for file in files:
+        print os.path.join(subdir, file)"
+188,1,search all matches in a string,14,"re.findall('<unk>', '<unk>')"
+189,1,search all matches in a string,10,"re.findall('<unk>', s)"
+190,1,search all matches in a string,14,"re.findall('<unk>', '<unk>')"
+191,0,regex digit python,43,">>> import re
+>>> s=""four digits 1234 five digits 56789 six digits 012345""
+>>> re.findall(r""\D(\d{5})\D"", s)
+['56789']"
+192,0,regex digit python,43,">>> import re
+>>> s=""four digits 1234 five digits 56789 six digits 012345""
+>>> re.findall(r""\D(\d{5})\D"", s)
+['56789']"
+193,0,extract year month day from string regex,46,"import re
+from datetime import datetime
+
+match = re.search(r'\d{4}-\d{2}-\d{2}', text)
+date = datetime.strptime(match.group(), '%Y-%m-%d').date()"
+194,1,move file,7,"shutil.copy2(file, 'filenames')"
+195,0,argparse subprogram,100,"import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('--foo')
+sub = parser.add_subparsers()
+for i in range(1,4):
+    sp = sub.add_parser('cmd%i'%i)
+    sp.add_argument('--foo%i'%i) # optionals have to be distinct
+
+rest = '--foo 0 cmd2 --foo2 2 cmd3 --foo3 3 cmd1 --foo1 1'.split() # or sys.argv
+args = argparse.Namespace()
+while rest:
+    args,rest =  parser.parse_known_args(rest,namespace=args)
+    print args, rest"
+196,0,request with params,76,"import requests
+
+url = 'http://192.168.3.45:8080/api/v2/event/log'
+
+data = {""eventType"": ""AAS_PORTAL_START"", ""data"": {""uid"": ""hfe3hf45huf33545"", ""aid"": ""1"", ""vid"": ""1""}}
+params = {'sessionKey': '9ebbd0b25760557393a43064a92bae539d962103', 'format': 'xml', 'platformId': 1}
+
+requests.post(url, params=params, json=data)"
+197,1,assign current date and time to `now`,5,now = datetime.now()
+198,1,add days to time,8,datetime.datetime.now() + datetime.timedelta(days=1)
+199,1,convert `week_date` to GMT timezone and assign to `GMT_week_date`,9,"GMT_week_date = datetime.datetime.strptime(week_date, 'GMT_week_date')"
+200,1,display `week_date` in format mm-dd-yyyy hh:mm ,23,"time.strftime('%Y-%m-%d %H:%M:%S', gmtime())"
+201,1,change datetime format of `week_date` to mm-dd-yyyy hh:mm,16,week_date.strftime('%Y-%m-%d %H:%M')
+202,1,"read csv file ""data.csv""",14,"df = pd.read_csv('data.csv', sep=',', header=None)"
+203,1,number of columns of csv,4,len(df.columns)
+204,1,"write csv `output_f` to file ""output/output.csv""",7,"output_f.to_csv('output/output.csv', index=False)"
+205,0,"if directory ""output"" exists",13,"import os
+if not os.path.exists(directory):
+    os.makedirs(directory)"
+206,0,print csv without row numbers,7,"df.to_csv('your.csv', index=False)"
+207,1,check if file `output_file` exists,4,os.path.exists(output_file)
+208,1,add entry to json file,7,"json.dumps(entry, content_type='application/json')"
+209,1,load json file,4,json.loads(file)
+210,1,"GET request to ""https://jsonplaceholder.typicode.com/posts"" with argument userId",11,"r = requests.get('https://jsonplaceholder.typicode.com/posts', params=userid)"
+211,1,print format,20,"print('<unk> %s, <unk>' % (1, 2))"
+212,1,exit program,3,sys.exit()
+213,1,get current time,6,datetime.datetime.now().time()
+214,1,load csv data,6,"pd.read_csv(data, header=None)"
+215,0,copy a file ,43,"import shutil, errno
+
+def copyanything(src, dst):
+    try:
+        shutil.copytree(src, dst)
+    except OSError as exc: # python >2.5
+        if exc.errno == errno.ENOTDIR:
+            shutil.copy(src, dst)
+        else: raise"
+216,0,how to split dataset  in scikit learn,22,"from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y,
+                                                    stratify=y, 
+                                                    test_size=0.25)"
+217,0,how to split dataset in scikit learn,22,"from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y,
+                                                    stratify=y, 
+                                                    test_size=0.25)"
+218,0,how to determine cross validation mean in scikit learn,218,"import numpy as np
+from sklearn.cross_validation import cross_val_score
+from sklearn.metrics import precision_score
+from sklearn.cross_validation import KFold
+from sklearn.pipeline import make_pipeline
+from sklearn.svm import SVC
+
+np.random.seed(1337)
+
+X = np.random.rand(1000,5)
+
+y = np.random.randint(0,2,1000)
+
+kf = KFold(n=len(y), n_folds=10, shuffle=True, random_state=42)
+pipe= make_pipeline(SVC(random_state=42))
+for train_index, test_index in kf:
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+
+print ('Precision',np.mean(cross_val_score(pipe, X_train, y_train, scoring='precision')))
+# Here you are evaluating precision score on X_train.
+
+#Second Approach
+clf = SVC(random_state=42)
+clf.fit(X_train,y_train)
+y_pred = clf.predict(X_test)
+print ('Precision:', precision_score(y_test, y_pred, average='binary'))
+
+# here you are evaluating precision score on X_test
+
+#Third approach
+pipe= make_pipeline(SVC())
+print('Precision',np.mean(cross_val_score(pipe, X, y, cv=kf, scoring='precision')))
+
+# Here you are splitting the data again and evaluating mean on each fold"
+219,0,cross validation mean accuracy,18,"predicted = cross_val_predict(clf, iris.data, iris.target, cv=10) 
+metrics.accuracy_score(iris.target, predicted)"
+220,0,cross validation in scikit learn,111,"# Doing linear regression with leave one out cross val
+
+from sklearn import cross_validation, linear_model
+import numpy as np
+
+# Including this to remind you that it is necessary to use numpy arrays rather 
+# than lists otherwise you will get an error
+X_digits = np.array(x)
+Y_digits = np.array(y)
+
+loo = cross_validation.LeaveOneOut(len(Y_digits))
+
+regr = linear_model.LinearRegression()
+
+scores = cross_validation.cross_val_score(regr, X_digits, Y_digits, scoring='mean_squared_error', cv=loo,)
+
+# This will print the mean of the list of errors that were output and 
+# provide your metric for evaluation
+print scores.mean()"
+221,0,cross validation in scikit learn,111,"# Doing linear regression with leave one out cross val
+
+from sklearn import cross_validation, linear_model
+import numpy as np
+
+# Including this to remind you that it is necessary to use numpy arrays rather 
+# than lists otherwise you will get an error
+X_digits = np.array(x)
+Y_digits = np.array(y)
+
+loo = cross_validation.LeaveOneOut(len(Y_digits))
+
+regr = linear_model.LinearRegression()
+
+scores = cross_validation.cross_val_score(regr, X_digits, Y_digits, scoring='mean_squared_error', cv=loo,)
+
+# This will print the mean of the list of errors that were output and 
+# provide your metric for evaluation
+print scores.mean()"
+222,1,How to generate random letter,20,""""""""""""".join(choice(ascii_uppercase) for i in range(12))"
+223,1,How to generate random int in range between 1 and 20,9,"print(random.randint(0, 9))"
+224,0,make directory,22,"import os, errno
+
+try:
+    os.makedirs(directory)
+except OSError as e:
+    if e.errno != errno.EEXIST:
+        raise"
+225,1,get current path,4,os.path.abspath(os.path)
+226,0,regexp date,45,"In [146]: import re
+In [152]: match = re.search(r'(\d+/\d+/\d+)','The date is 11/12/98')
+
+In [153]: match.group(1)
+Out[153]: '11/12/98'"
+227,0,copy files creating directory,63,"import os
+import errno
+
+filename = ""/foo/bar/baz.txt""
+if not os.path.exists(os.path.dirname(filename)):
+    try:
+        os.makedirs(os.path.dirname(filename))
+    except OSError as exc: # Guard against race condition
+        if exc.errno != errno.EEXIST:
+            raise
+
+with open(filename, ""w"") as f:
+    f.write(""FOOBAR"")"
+228,0,create directory,13,"import os
+if not os.path.exists(directory):
+    os.makedirs(directory)"
+229,0,date gmt,32,">>> datetime.datetime.now().time()
+datetime.time(15, 8, 24, 78915)
+
+>>> print(datetime.datetime.now().time())
+15:08:24.789150"
+230,0,date now,38,">>> from time import gmtime, strftime
+>>> strftime(""%Y-%m-%d %H:%M:%S"", gmtime())
+'2009-01-05 22:14:39'"
+231,0,cvs files,73,"import csv
+
+def getstuff(filename, criterion):
+    with open(filename, ""rb"") as csvfile:
+        datareader = csv.reader(csvfile)
+        yield next(datareader)  # yield the header row
+        count = 0
+        for row in datareader:
+            if row[3] == criterion:
+                yield row
+                count += 1
+            elif count:
+                # done when having read a consecutive series of rows 
+                return"
+232,0,cvs,23,"with open('output.csv', 'w', newline='') as f:
+    writer = csv.writer(f)
+    ..."
+233,0,read cvs,52,"import csv
+
+with open(""test.csv"", ""r"") as f:
+    reader = csv.reader(f, delimiter=""\t"")
+    for i, line in enumerate(reader):
+        print 'line[{}] = {}'.format(i, line)"
+234,0,csv write,36,"##text=List of strings to be written to file
+with open('csvfile.csv','wb') as file:
+    for line in text:
+        file.write(line)
+        file.write('\n')"
+235,0,csv writer,38,"import csv
+with open(<path to output_csv>, ""wb"") as csv_file:
+        writer = csv.writer(csv_file, delimiter=',')
+        for line in data:
+            writer.writerow(line)"
+236,0,if dir exist,16,"try:
+    os.makedirs(""path/to/directory"")
+except FileExistsError:
+    # directory already exists
+    pass"
+237,0,loop files recursive,41,"import fnmatch
+import os
+
+matches = []
+for root, dirnames, filenames in os.walk('src'):
+    for filename in fnmatch.filter(filenames, '*.c'):
+        matches.append(os.path.join(root, filename))"
+238,0,csv,30,"import csv
+
+with open('file.csv', newline='') as f:
+    reader = csv.reader(f)
+    data = list(reader)
+
+print(data)"
+239,0,csv write,46,"# Python 2
+with open('/pythonwork/thefile_subset11.csv', 'wb') as outfile:
+    writer = csv.writer(outfile)
+
+# Python 3
+with open('/pythonwork/thefile_subset11.csv', 'w', newline='') as outfile:
+    writer = csv.writer(outfile)"
+240,0,get time and date,38,">>> import datetime
+>>> datetime.datetime.now()
+datetime.datetime(2009, 1, 6, 15, 8, 24, 78915)
+
+>>> print(datetime.datetime.now())
+2009-01-06 15:08:24.789150"
+241,1,get date and time one week from now,11,"datetime.datetime.combine(datetime.date.today(), datetime.timedelta(hours=3))"
+242,1,get time and date one week from now ,11,"datetime.datetime.combine(datetime.date.today(), datetime.timedelta(hours=3))"
+243,1,trim the heading and trailing whitespaces and blank lines for all text files ,7,"re.split('\n\\s*\n', string)"
+244,1,generate random number,6,"random.randint(0, 9)"
+245,1,sort a list,12,"sorted(list, key=lambda x: x[1])"
+246,0,print without newline,9,"print('.', end='')"
+247,0,change directory,4,os.chdir(path)
+248,1,"change directory to ""data""",5,os.chdir('data')
+249,0,list files in directory,31,"import os
+for file in os.listdir(""/mydir""):
+    if file.endswith("".txt""):
+        print(os.path.join(""/mydir"", file))"
+250,0,read ISO-8859-15 ,45,"import codecs
+with codecs.open(filename, 'r', encoding='utf8') as f:
+    text = f.read()
+# process Unicode text
+with codecs.open(filename, 'w', encoding='utf8') as f:
+    f.write(text)"
+251,0,copy a file,10,"from shutil import copyfile
+copyfile(src, dst)"
+252,1,check if directory exists,3,os.path.exists()
+253,0,load wine dataset,50,"from sklearn.datasets import load_iris
+
+iris = load_iris()
+# `iris.data` holds the numerical values
+# `iris.feature_names` holds the numerical column names
+# `iris.target` holds the categorical (species) values (as ints)
+# `iris.target_names` holds the unique categorical names"
+254,0,sklearn 5 fold cross validation,43,"from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import cross_val_score
+import numpy as np
+
+clf = RandomForestClassifier() #Initialize with whatever parameters you want to
+
+# 10-Fold Cross validation
+print np.mean(cross_val_score(clf, X_train, y_train, cv=10))"
+255,0,pandas dataframe from csv,49,"import pandas as pd
+print pd.read_csv('value.txt')
+
+        Date    price  factor_1  factor_2
+0  2012-06-11  1600.20     1.255     1.548
+1  2012-06-12  1610.02     1.258     1.554
+2  2012-06-13  1618.07     1.249     1.552
+3  2012-06-14  1624.40     1.253     1.556
+4  2012-06-15  1626.15     1.258     1.552
+5  2012-06-16  1626.15     1.263     1.558
+6  2012-06-17  1626.15     1.264     1.572"
+256,1,pandas dataframe groupby column,15,df.groupby('User').agg({'A': x.mean})
+257,0,matplotlib multiple histograms,80,"import numpy as np
+import matplotlib.pyplot as plt
+
+#makes the data
+y1 = np.random.normal(-2, 2, 1000)
+y2 = np.random.normal(2, 2, 5000)
+colors = ['b','g']
+
+#plots the histogram
+fig, ax1 = plt.subplots()
+ax1.hist([y1,y2],color=colors)
+ax1.set_xlim(-10,10)
+ax1.set_ylabel(""Count"")
+plt.tight_layout()
+plt.show()"
+258,0,matplotlib grouped bar chart,222,"import numpy as np
+import matplotlib.pyplot as plt
+
+N = 3
+ind = np.arange(N)  # the x locations for the groups
+width = 0.27       # the width of the bars
+
+fig = plt.figure()
+ax = fig.add_subplot(111)
+
+yvals = [4, 9, 2]
+rects1 = ax.bar(ind, yvals, width, color='r')
+zvals = [1,2,3]
+rects2 = ax.bar(ind+width, zvals, width, color='g')
+kvals = [11,12,13]
+rects3 = ax.bar(ind+width*2, kvals, width, color='b')
+
+ax.set_ylabel('Scores')
+ax.set_xticks(ind+width)
+ax.set_xticklabels( ('2011-Jan-4', '2011-Jan-5', '2011-Jan-6') )
+ax.legend( (rects1[0], rects2[0], rects3[0]), ('y', 'z', 'k') )
+
+def autolabel(rects):
+    for rect in rects:
+        h = rect.get_height()
+        ax.text(rect.get_x()+rect.get_width()/2., 1.05*h, '%d'%int(h),
+                ha='center', va='bottom')
+
+autolabel(rects1)
+autolabel(rects2)
+autolabel(rects3)
+
+plt.show()"
+259,0,generate a rondom lower case character,61,">>> import string
+>>> import random
+>>> def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+...    return ''.join(random.choice(chars) for _ in range(size))
+...
+>>> id_generator()
+'G5G74W'
+>>> id_generator(3, ""6793YUIO"")
+'Y3U'"
+260,0,how to append value in dict ,20,"key = ""somekey""
+a.setdefault(key, [])
+a[key].append(1)"
+261,0,how to check if a  key is in a dictionay ,46,"d = {""key1"": 10, ""key2"": 23}
+
+if ""key1"" in d:
+    print(""this will execute"")
+
+if ""nonexistent key"" in d:
+    print(""this will not"")"
+262,0,how to delete a column in a dataframe python,22,"df = df.drop(df.columns[[0, 1, 3]], axis=1)  # df.columns is zero-based pd.Index"
+263,0,how to delete columns in dataframe,22,"df = df.drop(df.columns[[0, 1, 3]], axis=1)  # df.columns is zero-based pd.Index"
+264,0,how to save a dataframe in csv file,7,"df.to_csv(file_name, sep='\t')"
+265,1,how to draw scatter plot for data in csv file,9,"plt.scatter(x, y, color='str_3')"
+266,0,how to draw scatter plot for data in csv file,60,"import pandas as pd
+import matplotlib.pyplot as plt
+df  = pd.read_csv(""data.csv"")
+df.plot()  # plots all columns against index
+df.plot(kind='scatter',x='x',y='y') # scatter plot
+df.plot(kind='density')  # estimate density function
+# df.plot(kind='hist')  # histogram"
+267,0,how to choose plot size in inches ,18,"fig = matplotlib.pyplot.gcf()
+fig.set_size_inches(18.5, 10.5)
+fig.savefig('test2png.png', dpi=100)"
+268,0,how to create ascatter plot using matplotlib,36,"import itertools
+
+colors = itertools.cycle([""r"", ""b"", ""g""])
+for y in ys:
+    plt.scatter(x, y, color=next(colors))"
+269,0,how to choose plot title in matplotlib,42,"from matplotlib import pyplot as plt    
+
+fig = plt.figure()
+plt.plot(data)
+fig.suptitle('test title', fontsize=20)
+plt.xlabel('xlabel', fontsize=18)
+plt.ylabel('ylabel', fontsize=16)
+fig.savefig('test.jpg')"
+270,0,generate list of random charachters,16,''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(N))
+271,0,generate random charachter,25,">>> import string
+>>> string.ascii_letters
+'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+>>> import random
+>>> random.choice(string.ascii_letters)
+'j'"
+272,1,generate random int,6,"random.randint(0, 7)"
+273,1,dictionary of characters and int,15,"dict((k, 'b.') for k in of)"
+274,0,generate dict,70,">>> keys = ['a', 'b', 'c']
+>>> values = [1, 2, 3]
+>>> dictionary = dict(zip(keys, values))
+>>> print(dictionary)
+{'a': 1, 'b': 2, 'c': 3}"
+275,1,open csv,12,"df = pd.read_csv('<unk>', header=None)"
+276,1,delete row in csv,23,"np.delete(row, list(range(0, len(row) + 1, 2)), axis=1)"
+277,0,delete row in csv,39,"import pandas as pd
+f=pd.read_csv(""test.csv"")
+keep_col = ['day','month','lat','long']
+new_f = f[keep_col]
+new_f.to_csv(""newFile.csv"", index=False)"
+278,0,copy files from folder,10,"from shutil import copyfile
+copyfile(src, dst)"
+279,0,rename files,12,"import os
+
+os.rename('a.txt', 'b.kml')"
+280,1,rename files,6,"os.rename(filename, filenames)"
+281,0,recursive copy files and folders,14,"from distutils.dir_util import copy_tree
+copy_tree(""/a/b/c"", ""/x/y/z"")"
+282,1,http reques get html,12,"requests.get(html, headers={1}.__class__())"
+283,1,save table beautifulsoup,8,"tr.findAll('td', style='tr')"
+284,1,regex [],14,"re.sub('<unk>', '.', text)"
+285,0,save dict to csv,69,"import csv
+toCSV = [{'name':'bob','age':25,'weight':200},
+         {'name':'jim','age':31,'weight':180}]
+keys = toCSV[0].keys()
+with open('people.csv', 'w', newline='')  as output_file:
+    dict_writer = csv.DictWriter(output_file, keys)
+    dict_writer.writeheader()
+    dict_writer.writerows(toCSV)"
+286,0,download an image request,14,"import urllib
+urllib.urlretrieve(""http://www.gunnerkrigg.com//comics/00000001.jpg"", ""00000001.jpg"")"
+287,0,zip 2 lists,70,">>> keys = ['a', 'b', 'c']
+>>> values = [1, 2, 3]
+>>> dictionary = dict(zip(keys, values))
+>>> print(dictionary)
+{'a': 1, 'b': 2, 'c': 3}"
+288,1,rearrange dictionary keys into alphabetic order,17,"sorted(list(keys.items()), key=lambda x: x[1])"
+289,0,merge 2 dictionaries ,39,"def merge_two_dicts(x, y):
+      z = x.copy()   # start with x's keys and values
+      z.update(y)    # modifies z with y's keys and values & returns None
+      return z"
+290,1,sort a list x into ascending order,6,"sorted(var_1, key=sorted)"
+291,1,sort a list into ascending order,6,"sorted(list, key=sorted)"
+292,1,sort list 'values' into ascending order,6,"sorted(values, key=values.index)"
+293,0,how to get page urls beautifulsoup,54,"import httplib2
+from bs4 import BeautifulSoup, SoupStrainer
+
+http = httplib2.Http()
+status, response = http.request('http://www.nytimes.com')
+
+for link in BeautifulSoup(response, parse_only=SoupStrainer('a')):
+    if link.has_attr('href'):
+        print(link['href'])"
+294,1,round a variable to 2dp,130,">>> 125650429603636838/(2**53)
+13.949999999999999
+
+>>> 234042163/(2**24)
+13.949999988079071
+
+>>> a = 13.946
+>>> print(a)
+13.946
+>>> print(""%.2f"" % a)
+13.95
+>>> round(a,2)
+13.949999999999999
+>>> print(""%.2f"" % round(a, 2))
+13.95
+>>> print(""{:.2f}"".format(a))
+13.95
+>>> print(""{:.2f}"".format(round(a, 2)))
+13.95
+>>> print(""{:.15f}"".format(round(a, 2)))
+13.949999999999999"
+295,0,how to remove an item from a list using the index,57,">>> a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> del a[-1]
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8]"
+296,1,how to combine 2 lists into a dictionary,9,"dict(zip(keys, values))"
+297,0,convert txt fileencoding,39,"with codecs.open('test', encoding='utf-8', mode='w+') as f:
+    f.write(u'\u4500 blah blah blah\n')
+    f.seek(0)
+    print repr(f.readline()[:1])"
+298,0,copy file and rename,28,"import shutil
+shutil.copy2('/src/dir/file.ext', '/dst/dir/newname.ext') # complete target filename given
+shutil.copy2('/src/file.ext', '/dst/dir') # target filename is /dst/dir/file.ext"
+299,0,parse url into images,14,"import urllib.request
+
+urllib.request.urlretrieve(""http://www.digimouth.com/news/media/2011/09/google-logo.jpg"", ""local-filename.jpg"")"
+300,0,get date after week,34,">>> import datetime
+>>> today = datetime.date.today()
+>>> today + datetime.timedelta(days=-today.weekday(), weeks=1)
+datetime.date(2009, 10, 26)"
+301,1,client connection to url,4,print(self.status_code)
+302,0,client connction to http url,121,"from http.client import HTTPSConnection
+from base64 import b64encode
+#This sets up the https connection
+c = HTTPSConnection(""www.google.com"")
+#we need to base 64 encode it 
+#and then decode it to acsii as python 3 stores it as a byte string
+userAndPass = b64encode(b""username:password"").decode(""ascii"")
+headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+#then connect
+c.request('GET', '/', headers=headers)
+#get the response back
+res = c.getresponse()
+# at this point you could check the status etc
+# this gets the page text
+data = res.read()"
+303,0,"generate random nu,ber",9,"import random
+print(random.randint(0,9))"
+304,0,generate char lower case,16,''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(N))
+305,1,generate lowercase char,16,''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(N))
+306,1,generate random numbers,6,"random.randint(0, 7)"
+307,0,generat integers 1-20,11,"from random import randrange
+print(randrange(10))"
+308,1,list to dict,21,"dict((k, ':') for k, v in list(d.items()))"
+309,1,list to dict,21,"dict((k, ':') for k, v in list(d.items()))"
+310,0,delete coloumn pd,9,"df.drop('column_name', axis=1, inplace=True)"
+311,1,scatter,78,"y = [2.56422, 3.77284, 3.52623, 3.51468, 3.02199]
+z = [0.15, 0.3, 0.45, 0.6, 0.75]
+n = [58, 651, 393, 203, 123]
+
+fig, ax = plt.subplots()
+ax.scatter(z, y)
+
+for i, txt in enumerate(n):
+    ax.annotate(txt, (z[i], y[i]))"
+312,1,save plot as image,5,plt.savefig('save')
+313,1,print date and time in GMT in 24hr format,26,"time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(datetime.time.now()))"
+314,0,print date and time in GMT in 24hr format,38,">>> from time import gmtime, strftime
+>>> strftime(""%Y-%m-%d %H:%M:%S"", gmtime())
+'2009-01-05 22:14:39'"
+315,0,print date and time in GMT in 24hr format,128,"import datetime
+mylist = []
+today = datetime.date.today()
+mylist.append(today)
+print mylist[0] # print the date object, not the container ;-)
+2008-11-22
+
+# It's better to always use str() because :
+
+print ""This is a new day : "", mylist[0] # will work
+>>> This is a new day : 2008-11-22
+
+print ""This is a new day : "" + mylist[0] # will crash
+>>> cannot concatenate 'str' and 'datetime.date' objects
+
+print ""This is a new day : "" + str(mylist[0]) 
+>>> This is a new day : 2008-11-22"
+316,0,print date and time in GMT in 24hr format,128,"import datetime
+mylist = []
+today = datetime.date.today()
+mylist.append(today)
+print mylist[0] # print the date object, not the container ;-)
+2008-11-22
+
+# It's better to always use str() because :
+
+print ""This is a new day : "", mylist[0] # will work
+>>> This is a new day : 2008-11-22
+
+print ""This is a new day : "" + mylist[0] # will crash
+>>> cannot concatenate 'str' and 'datetime.date' objects
+
+print ""This is a new day : "" + str(mylist[0]) 
+>>> This is a new day : 2008-11-22"
+317,1,print date and time in GMT in 24hr format,23,"parser.strftime('%Y-%m-%d %H:%M:%S', gmtime())"
+318,0,delete first and last column in csv file,69,"import csv
+with open(""source"",""rb"") as source:
+    rdr= csv.reader( source )
+    with open(""result"",""wb"") as result:
+        wtr= csv.writer( result )
+        for r in rdr:
+            wtr.writerow( (r[0], r[1], r[3], r[4]) )"
+319,0,remove columns from csv file and save it to another csv file,131,"import csv
+from collections import defaultdict
+
+columns = defaultdict(list) # each value in each column is appended to a list
+
+with open('file.txt') as f:
+    reader = csv.DictReader(f) # read rows into a dictionary format
+    for row in reader: # read a row as {column1: value1, column2: value2,...}
+        for (k,v) in row.items(): # go over each column name and value 
+            columns[k].append(v) # append the value into the appropriate list
+                                 # based on column name k
+
+print(columns['name'])
+print(columns['phone'])
+print(columns['street'])"
+320,1,remove first column from csv file,9,"df = pd.read_csv('my.csv', header=None)"
+321,0,remove first column from csv file,20,"for row in reader:
+    content = list(row[i] for i in included_cols)
+print content"
+322,0,remove first column from csv file,131,"import csv
+from collections import defaultdict
+
+columns = defaultdict(list) # each value in each column is appended to a list
+
+with open('file.txt') as f:
+    reader = csv.DictReader(f) # read rows into a dictionary format
+    for row in reader: # read a row as {column1: value1, column2: value2,...}
+        for (k,v) in row.items(): # go over each column name and value 
+            columns[k].append(v) # append the value into the appropriate list
+                                 # based on column name k
+
+print(columns['name'])
+print(columns['phone'])
+print(columns['street'])"
+323,0,copy directory tree from source to destination,43,"import shutil, errno
+
+def copyanything(src, dst):
+    try:
+        shutil.copytree(src, dst)
+    except OSError as exc: # python >2.5
+        if exc.errno == errno.ENOTDIR:
+            shutil.copy(src, dst)
+        else: raise"
+324,0,move files from directory to directory,34,"import os
+import shutil
+
+os.rename(""path/to/current/file.foo"", ""path/to/new/destination/for/file.foo"")
+shutil.move(""path/to/current/file.foo"", ""path/to/new/destination/for/file.foo"")
+os.replace(""path/to/current/file.foo"", ""path/to/new/destination/for/file.foo"")"
+325,1,copy directory to another directory,7,"shutil.copy2(directory, 'ignore_errors')"
+326,0,copy directory to directory,14,"from distutils.dir_util import copy_tree
+copy_tree(""/a/b/c"", ""/x/y/z"")"
+327,0,copy directory to directory,64,"import os, shutil
+def copytree(src, dst, symlinks=False, ignore=None):
+    for item in os.listdir(src):
+        s = os.path.join(src, item)
+        d = os.path.join(dst, item)
+        if os.path.isdir(s):
+            shutil.copytree(s, d, symlinks, ignore)
+        else:
+            shutil.copy2(s, d)"
+328,1,rename file with regex,13,"re.sub('<unk>', '\\1', text)"
+329,1,format time,26,"""""""time"""""".strftime('%Y-%m-%d %H:%M:%S')"
+330,1,import time,18,now = datetime.datetime.now().strftime('%H:%M:%S')
+331,0,mm-dd-yyyy,18,">>> import arrow
+>>> arrow.now().format('YYYY-MM-DD')
+'2017-02-17'"
+332,1,read file,21,"with open('file.txt') as f:
+    f = open(os.path.join(__location__, 'rb'))"
+333,0,read file,25,"with open('data.txt', 'r') as file:
+    data = file.read().replace('\n', '')"
+334,1,iterating files in a folder,13,"for dirname, dirnames, filenames in os.walk(files):
+    pass"
+335,0,extract imafe from html,51,"data_uri = open('11.png', 'rb').read().encode('base64').replace('\n', '')
+img_tag = '<img src=""data:image/png;base64,{0}"">'.format(data_uri)
+
+print(img_tag)"
+336,1,pandas calculate mean,19,"df.groupby(np.arange(len(mean)) // 2 + 1, axis=1).mean()"
+337,1,pandas read from csv,11,"pd.read_csv('<unk>', sep='')"
+338,1,format output to 2 decimal,27,"""""""[{0}, {1}, {2}]"""""".format(1, 2, num=3)"
+339,0,pandas write to csv file,7,"df.to_csv(file_name, sep='\t')"
+340,0,pandas write to file decimal,36,"with open('foo.csv', 'w') as f:
+    data.to_csv(f, index=True, header=True, decimal=',', sep=' ', float_format='%.3f')"
+341,1,pair characters in `characters` and numbers in `numbers`,11,"numbers = list(zip(characters, numbers))"
+342,1,delete a column in csv,9,"df.drop('value', axis=1, inplace=True)"
+343,0,headers in a dataframe,4,list(my_dataframe.columns.values)
+344,1,save dataframe to csv,9,"pd.merge(csv, csv, sep='\t')"
+345,0,copy files and directories under `data` directory,57,"┌──────────────────┬────────┬───────────┬───────┬────────────────┐
+│     Function     │ Copies │   Copies  │Can use│   Destination  │
+│                  │metadata│permissions│buffer │may be directory│
+├──────────────────┼────────┼───────────┼───────┼────────────────┤
+│shutil.copy       │   No   │    Yes    │   No  │      Yes       │
+│shutil.copyfile   │   No   │     No    │   No  │       No       │
+│shutil.copy2      │  Yes   │    Yes    │   No  │      Yes       │
+│shutil.copyfileobj│   No   │     No    │  Yes  │       No       │
+└──────────────────┴────────┴───────────┴───────┴────────────────┘"
+346,1,reformat date,14,datetime.datetime.now().strftime('%Y-%m-%d')
+347,1,"create list ""a_list""",5,a = [a_list]
+348,1,create dictionary,26,"dict((k, list(v.values())[k]) for k in ('utf-8', '16'))"
+349,1,generate random number,6,"random.randint(0, 9)"
+350,1,generate random number,6,"random.randint(0, 7)"
+351,0,generate random ,25,">>> import string
+>>> string.ascii_letters
+'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+>>> import random
+>>> random.choice(string.ascii_letters)
+'j'"
+352,0,sort list,11,"s.sort(key = operator.itemgetter(1, 2))"
+353,1,"copy column from ""data.csv"" file to another ""output.csv""",10,output.csv['data.csv'] = pd.data.csv(data.csv)
+354,0,"copy column from ""data.csv"" to ""output.csv""",57,"import csv
+reader = csv.reader(open('output.csv', 'rb'))
+reader1 = csv.reader(open('output1.csv', 'rb'))
+writer = csv.writer(open('appended_output.csv', 'wb'))
+for row in reader:
+    row1 = reader1.next()
+    writer.writerow(row + row1)"
+355,0,create 'output.csv' csv file,25,"import csv
+
+with open(..., 'wb') as myfile:
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerow(mylist)"
+356,1,write to csv file,4,writer.writerow(write)
+357,1,new line,5,mmap.write('\n')
+358,0,delete column from csv file,9,"del r[2]
+            wtr.writerow( r )"
+359,1,read csv file using pandas,15,"pd.read_csv('<unk>', sep=',', header=None)"
+360,0,delete column from csv ,9,"df = df.drop('column_name', 1)"
+361,0,get the files that inside the folders,27,"from os import walk
+
+f = []
+for (dirpath, dirnames, filenames) in walk(mypath):
+    f.extend(filenames)
+    break"
+362,0,get all files and folders ,29,"import os
+ arr = os.listdir()
+ print(arr)
+
+ >>> ['$RECYCLE.BIN', 'work.txt', '3ebooks.txt', 'documents']"
+363,1,check if string has specific pattern,14,"re.findall('\\[(.*?)\\]', s)"
+364,1,regex dd-mm-yy,7,"re.findall('\\d+', regex)"
+365,0,regex for date,46,"import re
+from datetime import datetime
+
+match = re.search(r'\d{4}-\d{2}-\d{2}', text)
+date = datetime.strptime(match.group(), '%Y-%m-%d').date()"
+366,0,replace pattern in string,22,"import re
+line = re.sub(r""</?\[\d+>"", """", line)"
+367,0,datetime to string,27,"import datetime
+t = datetime.datetime(2012, 2, 23, 0, 0)
+t.strftime('%m/%d/%Y')"
+368,0,copy files,28,"import shutil
+shutil.copy2('/src/dir/file.ext', '/dst/dir/newname.ext') # complete target filename given
+shutil.copy2('/src/file.ext', '/dst/dir') # target filename is /dst/dir/file.ext"
+369,0,create folder,13,"import os
+if not os.path.exists(directory):
+    os.makedirs(directory)"
+370,0,create file,11,"file = open('myfile.dat', 'w+')"
+371,0,rename file,32,"import os
+old_file = os.path.join(""directory"", ""a.txt"")
+new_file = os.path.join(""directory"", ""b.kml"")
+os.rename(old_file, new_file)"
+372,0,write to file,18,"with open('somefile.txt', 'a') as the_file:
+    the_file.write('Hello\n')"
+373,1,read csv,9,"df = pd.read_csv('my.csv', header=None)"
+374,0,import pandas,15,"import pandas as pd
+data_df = pd.DataFrame('highfrequency2.csv')
+print(data_df.columns)"
+375,0,find unique data from csv,11,g = df['b'].unique()
+376,0,group of data  from csv,18,"week_grouped = df.groupby('week')
+week_grouped.sum().reset_index().to_csv('week_grouped.csv')"
+377,0,get average value from group of data in csv,28,"In [58]: df.groupby(['cluster']).mean()
+Out[58]:
+              time
+cluster
+1        12.333333
+2        54.000000
+3         6.000000"
+378,0,standard deviation from group of data in csv,62,"In [202]:
+
+df.groupby('A').agg(np.std, ddof=0)
+
+Out[202]:
+     B  values
+A             
+1  0.5     2.5
+2  0.5     2.5
+
+In [203]:
+
+df.groupby('A').agg(np.std, ddof=1)
+
+Out[203]:
+          B    values
+A                    
+1  0.707107  3.535534
+2  0.707107  3.535534"
+379,1,newline space,11,""""""" """""".rstrip('\r\n')"
+380,0,floating data in csv group in digit,11,"df.to_csv('pandasfile.csv', float_format='%.3f')"
+381,0,remove repeated column in csv file,22,"df = df.drop(df.columns[[0, 1, 3]], axis=1)  # df.columns is zero-based pd.Index"
+382,1,findall,11,"re.findall('<unk>', 'раз')"
+383,1,generate 100 random lower-cased leters,14,"random.choice(range(100), args=(100, 100))"
+384,0,generate random lower case letters,11,"''.join(random.choices(string.ascii_uppercase + string.digits, k=N))"
+385,0,generate 100 integers (1-20 inclusive).,26,">>> import random
+>>> random.sample(range(1, 100), 3)
+[77, 52, 45]"
+386,1,generate random numbers between 1-20 inclusive,9,"print(random.randint(0, 50))"
+387,1,"Given list `letters` and `integers`, create a dicitonary such that the values in `letters` are keys and values in `integers` are values",20,"letters = [(x + y) for x, y in zip(letters, integers)]"
+388,0,print `dic` sorted by keys,78,"In [1]: import collections
+
+In [2]: d = {2:3, 1:89, 4:5, 3:0}
+
+In [3]: od = collections.OrderedDict(sorted(d.items()))
+
+In [4]: od
+Out[4]: OrderedDict([(1, 89), (2, 3), (3, 0), (4, 5)])"
+389,1,open a csv file `data.csv` and read the data,14,"df = pd.read_csv('data.csv', sep=',', header=None)"
+390,1,delete first row from dataframe `df`,7,df = df.drop('get_title')
+391,1,delete first and last row from the dataframe `df`,6,df = df.loc[-1]
+392,0,save `df` to a file `output.csv` in a new directory `example_output`,7,"df.to_csv(file_name, sep='\t')"
+393,0,copy all files and directories from one folder to another,35,"import os
+import shutil
+src_files = os.listdir(src)
+for file_name in src_files:
+    full_file_name = os.path.join(src, file_name)
+    if os.path.isfile(full_file_name):
+        shutil.copy(full_file_name, dest)"
+394,0,go to a url,12,"import requests
+r = requests.get(""http://example.com/foo/bar"")"
+395,1,visit the url `url`,8,"r = requests.get(url, verify=False)"
+396,0,parse all hyperlinks from `r` using bs4,70,"from bs4 import BeautifulSoup
+import urllib.request
+
+parser = 'html.parser'  # or 'lxml' (preferred) or 'html5lib', if installed
+resp = urllib.request.urlopen(""http://www.gpsbasecamp.com/national-parks"")
+soup = BeautifulSoup(resp, parser, from_encoding=resp.info().get_param('charset'))
+
+for link in soup.find_all('a', href=True):
+    print(link['href'])"
+397,0,visit the given url `url` and extract all hrefs from there,54,"import httplib2
+from bs4 import BeautifulSoup, SoupStrainer
+
+http = httplib2.Http()
+status, response = http.request('http://www.nytimes.com')
+
+for link in BeautifulSoup(response, parse_only=SoupStrainer('a')):
+    if link.has_attr('href'):
+        print(link['href'])"
+398,0,visit `url` and extract hrefs using bs4,73,"from BeautifulSoup import BeautifulSoup
+
+html = '''<a href=""some_url"">next</a>
+<span class=""class""><a href=""another_url"">later</a></span>'''
+
+soup = BeautifulSoup(html)
+
+for a in soup.find_all('a', href=True):
+    print ""Found the URL:"", a['href']"
+399,0,find all hrefs from `soup`,73,"from BeautifulSoup import BeautifulSoup
+
+html = '''<a href=""some_url"">next</a>
+<span class=""class""><a href=""another_url"">later</a></span>'''
+
+soup = BeautifulSoup(html)
+
+for a in soup.find_all('a', href=True):
+    print ""Found the URL:"", a['href']"
+400,0,find all bold text from html `soup`,15,"for strong_tag in soup.find_all('strong'):
+    print(strong_tag.text, strong_tag.next_sibling)"
+401,0,find all red colored text from html `soup`,35,"soup.find_all(""a"", string=""Elsie"")
+# [<a href=""http://example.com/elsie"" class=""sister"" id=""link1"">Elsie</a>]"
+402,0,generate 100 random lowercase letters,16,''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(N))
+403,1,generate 100 random numbers,7,print(random.choice(100))
+404,1,generate 100 random numbers,9,"print(random.randrange(0, 100))"
+405,1,generate 100 random numbers from 1 to 20,9,"print(random.randint(0, 100))"
+406,1,create a dictionary with keys `random_letters` and values `random_numbers`,23,"random_numbers = dict((key, value) for key, value in list(random_letters.
+    items()))"
+407,1,print `dic` sorted by keys,14,"print(sorted(list(dic.items()), key=tuple))"
+408,1,print `dic` keys sorted,14,"print(sorted(list(dic.items()), key=k))"
+409,1,print `dic` keys on each line,14,print('\n'.join(str(key) for line in dic))
+410,1,"read ""data.csv"" file",14,"with open('data.csv', 'r') as f:
+    pass"
+411,1,"read csv file ""data.csv""",14,"df = pd.read_csv('data.csv', sep=',', header=None)"
+412,0,delete first and last column of `df`,9,"df.drop('column_name', axis=1, inplace=True)"
+413,1,"write output to csv file ""output.csv""",7,"output.csv.to_csv('output.csv', index=False)"
+414,1,write `output` to csv file,7,"output.to_csv('output', index=False)"
+415,1,"search for pattern ""%d%d-%d%d"" in `file`",16,"return re.findall('%d%d-%d%d', file)"
+416,1,copy file from `src_path` to `dest_path`,6,"copyfile(src_path, dest_path)"
+417,1,check if `file` is a directory,4,os.path.isfile(file)
+418,1,"write `final_data` to csv file ""price.csv""",5,final_data.to_csv('price.csv')
+419,0,import datetime,37,">>> import datetime
+>>> datetime.datetime.today()
+datetime.datetime(2012, 3, 23, 23, 24, 55, 173504)
+>>> datetime.datetime.today().weekday()
+4"
+420,0,get date 7 days from today,16,"from datetime import datetime, timedelta
+
+d = datetime.today() - timedelta(days=days_to_subtract)"
+421,1,change date format,23,"time.strftime('%Y-%m-%d %H:%M:%S', gmtime())"
+422,1,remove header,12,"re.sub('<unk>', '', text)"
+423,0,run 5-fold accuracy,34,"import numpy as np
+from sklearn.cross_validation import KFold
+
+x = [1,2,3,4,5,6,7,8,9,10,11,12]
+kf = KFold(12, n_folds=3)
+
+for train_index, test_index in kf:
+    print (train_index, test_index)"
+424,0,get height of bars in subplot bar gaphs,335,"def label_bars(ax, bars, text_format, **kwargs):
+    """"""
+    Attaches a label on every bar of a regular or horizontal bar chart
+    """"""
+    ys = [bar.get_y() for bar in bars]
+    y_is_constant = all(y == ys[0] for y in ys)  # -> regular bar chart, since all all bars start on the same y level (0)
+
+    if y_is_constant:
+        _label_bar(ax, bars, text_format, **kwargs)
+    else:
+        _label_barh(ax, bars, text_format, **kwargs)
+
+
+def _label_bar(ax, bars, text_format, **kwargs):
+    """"""
+    Attach a text label to each bar displaying its y value
+    """"""
+    max_y_value = ax.get_ylim()[1]
+    inside_distance = max_y_value * 0.05
+    outside_distance = max_y_value * 0.01
+
+    for bar in bars:
+        text = text_format.format(bar.get_height())
+        text_x = bar.get_x() + bar.get_width() / 2
+
+        is_inside = bar.get_height() >= max_y_value * 0.15
+        if is_inside:
+            color = ""white""
+            text_y = bar.get_height() - inside_distance
+        else:
+            color = ""black""
+            text_y = bar.get_height() + outside_distance
+
+        ax.text(text_x, text_y, text, ha='center', va='bottom', color=color, **kwargs)
+
+
+def _label_barh(ax, bars, text_format, **kwargs):
+    """"""
+    Attach a text label to each bar displaying its y value
+    Note: label always outside. otherwise it's too hard to control as numbers can be very long
+    """"""
+    max_x_value = ax.get_xlim()[1]
+    distance = max_x_value * 0.0025
+
+    for bar in bars:
+        text = text_format.format(bar.get_width())
+
+        text_x = bar.get_width() + distance
+        text_y = bar.get_y() + bar.get_height() / 2
+
+        ax.text(text_x, text_y, text, va='center', **kwargs)"
+425,0,get labels above bars in subplots,31,"for i, v in enumerate(y):
+    ax.text(v + 3, i + .25, str(v), color='blue', fontweight='bold')"
+426,0,time and date,38,">>> from time import gmtime, strftime
+>>> strftime(""%Y-%m-%d %H:%M:%S"", gmtime())
+'2009-01-05 22:14:39'"
+427,0,gmt time 24,38,">>> from time import gmtime, strftime
+>>> strftime(""%Y-%m-%d %H:%M:%S"", gmtime())
+'2009-01-05 22:14:39'"
+428,1,timedelta,9,timedelta(hours=5) - timedelta(hours=2)
+429,1,time and date in certain,15,"datetime.datetime.combine(datetime.datetime.now(), datetime.datetime.now() +
+    datetime.timedelta(days=1))"
+430,0,gmt,38,">>> from time import gmtime, strftime
+>>> strftime(""%Y-%m-%d %H:%M:%S"", gmtime())
+'2009-01-05 22:14:39'"
+431,1,convert text file encoding,20,"print(codecs.open('file.txt', 'w', encoding='utf-8').decode('utf-8'))"
+432,0,covert file to utf,121,">>> u8 = v.decode(""iso-8859-1"").encode(""utf-8"")
+>>> u8
+'\xc3\x84pple'    # convert iso-8859-1 to unicode to utf-8
+
+>>> tell_me_about(u8)
+(<type 'str'>, '\xc3\x84pple')
+
+>>> u16 = v.decode('iso-8859-1').encode('utf-16')
+>>> tell_me_about(u16)
+(<type 'str'>, '\xff\xfe\xc4\x00p\x00p\x00l\x00e\x00')
+
+>>> tell_me_about(u8.decode('utf8'))
+(<type 'unicode'>, u'\xc4pple')
+
+>>> tell_me_about(u16.decode('utf16'))
+(<type 'unicode'>, u'\xc4pple')"
+433,0,convert file to utf,121,">>> u8 = v.decode(""iso-8859-1"").encode(""utf-8"")
+>>> u8
+'\xc3\x84pple'    # convert iso-8859-1 to unicode to utf-8
+
+>>> tell_me_about(u8)
+(<type 'str'>, '\xc3\x84pple')
+
+>>> u16 = v.decode('iso-8859-1').encode('utf-16')
+>>> tell_me_about(u16)
+(<type 'str'>, '\xff\xfe\xc4\x00p\x00p\x00l\x00e\x00')
+
+>>> tell_me_about(u8.decode('utf8'))
+(<type 'unicode'>, u'\xc4pple')
+
+>>> tell_me_about(u16.decode('utf16'))
+(<type 'unicode'>, u'\xc4pple')"
+434,0,redirect ,34,"from contextlib import redirect_stdout
+
+with open('help.txt', 'w') as f:
+    with redirect_stdout(f):
+        print('it now prints to `help.text`')"
+435,0,unkown encoding,2,import encodings.idna
+436,0,sorting a dictionary by key,39,"x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+sorted_x = sorted(x.items(), key=lambda kv: kv[1])"
+437,1,convert list to dictionary,21,"dict((k, ':') for k, v in list(d.items()))"
+438,1,get the date and time a week from now in gmt,10,datetime.datetime.now().strftime('%a')
+439,1,get date and time in gmt,10,"datetime.datetime.combine(datetime.date.today(), datetime.date.utcnow())"
+440,1,get time and date in gmt in `date`,8,"datetime.datetime.combine(date, datetime.time())"
+441,1,get the current date in utc,8,today = datetime.datetime.utcnow().date()
+442,1,get the current time in utc ,8,now = datetime.datetime.utcnow().date()
+443,0,date from 7 days ,16,"from datetime import datetime, timedelta
+
+d = datetime.today() - timedelta(days=days_to_subtract)"
+444,1,open csv file with read and write ,7,"pd.read_csv('file', shell=True)"
+445,1,open csv file `data.csv` ,14,"df = pd.read_csv('data.csv', sep=',', header=None)"
+446,0,delete the first column in csv file `df`,9,"df = df.drop('column_name', 1)"
+447,1,write to csv file,4,writer.writerow(file)
+448,1,read a csv file,15,"df = pd.read_csv('<unk>', quotechar=',')"
+449,0,write csv to a file,7,"df.to_csv(file_name, sep='\t')"

@@ -1,0 +1,46 @@
+A Benchmark for Structured Procedural Knowledge Extraction from Cooking Videos.
+Frank F. Xu
+Minimally Supervised Categorization of Text with Metadata.
+Frank F. Xu
+Incorporating External Knowledge through Pre-training for Natural Language to Code Generation.
+Frank F. Xu
+How Can We Know What Language Models Know?
+Frank F. Xu
+Parsimonious Morpheme Segmentation with an Application to Enriching Word Embeddings.
+Frank F. Xu
+HiGitClass: Keyword-Driven Hierarchical Classification of GitHub Repositories.
+Frank F. Xu
+StateLens: A Reverse Engineering Solution for Making Existing Dynamic Touchscreens Accessible.
+Frank F. Xu
+AlpacaTag: An Active Learning-based Crowd Annotation Framework for Sequence Tagging.
+Frank F. Xu
+Toward Unsupervised Text Content Manipulation.
+Frank F. Xu
+Mining Cross-Cultural Differences and Similarities in Social Media.
+Frank F. Xu*
+Automatic Extraction of Commonsense LocatedNear Knowledge.
+Frank F. Xu*
+ExtRA: Extracting Prominent Review Aspects from Customer Feedback.
+Frank F. Xu
+Empower Sequence Labeling with Task-Aware Neural Language Model.
+Frank F. Xu
+ReQuest: Indirect Supervision for Relation Extraction using Question-Answer Pairs.
+Frank F. Xu
+Open Information Extraction with Global Structure Constraints.
+Frank F. Xu
+Entropy-Based Subword Mining with an Application to Word Embeddings.
+Frank F. Xu
+Mining Cross-Cultural Differences of Named Entities: A Preliminary Study.
+Frank F. Xu*
+Commonsense LocatedNear Relation Extraction.
+Frank F. Xu*
+Multi-channel BiLSTM-CRF Model for Emerging Named Entity Recognition in Social Media.
+Frank F. Xu*
+Transfer Learning for Traffic Speed Prediction: A Preliminary Study.
+Frank F. Xu*
+Cross-region Traffic Prediction for China on OpenStreetMap.
+Frank F. Xu
+Indirect Supervision for Information Extraction
+Frank F. Xu
+Traffic Prediction for Urban Planning
+Frank F. Xu
